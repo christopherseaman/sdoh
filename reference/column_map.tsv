@@ -1,0 +1,595 @@
+Column	Question
+msoc_time_startrev	Please record the time that the survey was started
+msoc_daterev	Date of assessment
+msoc_7rev	In which country were you born?
+msoc_intro	The following questions will help us to obtain important information about your personal and family history during different periods of your life. This is a very important survey for our research, so we ask that you try to give the most accurate answers possible.If you have a doubt or question about how to answer a question, please seek help from a family member, friend, or partner who can help you confirm the necessary information to answer these questions as accurately as possible. REMEMBER: If you are helping a participant complete this survey, the answers should be about the participant's life, not your own.
+msoc_age	First, please enter your current age* must provide value
+msoc_7arev	In which state were you born?
+msoc_7brev	In which city/town were you born?
+msoc_7crev	In which country were you born?
+msoc_7drev	In which city/town were you born?
+msoc_7erev	Approximately how old were you when you moved to the United States?
+msoc_7frev	What were the main reasons that motivated you to move to the United States? (select all that apply)
+msoc_7fgrev	What were the main reasons that motivated you to move to the United States? - Other:
+msoc_7grev	Have you ever felt concerned or nervous about the legality of your immigration status or the immigration status of a family member?
+msoc_live_table	Life Period Country State City (or town, community, etc)   0 - 10 years of age {msoc_live_country0} {msoc_live_state0} {msoc_live_city0}   11 - 24 years of age {msoc_live_country11} {msoc_live_state11} {msoc_live_city11}   25 - 34 years of age {msoc_live_country25} {msoc_live_state25} {msoc_live_city25}   35 - 45 years of age {msoc_live_country35} {msoc_live_state35} {msoc_live_city35}   46 - 65 years of age {msoc_live_country46} {msoc_live_state46} {msoc_live_city46}   66 until one year ago {msoc_live_country66} {msoc_live_state66} {msoc_live_city66}   The most recent 12 months {msoc_live_countryrec} {msoc_live_staterec} {msoc_live_cityrec}
+msoc_live_country0	Country(0-10 years)
+msoc_live_country11	Country(11-24 years)
+msoc_live_country25	Country(25-34 years)
+msoc_live_country35	Country(35-45 years)
+msoc_live_country46	Country(46-65 years)
+msoc_live_country66	Country(66 until one year ago)
+msoc_live_countryrec	Country (Most recent 12 months)
+msoc_live_state0	State (0-10 years)
+msoc_live_state11	State (11-24 years)
+msoc_live_state25	State(25-34 years)
+msoc_live_state35	State(35-45 years)
+msoc_live_state46	State(46-65 years)
+msoc_live_state66	State(66 until one year ago)
+msoc_live_staterec	State(most recent 12 months)
+msoc_live_city0	City(0-10 years)
+msoc_live_city11	City(11-24 years)
+msoc_live_city25	City(25-34 years)
+msoc_live_city35	City(35-45 years)
+msoc_live_city46	City(46-65 years)
+msoc_live_city66	City(66 until one year ago)
+msoc_live_cityrec	City( Most recent 12 months)
+msoc_37rev	Did you attend a private or public elementary school?
+msoc_39rev	Was the school you attended for the majority of your elementary education located in a rural area or in an urban area?
+msoc_38rev	Did you ever have to repeat a school year?
+msoc_38arev	What year or years of school did you repeat?
+msoc_38brev	Why did you repeat a school year?
+msoc_38crev	Enter the total number of school years you completed (do not include unfinished school years or repeated school years)
+msoc_ppted	Mark all of the educational certificates, diplomas, and/or degrees you have achieved
+msoc_pptedqual	In general, how would you grade the overall quality of the education you received?
+msoc_work18	Did you work before turning 18 years of age?
+msoc_work_age	What was your age when you worked for the first time?
+msoc_work_age_2	Why did you work during your childhood? (select all that apply)
+msoc_work_age2b	If another reason, please specify
+msoc_num_job	How many jobs have you had in your life, including jobs done as a child?
+msoc_longestjob	What is the longest held job you have had during your life, including unpaid work and work done as a homemaker? If you had two or more jobs for the same amount of time, please ONLY indicate the job that required the highest degree of skill or training.
+msoc_longestjob_dur	For how long did you have this job?
+msoc_longestjob_detail	Describe in detail the main tasks or activities you did for this job
+msoc_20rev	Have you ever had to work the nightshift (or "overnight" or "graveyard" shift) for more than one year?
+msoc_20arev	For how many years did you work the nightshift?
+msoc_44rev	Which languages were regularly spoken in your household during the first 10 years of your life?
+msoc_lang_spec	Which other languages were regularly spoken in your household during the first 10 years of your life?
+msoc_lang1rev	Indicate your native languages(s) and any other languages you have studied or learned, the age at which you started using each language in terms of listening, speaking, reading, and writing, and the total number of years you have spent using each language. REMEMBER: If you are helping a participant complete this survey, the answers should be about the participant's life, not your own.     Language   Listening   Speaking   Reading   Writing   Years of use *     {msoc_21rev}   {msoc_21arev}   {msoc_21brev}   {msoc_21crev}   {msoc_21drev}   {msoc_21erev}     {msoc_22rev}   {msoc_22arev}   {msoc_22brev}   {msoc_22crev}   {msoc_22drev}   {msoc_22erev}     {msoc_23rev}   {msoc_23arev}   {msoc_23brev}   {msoc_23crev}   {msoc_23drev}   {msoc_23erev}     {msoc_24rev}   {msoc_24arev}   {msoc_24brev}   {msoc_24crev}   {msoc_24drev}   {msoc_24erev}                     * For Years of Use, you may have learned a language, stopped using it, and then started using it again. Indicate the total cumulative number of years you have used each language.
+msoc_21rev	Language_1
+msoc_21arev	Listening_1
+msoc_21brev	Speaking_1
+msoc_21crev	Reading_1
+msoc_21drev	Writing_1
+msoc_21erev	Years_of_use_1
+msoc_22rev	Language_2
+msoc_22arev	Listening_2
+msoc_22brev	Speaking2
+msoc_22crev	Reading2
+msoc_22drev	Writing2
+msoc_22erev	Years_of_use2
+msoc_23rev	Language_3
+msoc_23arev	Listening_3
+msoc_23brev	Speaking_3
+msoc_23crev	Reading_3
+msoc_23drev	Writing_3
+msoc_23erev	Years_of_use_3
+msoc_24rev	Language_4
+msoc_24arev	Listening_4
+msoc_24brev	Speaking_4
+msoc_24crev	Reading_4
+msoc_24drev	Writing_4
+msoc_24erev	Years_of_use_4
+msoc_lang2rev	Now please rate your current ability in terms of listening, speaking, reading, and writing in each of the languages you have studied or learned (including your native language/s.) using this scale: (1) very bad, (2) bad, (3) limited, (4) functional, (5) good, (6) very good, (7) like a native. REMEMBER: If you are helping a participant complete this survey, the answers should be about the participant's life, not your own.     Language   Listening   Speaking   Reading   Writing     [msoc_21rev]   {msoc_21frev}   {msoc_21grev}   {msoc_21hrev}   {msoc_21irev}     [msoc_22rev]   {msoc_22frev}   {msoc_22grev}   {msoc_22hrev}   {msoc_22irev}     [msoc_23rev]   {msoc_23frev}   {msoc_23grev}   {msoc_23hrev}   {msoc_23irev}     [msoc_24rev]   {msoc_24frev}   {msoc_24grev}   {msoc_24hrev}   {msoc_24irev}
+msoc_21frev	Listening_ability_1
+msoc_21grev	Speaking_ability_1
+msoc_21hrev	Reading_ability_1
+msoc_21irev	Writing_ability_1
+msoc_22frev	Listening_ability_2
+msoc_22grev	Speaking_ability_2
+msoc_22hrev	Reading_ability_2
+msoc_22irev	Writing_ability_2
+msoc_23frev	Listening_ability_3
+msoc_23grev	Speaking_ability_3
+msoc_23hrev	Reading_ability_3
+msoc_23irev	Writing_ability_3
+msoc_24frev	Listening_ability_4
+msoc_24grev	Speaking_ability_4
+msoc_24hrev	Reading_ability_4
+msoc_24irev	Writing_ability_4
+msoc_lang3rev	Please estimate how many hours per day you spend in the following activities in each of the languages you have studied or learned (including your native language). REMEMBER: If you are helping a participant complete this survey, the answers should be about the participant's life, not your own.     Language   Watching television   Listening to radio/podcasts   Reading for fun   Reading for school/work   Using social media and internet   Writing for school/work     [msoc_21rev]   {msoc_21jrev}   {msoc_21krev}   {msoc_21lrev}   {msoc_21mrev}   {msoc_21nrev}   {msoc_21orev}     [msoc_22rev]   {msoc_22jrev}   {msoc_22krev}   {msoc_22lrev}   {msoc_22mrev}   {msoc_22nrev}   {msoc_22orev}     [msoc_23rev]   {msoc_23jrev}   {msoc_23krev}   {msoc_23lrev}   {msoc_23mrev}   {msoc_23nrev}   {msoc_23orev}     [msoc_24rev]   {msoc_24jrev}   {msoc_24krev}   {msoc_24lrev}   {msoc_24mrev}   {msoc_24nrev}   {msoc_24orev}
+msoc_21jrev	TV_lang_1
+msoc_21krev	radio_lang_1
+msoc_21lrev	reading_lang_1
+msoc_21mrev	reading_school_lang_1
+msoc_21nrev	social_media_lang_1
+msoc_21orev	writing_school_lang_1
+msoc_22jrev	TV_lang_2
+msoc_22krev	radio_lang_2
+msoc_22lrev	reading_lang_2
+msoc_22mrev	reading_school_lang_2
+msoc_22nrev	social_media_lang_2
+msoc_22orev	writing_school_lang_2
+msoc_23jrev	TV_lang_3
+msoc_23krev	radio_lang_3
+msoc_23lrev	reading_lang_3
+msoc_23mrev	reading_school_lang_3
+msoc_23nrev	social_media_lang_3
+msoc_23orev	writing_school_lang_2
+msoc_24jrev	TV_lang_4
+msoc_24krev	radio_lang_4
+msoc_24lrev	reading_lang_4
+msoc_24mrev	reading_school_lang_4
+msoc_24nrev	social_media_lang_4
+msoc_24orev	writing_school_lang_4
+msoc_lang4rev	Please estimate how many hours per day you spend speaking with the following groups of people in each of the languages you have studied or learned (including your native language). REMEMBER: If you are helping a participant complete this survey, the answers should be about the participant's life, not your own.     Language   Family members   Friends*   Classmates   Others (co-workers**, roommates, etc.)     [msoc_21rev]   {msoc_21prev}   {msoc_21qrev}   {msoc_21rrev}   {msoc_21srev}     [msoc_22rev]   {msoc_22prev}   {msoc_22qrev}   {msoc_22rrev}   {msoc_22srev}     [msoc_23rev]   {msoc_23prev}   {msoc_23qrev}   {msoc_23rrev}   {msoc_23srev}     [msoc_24rev]   {msoc_24prev}   {msoc_24qrev}   {msoc_24rrev}   {msoc_24srev}     *include significant others in this category if you did not include them as family members (e.g. married partners) ** include anyone in the work environment in this category (e.g. if you are a teacher, include students as co-workers)
+msoc_21prev	Family_1
+msoc_21qrev	Friends_1
+msoc_21rrev	Classmates_1
+msoc_21srev	Others_1
+msoc_22prev	Family_2
+msoc_22qrev	Friends_2
+msoc_22rrev	Classmates_2
+msoc_22srev	Others_2
+msoc_23prev	Family_3
+msoc_23qrev	Friends_3
+msoc_23rrev	Classmates_3
+msoc_23srev	Others_3
+msoc_24prev	Family_4
+msoc_24qrev	Friends_4
+msoc_24rrev	Classmates_4
+msoc_24srev	Others_4
+msoc_9rev	How would you describe your race?
+msoc_race	Race
+msoc_10rev	How would you describe your ethnicity or ethnic group?
+msoc_ethni	Ethnicity
+msoc_10rev_2	How would you describe your cultural identity or cultural group?
+msoc_cult	Cultural_identity
+msoc_11rev	With which of the following US Census racial/ethnic categories do you identify with? (select all that apply)
+msoc_cat_other	Other_ethnicity
+msoc_12rev	What sex were you assigned (on your birth certificate)?
+msoc_sex_other	Other_Sex
+msoc_13rev	How would you describe your sexual orientation?
+msoc_13arev	Please tell us how you would describe your sexual orientation
+msoc_14rev	How would you describe your gender identity?
+msoc_14arev	Please tell us how you would describe your gender identity
+msoc_15rev	A person's appearance, style, or dress may affect the way people think of them. On average, how do you think people would describe your appearance, style, or dress?
+msoc_16rev	A person's mannerisms (such as the way they walk or talk) may affect the way people think of them. On average, how do you think people would describe your mannerisms?
+msoc_child	How many children (including yourself) lived in your household for most of the time when you were between 0 and 10 years old?
+msoc_43rev	Approximately how many books were there in the household where you lived in for the longest time during the first 10 years of your life? Do not count magazines, newspapers, or schoolbooks.
+msoc_8rev	Did any of your siblings or children die before they were 18 years of age?
+msoc_8arev	How many of your siblings or children died before the age of 18?
+msoc_contact	Over the last 12 months, how frequently have you been in contact with loved ones, with people who are important to you, and/or people you feel close to? For example, speaking with friends over the phone or internet, visiting friends or family members, going to church or other meetings, having a conversation with other people in your household.
+msoc_household	0 to 10 years of age 11 to 24 years of age 25 to 34 years of age 35 to 45 years of age 46 to 65 years of age 66 until one year ago Over the last 12 months   Including yourself, how many people did you live with for the majority of time during the following periods of your life?   {msoc_household_0}   {msoc_household_1}   {msoc_household_2}   {msoc_household_3}   {msoc_household_4}   {msoc_household_5}   {msoc_household_6}    Who lived with you for the majority of time during the following periods of your life?   {msoc_household_7}   {msoc_household_8}   {msoc_household_9}   {msoc_household_10}   {msoc_household_11}   {msoc_household_12}   {msoc_household_13}
+msoc_household_0	Num_people(0-10 years)
+msoc_household_1	Num_people(11-24 years)
+msoc_household_2	Num_people(25-34 years)
+msoc_household_3	Num_people(35-45 years)
+msoc_household_4	Num_people(46-65 years)
+msoc_household_5	Num_people(66 until one year ago)
+msoc_household_6	Num_people(over the last 12 months)
+msoc_household_7	Who (0-10 years)
+msoc_household_8	Who (11-24 years)
+msoc_household_9	Who (25-34 years)
+msoc_household_10	Who (35-45 years)
+msoc_household_11	Who (46-65 years)
+msoc_household_12	Who (66 until one year ago)
+msoc_household_13	Who (Over the last 12 months)
+msoc_1arev	Enter the total number of school years completed by your MOTHER (do not include unfinished school years or repeated school years)
+msoc_1arevyears	Mother_schooling_years
+msoc_1rev	Mark all of the educational certificates, diplomas, and/or degrees achieved by your MOTHER
+msoc_2rev	What is your MOTHER'S longest held job, including unpaid work and/or work as a homemaker? If she had two or more jobs for the same amount of time, please ONLY indicate the job that required the highest degree of skill or training.
+msoc_2rev_des	Describe in detail the main tasks or activities your MOTHER did for this job
+msoc_3rev	On average, how many hours per week did your mother work outside the home?
+msoc_4rev	Enter the total number of school years completed by your FATHER (do not include unfinished school years or repeated school years)
+msoc_4arevyears	Father_schooling_years
+msoc_4arev	Mark all of the educational certificates, diplomas, and/or degrees achieved by your FATHER:
+msoc_5rev	What is your FATHER'S longest held job, including unpaid work and/or work as a homemaker? If he had two or more jobs for the same amount of time, please ONLY indicate the job that required the highest degree of skill or training.
+msoc_5rev_des	Describe in detail the main tasks or activities your FATHER did for this job
+msoc_6rev	On average, how many hours per week did your father work outside the home?
+msoc_35rev	For the majority of time during the first 10 years of your life, who was the primary economic provider in your household?
+msoc_35arev	Who was the primary economic provider during the first 10 years of your life?
+msoc_36rev	During the first 10 years of your life, did you or one of your brothers or sisters have to stop attending school in order to work and support the economic needs of your household?
+msoc_amenities	0 to 10 years of age   11 to 24 years of age   25 to 34 years of age   35 to 45 years of age   46 to 65 years of age   66 until one year ago   Over the last 12 months     Electricity   {msoc_elec_0}   {msoc_elec_11}   {msoc_elec_25}   {msoc_elec_35}   {msoc_elec_46}   {msoc_elec_66}   {msoc_elec_rec}     Radio   {msoc_rad_0}   {msoc_rad_11}   {msoc_rad_25}   {msoc_rad_35}   {msoc_rad_46}   {msoc_rad_66}   {msoc_rad_rec}     Television   {msoc_tv_0}   {msoc_tv_11}   {msoc_tv_25}   {msoc_tv_35}   {msoc_tv_46}   {msoc_tv_66}   {msoc_tv_rec}     Refrigerator   {msoc_ref_0}   {msoc_ref_11}   {msoc_ref_25}   {msoc_ref_35}   {msoc_ref_46}   {msoc_ref_66}   {msoc_ref_rec}     Washing machine   {msoc_wash_0}   {msoc_wash_11}   {msoc_wash_25}   {msoc_wash_35}   {msoc_wash_46}   {msoc_wash_66}   {msoc_wash_rec}     Landline telephone   {msoc_line_0}   {msoc_line_11}   {msoc_line_25}   {msoc_line_35}   {msoc_line_46}   {msoc_line_66}   {msoc_line_rec}     Water heater or water boiler   {msoc_wat_0}   {msoc_wat_11}   {msoc_wat_25}   {msoc_wat_35}   {msoc_wat_46}   {msoc_wat_66}   {msoc_wat_rec}     Indoor bathroom (a toilet with sewage/drainage system)   {msoc_bath_0}   {msoc_bath_11}   {msoc_bath_25}   {msoc_bath_35}   {msoc_bath_46}   {msoc_bath_66}   {msoc_bath_rec}     Running water inside the home   {msoc_runn_0}   {msoc_runn_11}   {msoc_runn_25}   {msoc_runn_35}   {msoc_runn_46}   {msoc_runn_66}   {msoc_runn_rec}
+msoc_amenities_2	0 to 10 years of age   11 to 24 years of age   25 to 34 years of age   35 to 45 years of age   46 to 65 years of age   66 until one year ago   Over the last 12 months     Automobile for personal or family use (do NOT include work vehicles, such as taxis, that could be used as personal or family vehicles)   {msoc_car_0}   {msoc_car_11}   {msoc_car_25}   {msoc_car_35}   {msoc_car_46}   {msoc_car_66}   {msoc_car_rec}     Computer   {msoc_comp_0}   {msoc_comp_11}   {msoc_comp_25}   {msoc_comp_35}   {msoc_comp_46}   {msoc_comp_66}   {msoc_comp_rec}     Internet service inside your home (do NOT include internet services accessed through your cell phone)   {msoc_inter_0}   {msoc_inter_11}   {msoc_inter_25}   {msoc_inter_35}   {msoc_inter_46}   {msoc_inter_66}   {msoc_inter_rec}     Sound System   {msoc_sound_0}   {msoc_sound_11}   {msoc_sound_25}   {msoc_sound_35}   {msoc_sound_46}   {msoc_sound_66}   {msoc_sound_rec}     Smartphone   {msoc_smrt_0}   {msoc_smrt_11}   {msoc_smrt_25}   {msoc_smrt_35}   {msoc_smrt_46}   {msoc_smrt_66}   {msoc_smrt_rec}     Bedrooms (rooms that were primarily used for sleeping)   {msoc_bedr_0}   {msoc_bedr_11}   {msoc_bedr_25}   {msoc_bedr_35}   {msoc_bedr_46}   {msoc_bedr_66}   {msoc_bedr_rec}
+msoc_elec_0	Elec (0 to 10 years_
+msoc_elec_11	Elec (11 to 24 years)
+msoc_elec_25	Elec (25 to 34 years)
+msoc_elec_35	Elec (35 to 45 years)
+msoc_elec_46	Elec (46 to 65 years)
+msoc_elec_66	Elec (66 until one year ago)
+msoc_elec_rec	Elec(over the last 12 months)
+msoc_rad_0	Radio(0 to 10 years)
+msoc_rad_11	Radio(11 to 24 years)
+msoc_rad_25	Radio(25 to 34 years)
+msoc_rad_35	Radio(35 to 45 years)
+msoc_rad_46	Radio(46 to 65 years)
+msoc_rad_66	Radio (66 until one year ago)
+msoc_rad_rec	Radio(over the last 12 months)
+msoc_tv_0	TV(0 to 10 years)
+msoc_tv_11	TV(11 to 24 years)
+msoc_tv_25	TV(25 to 34 years)
+msoc_tv_35	TV(35 to 45 years)
+msoc_tv_46	TV(46 to 65 years)
+msoc_tv_66	TV(66 until one year ago)
+msoc_tv_rec	TV(over the last 12 months)
+msoc_ref_0	Ref(0 to 10 years)
+msoc_ref_11	Ref(11 to 24 years)
+msoc_ref_25	Ref(25 to 34 years)
+msoc_ref_35	Ref(35 to 45 years)
+msoc_ref_46	Ref(46 to 65 years)
+msoc_ref_66	Ref(66 until one year ago)
+msoc_ref_rec	Ref(over the last 12 months)
+msoc_wash_0	Wash(0 to 10 years)
+msoc_wash_11	Wash(11 to 24 years
+msoc_wash_25	Wash(25 to 34 years)
+msoc_wash_35	Wash (35 to 45 years)
+msoc_wash_46	Wash(46 to 65 years)
+msoc_wash_66	Wash(66 until one year ago)
+msoc_wash_rec	Wash(over the last 12 months)
+msoc_comp_0	Comp(0 to 10 years)
+msoc_comp_11	Comp(11 to 24 years)
+msoc_comp_25	Comp (25 to 34 years)
+msoc_comp_35	Comp(35 to 45 years)
+msoc_comp_46	Comp(46 to 65 years)
+msoc_comp_66	Comp (66 until one year ago)
+msoc_comp_rec	Comp(over the last 12 months)
+msoc_line_0	Line(0 to 10 years)
+msoc_line_11	Line(11 to 24 years)
+msoc_line_25	Line(25 to 34 years)
+msoc_line_35	Line(35 to 45 years)
+msoc_line_46	Line(46 to 65 years)
+msoc_line_66	Line(66 until one year ago)
+msoc_line_rec	Line(over the last 12 months)
+msoc_runn_0	Runn(0 to 10 years)
+msoc_runn_11	Runn(11 to 24 years)
+msoc_runn_25	Runn(25 to 34 years)
+msoc_runn_35	Runn(35 to 45 years)
+msoc_runn_46	Runn(46 to 65 years)
+msoc_runn_66	Runn(66 until one year ago)
+msoc_runn_rec	Runn(over the last 12 months)
+msoc_wat_0	Wat(0 to 10 years of age)
+msoc_wat_11	Wat(11 to 24 years)
+msoc_wat_25	Wat(25 to 34 years)
+msoc_wat_35	Wat(35 to 45 years)
+msoc_wat_46	Wat(46 to 65 years)
+msoc_wat_66	Wat(66 until one year ago)
+msoc_wat_rec	Wat(over the last 12 months)
+msoc_bath_0	Bath(0 to 10 years)
+msoc_bath_11	Bath(11 to 24 years)
+msoc_bath_25	Bath(25 to 34 years)
+msoc_bath_35	Bath(35 to 45 years)
+msoc_bath_46	Bath(46 to 65 years)
+msoc_bath_66	Bath(66 until one year ago)
+msoc_bath_rec	Bath(over the last 12 months)
+msoc_car_0	Automobile(0 to 10 years of age)
+msoc_car_11	Automobile(11 to 24 years of age)
+msoc_car_25	Automobile(25 to 34 years of age)
+msoc_car_35	Automobile(35 to 45 years of age)
+msoc_car_46	Automobile(46 to 65 years of age)
+msoc_car_66	Automobile(66 until one year ago)
+msoc_car_rec	Automobile(over the last 12 months)
+msoc_inter_0	Internet(0 to 10 years)
+msoc_inter_11	Internet(11 to 24 years)
+msoc_inter_25	Internet(25 to 34 years)
+msoc_inter_35	Internet(35 to 45 years)
+msoc_inter_46	Internet(46 to 65 years)
+msoc_inter_66	Internet(66 until one year ago)
+msoc_inter_rec	Internet(over the last 12 months)
+msoc_sound_0	Sound(0 to 10 years)
+msoc_sound_11	Sound(11 to 24 years)
+msoc_sound_25	Sound (25 to 34 years)
+msoc_sound_35	Sound(35 to 45 years)
+msoc_sound_46	Sound(46 to 65 years)
+msoc_sound_66	Sound(66 until one year ago)
+msoc_sound_rec	Sound(over the last last 12 months)
+msoc_smrt_0	Smartphone(0 to 10 years)
+msoc_smrt_11	Smartphone(11 to 24 years)
+msoc_smrt_25	Smartphone(25 to 34 years)
+msoc_smrt_35	Smartphone(35 to 45 years)
+msoc_smrt_46	Smartphone(46 to 65 years)
+msoc_smrt_66	Smartphone(66 until one year ago)
+msoc_smrt_rec	Smartphone(over the last 12 months)
+msoc_bedr_0	Bedroom(0 to 10 years)
+msoc_bedr_11	Bedroom(11 to 24 years)
+msoc_bedr_25	Bedroom(25 to 34 years)
+msoc_bedr_35	Bedroom(35 to 45 years)
+msoc_bedr_46	Bedroom(46 to 65)
+msoc_bedr_66	Bedroom(66 until one year ago)
+msoc_bedr_rec	Bedroom(over the last 12 months)
+msoc_obj_num	Indicate the number (e.g., 1, 2, 3) of each of these items present in your home during each life period. REMEMBER: If you are helping a participant complete this survey, the answers should be about the participant's life, not your own.         0 to 10 years of age   11 to 24 years of age   25 to 34 years of age   35 to 45 years of age   46 to 65 years of age   66 until one year ago   Over the last 12 months     Television   {msoc_ob1_0}   {msoc_ob1_11}   {msoc_ob1_25}   {msoc_ob1_35}   {msoc_ob1_46}   {msoc_ob1_66}   {msoc_ob1_rec}     Indoor bathroom (a toilet with sewage/drainage system)    {msoc_ob2_0}   {msoc_ob2_11}   {msoc_ob2_25}   {msoc_ob2_35}   {msoc_ob2_46}   {msoc_ob2_66}   {msoc_ob2_rec}     Automobile for personal or family use (do NOT include work vehicles, such as taxis, that could be used as personal or family vehicles)   {msoc_ob3_0}   {msoc_ob3_11}   {msoc_ob3_25}   {msoc_ob3_35}   {msoc_ob3_46}   {msoc_ob3_66}   {msoc_ob3_rec}     Computer    {msoc_ob4_0}   {msoc_ob4_11}   {msoc_ob4_25}   {msoc_ob4_35}   {msoc_ob4_46}   {msoc_ob4_66}   {msoc_ob4_rec}     Bedrooms (rooms that were primarily used for sleeping)   {msoc_ob5_0}   {msoc_ob5_11}   {msoc_ob5_25}   {msoc_ob5_35}   {msoc_ob5_46}   {msoc_ob5_66}   {msoc_ob5_rec}
+msoc_ob1_0	TV_no(0 to 10 years)
+msoc_ob1_11	TV_no(11 to 24 years)
+msoc_ob1_25	TV_no(25 to 34 years)
+msoc_ob1_35	TV_no(35 to 45 years)
+msoc_ob1_46	TV_no(46 to 65 years)
+msoc_ob1_66	TV_no(66 until one year ago)
+msoc_ob1_rec	TV_no(over the last 12 months)
+msoc_ob2_0	Indoor_bath_no(0 to 10 years)
+msoc_ob2_11	Indoor_bath_no(11 to 24 years)
+msoc_ob2_25	Indoor_bath_no(25 to 34 years)
+msoc_ob2_35	Indoor_bath_no(35 to 45 years)
+msoc_ob2_46	Indoor_bath_no(46 to 65 years)
+msoc_ob2_66	Indoor_bath_no(66 until one year ago)
+msoc_ob2_rec	Indoor_bath_no(over the last 12 months)
+msoc_ob3_0	Automobile_no(0 to 10 years)
+msoc_ob3_11	Automobile_no(11 to 24years)
+msoc_ob3_25	Automobile_no(25 to 34 years)
+msoc_ob3_35	Automobile_no(35 to 45 years)
+msoc_ob3_46	Automobile_no(46 to 65 years)
+msoc_ob3_66	Automobile_no(66 until one year ago)
+msoc_ob3_rec	Automobile_no(over the last 12 months)
+msoc_ob4_0	Comp_no(0 to 10 years
+msoc_ob4_11	Comp_no(11 to 24 years)
+msoc_ob4_25	Comp_no(25 to 34 years)
+msoc_ob4_35	Comp_no(35 to 45 years)
+msoc_ob4_46	Comp_no(46 to 65 years)
+msoc_ob4_66	Comp_no(66 until one year ago)
+msoc_ob4_rec	Comp_no(over the last 12 months)
+msoc_ob5_0	Bedrooms_no(0 to 10 years)
+msoc_ob5_11	Bedrooms_no(11 to 24 years)
+msoc_ob5_25	Bedrooms_no(25 to 34 years)
+msoc_ob5_35	Bedrooms_no(35 to 45 years)
+msoc_ob5_46	Bedrooms_no(46 to 65 years)
+msoc_ob5_66	Bedrooms_no(66 until one year ago)
+msoc_ob5_rec	Bedrooms_no(over the last 12 months)
+msoc_bas	In your life has it ever been difficult for your family to meet the expenses of your basic needs such as food, clothing and housing?
+msoc_bas_1	In these stages of your life, how difficult has it been for your family to meet the expenses of your basic needs such as food, clothing and housing?
+msoc_bas_0	0 to 10 years of age
+msoc_bas_11	11 to 24 years of age
+msoc_bas_25	25 to 34 years of age
+msoc_bas_35	35 to 45 years of age
+msoc_bas_46	46 to 65 years of age
+msoc_bas_66	66 to one year ago
+msoc_bas_rec	Over the last 12 months
+msoc_fin	On average across your whole life, how did your family's finances usually work out by the end of each month?
+msoc_fin_1	In these stages of your life, how have your family's finances usually worked out by the end of each month?
+msoc_fin_0	0 to 10 years of age
+msoc_fin_11	11 to 24 years of age
+msoc_fin_25	25 to 34 years of age
+msoc_fin_35	35 to 45 years of age
+msoc_fin_46	46 to 65 years of age
+msoc_fin_66	66 to one year ago
+msoc_fin_rec	Over the last 12 months
+msoc_care	In your life, has it ever been difficult for your family to pay for health care?
+msoc_care_1	In these stages of your life, how difficult has it been for your family to pay for health care?
+msoc_care_0	0 to 10 years of age
+msoc_care_11	11 to 24 years of age
+msoc_care_25	25 to 34 years of age
+msoc_care_35	35 to 45 years of age
+msoc_care_46	46 to 65 years of age
+msoc_care_66	66 to one year ago
+msoc_care_rec	Over the last 12 months
+msoc_eat	Throughout your life, have you ever eaten less than you thought you should because you/your family didn't have enough money for food?
+msoc_eat_1	Did this happen during any of these stages of your life?
+msoc_eat_0	0 to 10 years of age
+msoc_eat_11	11 to 24 years of age
+msoc_eat_25	25 to 34 years of age
+msoc_eat_35	35 to 45 years of age
+msoc_eat_46	46 to 65 years of age
+msoc_eat_66	66 to one year ago
+msoc_eat_rec	Over the last 12 months
+msoc_bal	Throughout your life, have you ever not been able to eat a balanced or healthy meal due to lack of money or other resources?
+msoc_bal_1	Did this happen during any of these stages of your life?
+msoc_bal_0	0 to 10 years of age
+msoc_bal_11	11 to 24 years of age
+msoc_bal_25	25 to 34 years of age
+msoc_bal_35	35 to 45 years of age
+msoc_bal_46	46 to 65 years of age
+msoc_bal_66	66 to one year ago
+msoc_bal_rec	Over the last 12 months
+msoc_ladder_a	0 to 10 years of age   11 to 24 years of age   25 to 34 years of age   35 to 45 years of age   46 to 65 years of age   66 until one year ago   Over the last 12 months     {msoc_ladder}   {msoc_ladder_0}   {msoc_ladder_11}   {msoc_ladder_25}   {msoc_ladder_35}   {msoc_ladder_46}   {msoc_ladder_66}   {msoc_ladder_rec}
+msoc_ladder	
+msoc_ladder_0	0 to 10 years of age
+msoc_ladder_11	11 to 24 years of age
+msoc_ladder_25	25 to 34 years of age
+msoc_ladder_35	35 to 45 years of age
+msoc_ladder_46	46 to 65 years of age
+msoc_ladder_66	66 to one year ago
+msoc_ladder_rec	Over the last 12 months
+msoc_74rev	Are you currently working? Please consider paid and/or unpaid work.
+msoc_74arev	What type of work do you? Please describe your work briefly
+msoc_75rev	What are your current sources of income? (select all that apply)
+msoc_75reva	Other_sources_of_income
+msoc_76rev	Counting the income of all the members of your household, was you household income before taxes for the previous year less than $30,000 or $30,000 or more? This includes all money received from all sources.
+msoc_76arev	Which of the following brackets includes your total household income?
+msoc_76brev	Which of the following brackets includes your total household income?
+msoc_77rev	Approximately what proportion of your household income is spent on rent/mortgage
+msoc_79rev	What is the total family debt within your household from such things as credit card charges, medical or legal bills, and loans from banks or relatives? Do not include mortgage or car loans.
+msoc_80rev	If you lost all your current sources of household income (paycheck, public assistance, or other forms of income), how long could you continue to live at your current address and standard of living?
+msoc_81rev	Which of the following describes your current living situation?
+msoc_81arev	How long have you been homeless?
+msoc_82rev	In the past 12 months, have you had concerns about the conditions or quality of your home? For example, water leaks, electrical problems, problems with a water heater, etc.
+msoc_82arev	Please tell us what types of concerns you've had about the conditions or quality of your home? (select all that apply)
+msoc_82brev	other_concerns
+msoc_83rev	In the past 12 months, have you been evicted or forcibly removed from your home for any reason?
+msoc_84rev	What kinds of health insurance or health care coverage do you have? (select all that apply)
+msoc_insur_type	Which of the following types of medical insurance do you have? (select all that apply)
+msoc_87rev	In the past 12 months, how often have you had a problem understanding what is being told to you about your health by medical professionals in a clinic or hospital?
+msoc_91rev	In the past 12 months, have you needed to see a doctor, but weren't able to for any reason?
+msoc_doc_why	Why couldn't you see a doctor when you needed to? (select all that apply)
+msoc_doc_why_spec	Other_doc_why
+msoc_25rev	How often did a parent or other adult in the household make you feel that you were loved, supported, and cared for?
+msoc_27rev	How often did a parent or other adult in the household express physical affection for you, such as hugging, or other physical gestures of warmth and affection?
+msoc_30rev	How often would you say there were fights, arguments, or yelling between your parents?
+msoc_31rev	How often would you say there were fights, arguments, or yelling between one of your parents and you?
+msoc_31rev_2	How often would you say there were fights, arguments, or yelling between one of your parents and one of your siblings?
+msoc_31rev_3	How often would you say there were fights, arguments, or yelling between your siblings and you?
+msoc_32rev	Would you say that the home you grew up in was well organized and managed?
+msoc_33rev	As a child, did you live with someone who was a problem drinker or alcoholic, or used illegal drugs?
+msoc_34rev	Would you say that you were neglected during your childhood, that you were left alone to fend for yourself?
+msoc_hit	Has someone (including family members or friends) ever hit, pushed, or pulled your hair?
+msoc_hit_period	In what period or periods of your life did this occur?
+msoc_hit_relat	What relationship did you have with the person or persons who treated you this way?
+msoc_hit_relat_s	If other, please specify
+msoc_att	Has anyone (including family members or friends) ever attacked you using a gun, knife, or other weapon?
+msoc_att_period	In what period or periods of your life did this occur?
+msoc_att_relat	What relationship did you have with the person or persons who treated you this way?
+msoc_att_relat_s	If other, please specify
+msoc_humi	Has someone (including family members or friends) ever humiliated or made fun of you?
+msoc_humi_period	In what period or periods of your life did this occur?
+msoc_humi_relat	What relationship did you have with the person or persons who treated you this way?
+msoc_humi_relat_s	If other, please specify
+msoc_forb	Has someone (including family members or friends) ever forbid you from leaving your home or having visitors?
+msoc_forb_period	In what period or periods of your life did this occur?
+msoc_forb_relat	What relationship did you have with the person or persons who treated you this way?
+msoc_forb_relat_s	If other, please specify
+msoc_prov	Has someone (including family members or friends) ever stopped providing you with basic needs such as clothing, shoes, or medications that you need despite having the money to supply you with these needs?
+msoc_prov_period	In what period or periods of your life did this occur?
+msoc_prov_relat	What relationship did you have with the person or persons who treated you this way?
+msoc_prov_relat_s	If other, please specify
+msoc_mon	Has anyone (including family members or friends) ever handled your money without your consent?
+msoc_mon_period	In what period or periods of your life did this occur?
+msoc_mon_relat	What relationship did you have with the person or persons who treated you this way?
+msoc_mon_relat_s	If other, please specify
+msoc_prop	Has anyone (including family members or friends) ever pressured you to stop owning your home or other property?
+msoc_prop_period	In what period or periods of your life did this occur?
+msoc_prop_relat	What relationship did you have with the person or persons who treated you this way?
+msoc_prop_relat_s	If other, please specify
+msoc_deman	Has someone (including family members or friends) ever demanded sex, even if you didn't want to?
+msoc_deman_period	In what period or periods of your life did this occur?
+msoc_deman_relat	What relationship did you have with the person or persons who treated you this way?
+msoc_deman_relat_s	If other, please specify
+msoc_45rev_2	Have you suffered an act of political violence or repression?
+msoc_45arev_2	When did this happen to you?
+msoc_45rev_3	Has anyone ever assaulted you to steal or try to steal your personal belongings?
+msoc_45arev_3	When did this happen to you?
+msoc_45rev_4	Has anyone ever tried or managed to break into your home to steal from you?
+msoc_45arev_4	When did this happen to you?
+msoc_45rev_5	Have you ever experienced a "man-made" disaster such as a train crash, building collapse, bank robbery, fire, etc., where you felt you or your loved ones were in danger of death or injury?
+msoc_45arev_5	When did this happen to you?
+msoc_45rev_6	Have you ever been in any other situation in which you felt you might be killed or be seriously injured?
+msoc_45arev_6	When did this happen to you?
+msoc_45rev_7	Outside of work or professional situations, have you ever seen someone seriously injured or killed?
+msoc_45arev_7	When did this happen to you?
+msoc_45rev_8	Outside of work or professional situations, have you ever seen dead bodies (other than at a funeral) or had to handle dead bodies for any reason?
+msoc_45arev_8	When did this happen to you?
+msoc_52rev	Have there been times in your daily life when you were treated with less courtesy or respect than other people?
+msoc_52revb	Have there been times in your daily life when you were treated with more courtesy or respect than other people?
+msoc_52arev_2	When did this happen to you?
+msoc_52a_1arev	From 0 to 10 years of age, how frequently were you treated this way?
+msoc_52a_1brev	From 0 to 10 years of age, what do you think is the main reason for these experiences?
+msoc_52a_1brev_s	If other, please specify
+msoc_52a_2arev	From 11 to 24 years of age, how frequently were you treated this way?
+msoc_52a_2brev	From 11 to 24 years of age, what do you think is the main reason for these experiences?
+msoc_52a_2brev_s	If other, please specify
+msoc_52a_3arev	From 25 to 34 years of age, how frequently were you treated this way?
+msoc_52a_3brev	From 25 to 34 years of age, what do you think is the main reason for these experiences?
+msoc_52a_3brev_s	If other, please specify
+msoc_52a_4arev	From 35 to 45 years of age, how frequently were you treated this way?
+msoc_52a_4brev	From 35 to 45 years of age, what do you think is the main reason for these experiences?
+msoc_52a_4brev_s	If other, please specify
+msoc_52a_5arev	From 46 to 65 years of age, how frequently were you treated this way?
+msoc_52a_5brev	From 46 to 65 years of age, what do you think is the main reason for these experiences?
+msoc_52a_5brev_s	If other, please specify
+msoc_52a_6arev	From 66 to one year ago, how frequently were you treated this way?
+msoc_52a_6brev	From 66 to one year ago, what do you think is the main reason for these experiences?
+msoc_52a_6brev_s	If other, please specify
+msoc_52a_7arev	Within the last 12 months, how frequently were you treated this way?
+msoc_52a_7brev	Within the last 12 months, what do you think is the main reason for these experiences?
+msoc_52a_7brev_s	If other, please specify
+msoc_53rev	Have there been times in your daily life when you received worse service than other people in restaurants, markets, stores, or other similar establishments?
+msoc_53revb	Have there been times in your daily life when you received better service than other people in restaurants, markets, stores, or other similar establishments?
+msoc_53arev	When did this happen to you?
+msoc_53a_1arev	From 0 to 10 years of age, how frequently were you treated this way?
+msoc_53a_1brev	From 0 to 10 years of age, what do you think is the main reason for these experiences?
+msoc_53a_1brev_s	If other, please specify
+msoc_53a_2arev	From 11 to 24 years of age, how frequently were you treated this way?
+msoc_53a_2brev	From 11 to 24 years of age, what do you think is the main reason for these experiences?
+msoc_53a_2brev_s	If other, please specify
+msoc_53a_3arev	From 25 to 34 years of age, how frequently were you treated this way?
+msoc_53a_3brev	From 25 to 34 years of age, what do you think is the main reason for these experiences?
+msoc_53a_3brev_s	If other, please specify
+msoc_53a_4arev	From 35 to 45 years of age, how frequently were you treated this way?
+msoc_53a_4brev	From 35 to 45 years of age, what do you think is the main reason for these experiences?
+msoc_53a_4brev_s	If other, please specify
+msoc_53a_5arev	From 46 to 65 years of age, how frequently were you treated this way?
+msoc_53a_5brev	From 46 to 65 years of age, what do you think is the main reason for these experiences?
+msoc_53a_5brev_s	If other, please specify
+msoc_53a_6arev	From 66 to one year ago, how frequently were you treated this way?
+msoc_53a_6brev	From 66 to one year ago, what do you think is the main reason for these experiences?
+msoc_53a_6brev_s	If other, please specify
+msoc_53a_7arev	Within the last 12 months, how frequently were you treated this way?
+msoc_53a_7brev	Within the last 12 months, what do you think is the main reason for these experiences?
+msoc_53a_7brev_s	If other, please specify
+msoc_54rev	Have there been times in your everyday life when other people have acted as if they think you are less intelligent than other people?
+msoc_54revb	Have there been times in your daily life when other people have acted as if they think you are more intelligent than other people?
+msoc_54arev	When did this happen to you?
+msoc_54a_1arev	From 0 to 10 years of age, how frequently were you treated this way?
+msoc_54a_1brev	From 0 to 10 years of age, what do you think is the main reason for these experiences?
+msoc_54a_1brev_s	If other, please specify
+msoc_54a_2arev	From 11 to 24 years of age, how frequently were you treated this way?
+msoc_54a_2brev	From 11 to 24 years of age, what do you think is the main reason for these experiences?
+msoc_54a_2brev_s	If other, please specify
+msoc_54a_3arev	From 25 to 34 years of age, how frequently were you treated this way?
+msoc_54a_3brev	From 25 to 34 years of age, what do you think is the main reason for these experiences?
+msoc_54a_3brev_s	If other, please specify
+msoc_54a_4arev	From 35 to 45 years of age, how frequently were you treated this way?
+msoc_54a_4brev	From 35 to 45 years of age, what do you think is the main reason for these experiences?
+msoc_54a_4brev_s	If other, please specify
+msoc_54a_5arev	From 46 to 65 years of age, how frequently were you treated this way?
+msoc_54a_5brev	From 46 to 65 years of age, what do you think is the main reason for these experiences?
+msoc_54a_5brev_s	If other, please specify
+msoc_54a_6arev	From 66 to one year ago, how frequently were you treated this way?
+msoc_54a_6brev	From 66 to one year ago, what do you think is the main reason for these experiences?
+msoc_54a_6brev_s	If other, please specify
+msoc_54a_7arev	Within the last 12 months, how frequently were you treated this way?
+msoc_54a_7brev	Within the last 12 months, what do you think is the main reason for these experiences?
+msoc_54a_7brev_s	If other, please specify
+msoc_55rev	Have there been times in your daily life when other people acted as if they were afraid of you?
+msoc_55arev	When did this happen to you?
+msoc_55a_1arev	From 0 to 10 years of age, how frequently were you treated this way?
+msoc_55a_1brev	From 0 to 10 years of age, what do you think is the main reason for these experiences?
+msoc_55a_1brev_s	If other, please specify
+msoc_55a_2arev	From 11 to 24 years of age, how frequently were you treated this way?
+msoc_55a_2brev	From 11 to 24 years of age, what do you think is the main reason for these experiences?
+msoc_55a_2brev_s	If other, please specify
+msoc_55a_3arev	From 25 to 34 years of age, how frequently were you treated this way?
+msoc_55a_3brev	From 25 to 34 years of age, what do you think is the main reason for these experiences?
+msoc_55a_3brev_s	If other, please specify
+msoc_55a_4arev	From 35 to 45 years of age, how frequently were you treated this way?
+msoc_55a_4brev	From 35 to 45 years of age, what do you think is the main reason for these experiences?
+msoc_55a_4brev_s	If other, please specify
+msoc_55a_5arev	From 46 to 65 years of age, how frequently were you treated this way?
+msoc_55a_5brev	From 46 to 65 years of age, what do you think is the main reason for these experiences?
+msoc_55a_5brev_s	If other, please specify
+msoc_55a_6arev	From 66 to one year ago, how frequently were you treated this way?
+msoc_55a_6brev	From 66 to one year ago, what do you think is the main reason for these experiences?
+msoc_55a_6brev_s	If other, please specify
+msoc_55a_7arev	Within the last 12 months, how frequently were you treated this way?
+msoc_55a_7brev	Within the last 12 months, what do you think is the main reason for these experiences?
+msoc_55a_7brev_s	If other, please specify
+msoc_56rev	Have there been times in your daily life when you have felt threatened or harassed by other people?
+msoc_56arev	When did this happen to you?
+msoc_56a_1arev	From 0 to 10 years of age, how frequently were you treated this way?
+msoc_56a_1brev	From 0 to 10 years of age, what do you think is the main reason for these experiences?
+msoc_56a_1brev_s	If other, please specify
+msoc_56a_2arev	From 11 to 24 years of age, how frequently were you treated this way?
+msoc_56a_2brev	From 11 to 24 years of age, what do you think is the main reason for these experiences?
+msoc_56a_2brev_s	If other, please specify
+msoc_56a_3arev	From 25 to 34 years of age, how frequently were you treated this way?
+msoc_56a_3brev	From 25 to 34 years of age, what do you think is the main reason for these experiences?
+msoc_56a_3brev_s	If other, please specify
+msoc_56a_4arev	From 35 to 45 years of age, how frequently were you treated this way?
+msoc_56a_4brev	From 35 to 45 years of age, what do you think is the main reason for these experiences?
+msoc_56a_4brev_s	If other, please specify
+msoc_56a_5arev	From 46 to 65 years of age, how frequently were you treated this way?
+msoc_56a_5brev	From 46 to 65 years of age, what do you think is the main reason for these experiences?
+msoc_56a_5brev_s	If other, please specify
+msoc_56a_6arev	From 66 to one year ago, how frequently were you treated this way?
+msoc_56a_6brev	From 66 to one year ago, what do you think is the main reason for these experiences?
+msoc_56a_6brev_s	If other, please specify
+msoc_56a_7arev	Within the last 12 months, how frequently were you treated this way?
+msoc_56a_7brev	Within the last 12 months, what do you think is the main reason for these experiences?
+msoc_56a_7brev_s	If other, please specify
+msoc_102	Have you felt this kind of stress lately?
+msoc_103	Have you felt this type of stress for several days, weeks, or months during other periods of your life?
+msoc_104	From 0 to 10 years of age, approximately what was your level of stress?
+msoc_105	From 11 to 24 years of age, approximately what was your level of stress?
+msoc_106	From 25 to 34 years of age, approximately what was your level of stress?
+msoc_107	From 35 to 45 years of age, approximately what was your level of stress?
+msoc_108	From 46 to 65 years of age, approximately what was your level of stress?
+msoc_109	From 66 to one year ago, approximately what was your level of stress?
+msoc_contrib	Who contributed to answering these questions?
+msoc_confid	The following question is for the study partner. On average, how confident are you that your answers to the questions in this survey accurately reflect the participant's experience?
+msoc_contrib_ppt	How much did you (the participant) contribute to completing this survey?
+msoc_time_endrev	Please record the time that the survey was completed

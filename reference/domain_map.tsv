@@ -1,0 +1,83 @@
+Domain	Item	Column Name
+Parental background	Schooling by mother	msoc_1arevyears
+Parental background	Maternal degrees, diplomas, certificates	msoc_1rev
+Parental background	Maternal hours of work outside the home	msoc_3rev
+Parental background	Schooling by father	msoc_4arevyears
+Parental background	Paternal degrees, diplomas, certificates	msoc_4arev
+Parental background	Paternal hours of work outside the home	msoc_6rev
+Personal background	Country of birth: USA vs. LMIC vs. HIC	msoc_7rev
+Personal background	If born abroad: age at immigration	msoc_7erev
+Personal background	Language during childhood	msoc_44rev
+Personal background	Race, free text	msoc_9rev
+Personal background	Ethnicity, free text	msoc_10rev
+Personal background	Culture, free text	msoc_10rev_2
+Personal background	US Census categories	msoc_11rev
+Personal background	Sex at birth	msoc_12rev
+Personal background	Sexual orientation	msoc_13rev
+Personal background	Gender	msoc_14rev
+Literacy/Educational attainment	Books in the home during childhood	msoc_43rev
+Literacy/Educational attainment	No schooling	msoc_38crev
+Literacy/Educational attainment	Private elementary school vs. public elementary school vs. both	msoc_37rev
+Literacy/Educational attainment	Elementary school setting - urban vs. rural vs. suburban	msoc_39rev
+Literacy/Educational attainment	Total # of school years	msoc_38crev
+Literacy/Educational attainment	Repeat school year	msoc_38rev
+Literacy/Educational attainment	Degrees, diplomas, certificates attained	msoc_ppted
+Work experience	Work during childhood	msoc_work18
+Work experience	Age when first worked	msoc_work_age
+Work experience	Reason/s for work during childhood	msoc_work_age_2
+Work experience	Number of jobs	msoc_num_job
+Work experience	Nightshift work	msoc_20rev
+Work experience	Currently working	msoc_74rev
+Stress/adversity/living conditions	Lack of paternal figure	msoc_4arevyears
+Stress/adversity/living conditions	Lack of maternal figure	msoc_1arevyears
+Stress/adversity/living conditions	Number of children in the household during childhood	msoc_child
+Stress/adversity/living conditions	Children or sibling deaths during childhood	msoc_8rev
+Stress/adversity/living conditions	Number of of people in the household – life course view	msoc_household_0, msoc_household_1, msoc_household_2, msoc_household_3, msoc_household_4, msoc_household_5, msoc_household_6
+Stress/adversity/living conditions	Household environment during childhood	msoc_32rev
+Stress/adversity/living conditions	Emotional, psychological, and/or physical abuse – life course view	msoc_hit, msoc_hit_period, msoc_hit_relat, msoc_att, msoc_att_period, msoc_att_relat, msoc_humi, msoc_humi_period, msoc_humi_relat, msoc_forb, msoc_forb_period, msoc_forb_relat, msoc_prov, msoc_prov_period, msoc_prov_relat, msoc_mon, msoc_mon_period, msoc_mon_relat, msoc_prop, msoc_prop_period, msoc_prop_relat, msoc_deman, msoc_deman_period, msoc_deman_relat
+Stress/adversity/living conditions	Political violence or repression - life course view	msoc_45rev_2, msoc_45arev_2
+Stress/adversity/living conditions	Assaults - life course view	msoc_45rev_3, msoc_45arev_3
+Stress/adversity/living conditions	House burglary - life course view	msoc_45rev_4, msoc_45arev_4
+Stress/adversity/living conditions	Man-made disasters - life course view	msoc_45rev_5, msoc_45arev_5
+Stress/adversity/living conditions	Risk of death – life course view	msoc_45rev_6, msoc_45arev_6
+Stress/adversity/living conditions	Seen someone seriously injured or killed – life course view	msoc_45rev_7, msoc_45arev_7
+Stress/adversity/living conditions	Dead bodies – life course view	msoc_45rev_8, msoc_45arev_8
+Stress/adversity/living conditions	Stress during different periods of life – life course view	msoc_104, msoc_105, msoc_106, msoc_107, msoc_108, msoc_109
+Stress/adversity/living conditions	Recent stress	msoc_102
+Stress/adversity/living conditions	Recent evictions or forced removals from home	msoc_83rev
+Stress/adversity/living conditions	Recent isolation	msoc_contact
+Stress/adversity/living conditions	Current living situation	msoc_81rev
+Stress/adversity/living conditions	Current concerns about the quality of home	msoc_82rev
+Stress/adversity/living conditions	Immigration status concerns	msoc_7grev
+Economic health	Primary economic provider during childhood	msoc_35rev
+Economic health	Economic hardship during childhood	msoc_36rev
+Economic health	Electricity in the home – life course view	msoc_elec_0, msoc_elec_11, msoc_elec_25, msoc_elec_35, msoc_elec_46, msoc_elec_66, msoc_elec_rec
+Economic health	TV in the home – life course view	msoc_tv_0, msoc_tv_11, msoc_tv_25, msoc_tv_35, msoc_tv_46, msoc_tv_66, msoc_tv_rec
+Economic health	Radio in the home – life course view	msoc_rad_0, msoc_rad_11, msoc_rad_25, msoc_rad_35, msoc_rad_46, msoc_rad_66, msoc_rad_rec
+Economic health	Refrigerator in the home – life course view	msoc_ref_0, msoc_ref_11, msoc_ref_25, msoc_ref_35, msoc_ref_46, msoc_ref_66, msoc_ref_rec
+Economic health	Indoor bathroom in the home – life course view	msoc_bath_0, msoc_bath_11, msoc_bath_25, msoc_bath_35, msoc_bath_46, msoc_bath_66, msoc_bath_rec
+Economic health	Running water in the home – life course view	msoc_runn_0, msoc_runn_11, msoc_runn_25, msoc_runn_35, msoc_runn_46, msoc_runn_66, msoc_runn_rec
+Economic health	Automobile in the home – life course view	msoc_car_0, msoc_car_11, msoc_car_25, msoc_car_35, msoc_car_46, msoc_car_66, msoc_car_rec
+Economic health	Number of bedrooms in the home – life course view	msoc_bedr_0, msoc_bedr_11, msoc_bedr_25, msoc_bedr_35, msoc_bedr_46, msoc_bedr_66, msoc_bedr_rec
+Economic health	Difficulty meeting basic expenses – life course view	msoc_bas_0, msoc_bas_11, msoc_bas_25, msoc_bas_35, msoc_bas_46, msoc_bas_66, msoc_bas_rec
+Economic health	Finances at end of month – life course view	msoc_fin_0, msoc_fin_11, msoc_fin_25, msoc_fin_35, msoc_fin_46, msoc_fin_66, msoc_fin_rec
+Economic health	Perceived socioeconomic status - life course view	msoc_ladder_0, msoc_ladder_11, msoc_ladder_25, msoc_ladder_35, msoc_ladder_46, msoc_ladder_66, msoc_ladder_rec
+Economic health	Current sources of income	msoc_75rev
+Economic health	Current household income	msoc_76rev, msoc_76arev, msoc_76brev
+Economic health	Current family debt	msoc_79rev
+Economic health	Current proportion of income spent on rent/mortgage	msoc_77rev
+Economic health	Current strength of savings	msoc_80rev
+Discrimination	Treated with less courtesy or respect - life course view	msoc_52rev, msoc_52arev_2, msoc_52a_1arev, msoc_52a_2arev, msoc_52a_3arev, msoc_52a_4arev, msoc_52a_5arev, msoc_52a_6arev, msoc_52a_7arev
+Discrimination	Worst service than others - life course view	msoc_53rev, msoc_53arev, msoc_53a_1arev, msoc_53a_2arev, msoc_53a_3arev, msoc_53a_4arev, msoc_53a_5arev, msoc_53a_6arev, msoc_53a_7arev
+Discrimination	Treated as less intelligent than others - life course view	msoc_54rev, msoc_54arev, msoc_54a_1arev, msoc_54a_2arev, msoc_54a_3arev, msoc_54a_4arev, msoc_54a_5arev, msoc_54a_6arev, msoc_54a_7arev
+Discrimination	Treated as afraid of you - life course view	msoc_55rev, msoc_55arev, msoc_55a_1arev, msoc_55a_2arev, msoc_55a_3arev, msoc_55a_4arev, msoc_55a_5arev, msoc_55a_6arev, msoc_55a_7arev
+Discrimination	Threatened or harassed - life course view	msoc_56rev, msoc_56arev, msoc_56a_1arev, msoc_56a_2arev, msoc_56a_3arev, msoc_56a_4arev, msoc_56a_5arev, msoc_56a_6arev, msoc_56a_7arev
+Privilege	More courtesy or respect than others - life course view	msoc_52revb
+Privilege	Better service than others - life course view	msoc_53revb
+Privilege	Treated as more intelligent than others - life course view	msoc_54revb
+Healthcare	Difficulties paying for a healthcare – life course view	msoc_care_0, msoc_care_11, msoc_care_25, msoc_care_35, msoc_care_46, msoc_care_66, msoc_care_rec
+Healthcare	Current types of health insurance or health coverage	msoc_84rev
+Healthcare	Recent difficulty understanding health providers	msoc_87rev
+Healthcare	Recent difficulty accessing health provider	msoc_91rev
+Nutrition	Eating less than you thought – life course view	msoc_eat_0, msoc_eat_11, msoc_eat_25, msoc_eat_35, msoc_eat_46, msoc_eat_66, msoc_eat_rec
+Nutrition	Eating unbalanced meal - life course view	msoc_bal_0, msoc_bal_11, msoc_bal_25, msoc_bal_35, msoc_bal_46, msoc_bal_66, msoc_bal_rec

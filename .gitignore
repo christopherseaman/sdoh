@@ -3,3 +3,4 @@ dot.env
 __pycache__/
 data/
 *.csv
+.DS_Store
