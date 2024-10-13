@@ -1,7 +1,7 @@
 #!/bin/env python3
 
 from dotenv import load_dotenv
-from notebook_check import in_notebook
+from utils.notebook_check import in_notebook
 import os
 from redcap import Project
 import pandas as pd
