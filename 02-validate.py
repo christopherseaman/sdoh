@@ -48,6 +48,13 @@ def check_categories(df):
 inconsistent_data_types = check_data_types(df)
 inconsistent_categories = check_categories(df)
 
+# Save all columns data types and categories to a file
+with open('reference/data_types.tsv', 'w') as f:
+    f.write("Column\tData Type\n")
+    for column in df.columns:
+        f.write(f"{column}\t{df[column].dtype}\n")
+    print("Data types saved to reference/data_types.tsv")
+
 # Print results
 print("Columns with inconsistent data types across surveys:")
 for column in inconsistent_data_types:
