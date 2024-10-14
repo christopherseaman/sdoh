@@ -24,7 +24,7 @@ data = {}
 # Check is csv's exist, if not then download from REDCap
 for key in token:
     if os.path.exists(f"{DATA}/raw/{key}.tsv"):
-        data[key] = pd.read_csv(f"{DATA}/{key}.tsv", sep='\t')
+        data[key] = pd.read_csv(f"{DATA}/raw/{key}.tsv", sep='\t')
         print(f"Loaded: {key}.tsv")
     else:
         try:
@@ -54,6 +54,8 @@ q_c['english'] = 'mac_sdoh_questionnaire_english_complete'
 q_c['spanish'] = 'mac_sdoh_questionnaire_spanish_complete'
 
 for key in data:
+    # Replace multiple underscores with single underscore
+    data[key].columns = data[key].columns.str.replace(r'__+', '_', regex=True)
     data[key].rename(columns={'msoc_bas_45': 'msoc_bas_46'}, inplace=True)
     data[key].rename(columns={q_c[key]: 'questionnaire_complete'}, inplace=True)
     # Combine Chinese surveys
