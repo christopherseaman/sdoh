@@ -11,6 +11,7 @@ JUPYTER = in_notebook()
 DEBUG = False
 DATA = 'data'
 os.makedirs(DATA, exist_ok=True)
+os.makedirs(f'{DATA}/raw', exist_ok=True)
 
 # Load environment variables
 load_dotenv('dot.env')
@@ -22,7 +23,7 @@ data = {}
 
 # Check is csv's exist, if not then download from REDCap
 for key in token:
-    if os.path.exists(f"{DATA}/{key}.tsv"):
+    if os.path.exists(f"{DATA}/raw/{key}.tsv"):
         data[key] = pd.read_csv(f"{DATA}/{key}.tsv", sep='\t')
         print(f"Loaded: {key}.tsv")
     else:
@@ -30,7 +31,7 @@ for key in token:
             api_key = token[key]
             project = Project(api_url, api_key)
             data[key] = pd.DataFrame(project.export_records())
-            data[key].to_csv(f"{DATA}/{key}.tsv", index=False, sep='\t')
+            data[key].to_csv(f"{DATA}/raw/{key}.tsv", index=False, sep='\t')
             print(f"Saved : {key}.tsv")
         except Exception as e:
             print(f"Error : {e}")
@@ -75,6 +76,13 @@ def check_columns(data):
 
 if check_columns(data):
     print("All dataframes have the same columns")
+    # Combine into single dataframe and save
+    combined_df = pd.concat(data.values(), ignore_index=True)
+    try :
+        combined_df.to_csv(f"{DATA}/combined.tsv", index=False, sep='\t')
+        print(f"Saved : combined.tsv")
+    except Exception as e:
+        print(f"Error : {e}")
 else:
     # Find the columns that are different
     columns = None
