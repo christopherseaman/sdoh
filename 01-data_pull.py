@@ -55,7 +55,11 @@ q_c['spanish'] = 'mac_sdoh_questionnaire_spanish_complete'
 for key in data:
     data[key].rename(columns={'msoc_bas_45': 'msoc_bas_46'}, inplace=True)
     data[key].rename(columns={q_c[key]: 'questionnaire_complete'}, inplace=True)
-    data[key]['survey'] = key
+    # Combine Chinese surveys
+    if key in ['chinese_traditional', 'chinese_simplified']:
+        data[key]['survey'] = 'chinese'
+    else:
+        data[key]['survey'] = key
 
 
 # Check if dataframes have the same columns
