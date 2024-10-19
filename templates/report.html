@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Domain Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .domain { margin-bottom: 40px; }
+        .item { margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; vertical-align: top; }
+        th { background-color: #f2f2f2; }
+        .distribution { margin-top: 10px; }
+        .cohort-tabs { position: sticky; top: 0; background-color: white; z-index: 1000; display: flex; margin-bottom: 10px; }
+        .cohort-tab { padding: 10px; cursor: pointer; border: 1px solid #ccc; background-color: #f1f1f1; }
+        .cohort-tab.active { background-color: #ccc; }
+        .cohort-content { display: none; }
+        .cohort-content.active { display: block; }
+    </style>
+    <script>
+        function showCohort(cohortName, element) {
+            // Hide all cohort contents
+            var contents = document.getElementsByClassName('cohort-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active');
+            }
+            
+            // Deactivate all tabs
+            var tabs = document.getElementsByClassName('cohort-tab');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+            
+            // Show selected cohort content and activate tab
+            var cohortContents = document.getElementsByClassName(cohortName);
+            for (var i = 0; i < cohortContents.length; i++) {
+                cohortContents[i].classList.add('active');
+            }
+            element.classList.add('active');
+        }
+
+        // Function to show all domains on load
+        window.onload = function() {
+            showCohort('all-cohorts', document.querySelector('.cohort-tab'));
+        }
+    </script>
+</head>
+<body>
+    <h1>Domain Report</h1>
+    <div class="cohort-tabs">
+        <div class="cohort-tab active" onclick="showCohort('all-cohorts', this)">All Cohorts</div>
+        <div class="cohort-tab" onclick="showCohort('english-cohort', this)">English Cohort</div>
+        <div class="cohort-tab" onclick="showCohort('spanish-cohort', this)">Spanish Cohort</div>
+        <div class="cohort-tab" onclick="showCohort('chinese-cohort', this)">Chinese Cohort</div>
+        <div class="cohort-tab" onclick="showCohort('pairwise-comparison', this)">Pairwise Comparison</div>
+    </div>
+    {% for entry in summary %}
+    <div class="domain">
+        <h2>{{ entry.domain }}</h2>
+        <div class="item">
+            <h3>{{ entry.item }}</h3>
+            <div class="all-cohorts cohort-content">
+                <h4>All Cohorts Combined</h4>
+                {% with distributions=entry.distributions_all %}
+                    {% include 'templates/cohort_table.html' %}
+                {% endwith %}
+            </div>
+            <div class="english-cohort cohort-content">
+                <h4>English Cohort</h4>
+                {% with distributions=entry.distributions_english %}
+                    {% include 'templates/cohort_table.html' %}
+                {% endwith %}
+            </div>
+            <div class="spanish-cohort cohort-content">
+                <h4>Spanish Cohort</h4>
+                {% with distributions=entry.distributions_spanish %}
+                    {% include 'templates/cohort_table.html' %}
+                {% endwith %}
+            </div>
+            <div class="chinese-cohort cohort-content">
+                <h4>Chinese Cohort</h4>
+                {% with distributions=entry.distributions_chinese %}
+                    {% include 'templates/cohort_table.html' %}
+                {% endwith %}
+            </div>
+            <div class="pairwise-comparison cohort-content">
+                <h4>Pairwise Comparisons</h4>
+                <table>
+                    <tr>
+                        <th>Column</th>
+                        <th>English vs Spanish</th>
+                        <th>English vs Chinese</th>
+                        <th>Spanish vs Chinese</th>
+                    </tr>
+                    {% for col in entry.columns %}
+                    <tr>
+                        <td>{{ col }}</td>
+                        <td>{{ entry.pairwise_comparisons['English vs Spanish'].get(col, 'N/A') }}</td>
+                        <td>{{ entry.pairwise_comparisons['English vs Chinese'].get(col, 'N/A') }}</td>
+                        <td>{{ entry.pairwise_comparisons['Spanish vs Chinese'].get(col, 'N/A') }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>
