@@ -27,8 +27,8 @@ Work experience	Reason/s for work during childhood	msoc_work_age_2
 Work experience	Number of jobs	msoc_num_job
 Work experience	Nightshift work	msoc_20rev
 Work experience	Currently working	msoc_74rev
-Stress/adversity/living conditions	Lack of maternal figure	msoc_1arevyears
-Stress/adversity/living conditions	Lack of paternal figure	msoc_4arevyears
+Stress/adversity/living conditions	Lack of maternal figure	derived_lack_maternal
+Stress/adversity/living conditions	Lack of paternal figure	derived_lack_paternal
 Stress/adversity/living conditions	Number of children in the household during childhood	msoc_child
 Stress/adversity/living conditions	Children or sibling deaths during childhood	msoc_8rev
 Stress/adversity/living conditions	Number of of people in the household – life course view	msoc_household_0, msoc_household_1, msoc_household_2, msoc_household_3, msoc_household_4, msoc_household_5, msoc_household_6
