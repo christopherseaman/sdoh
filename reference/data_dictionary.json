@@ -1,0 +1,5830 @@
+{
+  "record_id": {
+    "type": "text",
+    "label": "Record ID",
+    "value_labels": null
+  },
+  "first_name": {
+    "type": "text",
+    "label": "First Name",
+    "value_labels": null
+  },
+  "email_address": {
+    "type": "text",
+    "label": "Email Address",
+    "value_labels": null
+  },
+  "msoc_time_startrev": {
+    "type": "text",
+    "label": "Please record the time that the survey was started",
+    "value_labels": null
+  },
+  "msoc_daterev": {
+    "type": "text",
+    "label": "Date of assessment",
+    "value_labels": null
+  },
+  "msoc_age": {
+    "type": "text",
+    "label": "First, please enter your current age",
+    "value_labels": null
+  },
+  "msoc_7rev": {
+    "type": "radio",
+    "label": "In which country were you born?",
+    "value_labels": {
+      "1": "United States of America",
+      "2": "Another Country",
+      "3": "I do not know"
+    }
+  },
+  "msoc_7arev": {
+    "type": "text",
+    "label": "In which state were you born?",
+    "value_labels": null
+  },
+  "msoc_7brev": {
+    "type": "text",
+    "label": "In which city/town were you born?",
+    "value_labels": null
+  },
+  "msoc_7crev": {
+    "type": "text",
+    "label": "In which country were you born?",
+    "value_labels": null
+  },
+  "msoc_7drev": {
+    "type": "text",
+    "label": "In which city/town were you born?",
+    "value_labels": null
+  },
+  "msoc_7erev": {
+    "type": "text",
+    "label": "Approximately how old were you when you moved to the United States?",
+    "value_labels": null
+  },
+  "msoc_7frev": {
+    "type": "checkbox",
+    "label": "What were the main reasons that motivated you to move to the United States? (select all that apply)",
+    "value_labels": {
+      "1": "Poverty in my country",
+      "2": "Educational opportunities",
+      "3": "Work opportunities",
+      "4": "Violence in my country",
+      "5": "Family reasons",
+      "6": "Other reason: {msoc_7fgrev}"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_7frev_1",
+      "msoc_7frev_2",
+      "msoc_7frev_3",
+      "msoc_7frev_4",
+      "msoc_7frev_5",
+      "msoc_7frev_6"
+    ]
+  },
+  "msoc_7fgrev": {
+    "type": "text",
+    "label": "What were the main reasons that motivated you to move to the United States? - Other:",
+    "value_labels": null
+  },
+  "msoc_7grev": {
+    "type": "radio",
+    "label": "Have you ever felt concerned or nervous about the legality of your immigration status or the immigration status of a family member? ",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  "msoc_live_table": {
+    "type": "descriptive",
+    "label": "     Life Period Country State City (or town, community, etc)   0 - 10 years of age {msoc_live_country0} {msoc_live_state0} {msoc_live_city0}   11 - 24 years of age {msoc_live_country11} {msoc_live_state11} {msoc_live_city11}   25 - 34 years of age {msoc_live_country25} {msoc_live_state25} {msoc_live_city25}   35 - 45 years of age {msoc_live_country35} {msoc_live_state35} {msoc_live_city35}   46 - 65 years of age {msoc_live_country46} {msoc_live_state46} {msoc_live_city46}   66 until one year ago {msoc_live_country66} {msoc_live_state66} {msoc_live_city66}   The most recent 12 months {msoc_live_countryrec} {msoc_live_staterec} {msoc_live_cityrec}   ",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_live_country0",
+      "msoc_live_country11",
+      "msoc_live_country25",
+      "msoc_live_country35",
+      "msoc_live_country46",
+      "msoc_live_country66",
+      "msoc_live_countryrec",
+      "msoc_live_state0",
+      "msoc_live_state11",
+      "msoc_live_state25",
+      "msoc_live_state35",
+      "msoc_live_state46",
+      "msoc_live_state66",
+      "msoc_live_staterec",
+      "msoc_live_city0",
+      "msoc_live_city11",
+      "msoc_live_city25",
+      "msoc_live_city35",
+      "msoc_live_city46",
+      "msoc_live_city66",
+      "msoc_live_cityrec"
+    ]
+  },
+  "msoc_live_country0": {
+    "type": "text",
+    "label": "Country(0-10 years)",
+    "value_labels": null
+  },
+  "msoc_live_country11": {
+    "type": "text",
+    "label": "Country(11-24 years)",
+    "value_labels": null
+  },
+  "msoc_live_country25": {
+    "type": "text",
+    "label": "Country(25-34 years)",
+    "value_labels": null
+  },
+  "msoc_live_country35": {
+    "type": "text",
+    "label": "Country(35-45 years)",
+    "value_labels": null
+  },
+  "msoc_live_country46": {
+    "type": "text",
+    "label": "Country(46-65 years)",
+    "value_labels": null
+  },
+  "msoc_live_country66": {
+    "type": "text",
+    "label": "Country(66 until one year ago)",
+    "value_labels": null
+  },
+  "msoc_live_countryrec": {
+    "type": "text",
+    "label": "Country (Most recent 12 months)",
+    "value_labels": null
+  },
+  "msoc_live_state0": {
+    "type": "text",
+    "label": "State (0-10 years)",
+    "value_labels": null
+  },
+  "msoc_live_state11": {
+    "type": "text",
+    "label": "State (11-24 years)",
+    "value_labels": null
+  },
+  "msoc_live_state25": {
+    "type": "text",
+    "label": "State(25-34 years)",
+    "value_labels": null
+  },
+  "msoc_live_state35": {
+    "type": "text",
+    "label": "State(35-45 years)",
+    "value_labels": null
+  },
+  "msoc_live_state46": {
+    "type": "text",
+    "label": "State(46-65 years)",
+    "value_labels": null
+  },
+  "msoc_live_state66": {
+    "type": "text",
+    "label": "State(66 until one year ago)",
+    "value_labels": null
+  },
+  "msoc_live_staterec": {
+    "type": "text",
+    "label": "State(most recent 12 months)",
+    "value_labels": null
+  },
+  "msoc_live_city0": {
+    "type": "text",
+    "label": "City(0-10 years)",
+    "value_labels": null
+  },
+  "msoc_live_city11": {
+    "type": "text",
+    "label": "City(11-24 years)",
+    "value_labels": null
+  },
+  "msoc_live_city25": {
+    "type": "text",
+    "label": "City(25-34 years)",
+    "value_labels": null
+  },
+  "msoc_live_city35": {
+    "type": "text",
+    "label": "City(35-45 years)",
+    "value_labels": null
+  },
+  "msoc_live_city46": {
+    "type": "text",
+    "label": "City(46-65 years)",
+    "value_labels": null
+  },
+  "msoc_live_city66": {
+    "type": "text",
+    "label": "City(66 until one year ago)",
+    "value_labels": null
+  },
+  "msoc_live_cityrec": {
+    "type": "text",
+    "label": "City( Most recent 12 months)",
+    "value_labels": null
+  },
+  "msoc_37rev": {
+    "type": "radio",
+    "label": "Did you attend a private or public elementary school? ",
+    "value_labels": {
+      "1": "Public",
+      "2": "Private",
+      "3": "Public and Private",
+      "4": "I did not attend school"
+    }
+  },
+  "msoc_39rev": {
+    "type": "radio",
+    "label": "Was the school you attended for the majority of your elementary education located in a rural area or in an urban area? ",
+    "value_labels": {
+      "1": "Rural",
+      "2": "Urban",
+      "3": "Suburban (somewhat rural and somewhat urban)"
+    }
+  },
+  "msoc_38rev": {
+    "type": "radio",
+    "label": "Did you ever have to repeat a school year?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  "msoc_38arev": {
+    "type": "text",
+    "label": "What year or years of school did you repeat?",
+    "value_labels": null
+  },
+  "msoc_38brev": {
+    "type": "text",
+    "label": "Why did you repeat a school year?",
+    "value_labels": null
+  },
+  "msoc_38crev": {
+    "type": "dropdown",
+    "label": "Enter the total number of school years you completed (do not include unfinished school years or repeated school years)",
+    "value_labels": {
+      "0": "0",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "11": "11",
+      "12": "12",
+      "13": "13",
+      "14": "14",
+      "15": "15",
+      "16": "16",
+      "17": "17",
+      "18": "18",
+      "19": "19",
+      "20": "20",
+      "21": "21",
+      "22": "22",
+      "23": "23",
+      "24": "24",
+      "25": "25",
+      "26": "26",
+      "27": "27",
+      "28": "28",
+      "29": "29",
+      "30": "30"
+    }
+  },
+  "msoc_ppted": {
+    "type": "checkbox",
+    "label": "Mark all of the educational certificates, diplomas, and/or degrees you have achieved",
+    "value_labels": {
+      "1": "I attended school, but did not obtain any formal certificate, diploma, or degree",
+      "2": "Early childhood education (daycare center, nursery, play school, etc.)",
+      "3": "Primary education (elementary school)",
+      "4": "Lower secondary education (secondary school, junior school, middle school, junior high school, etc.)",
+      "5": "Higher secondary education (secondary school, high school, etc.)",
+      "6": "Technical or vocational education (including associate degree)",
+      "7": "Bachelor's degree or equivalent",
+      "8": "Master's degree or equivalent",
+      "9": "Doctoral degree or equivalent (MD, PhD, JD, etc.)"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_ppted_1",
+      "msoc_ppted_2",
+      "msoc_ppted_3",
+      "msoc_ppted_4",
+      "msoc_ppted_5",
+      "msoc_ppted_6",
+      "msoc_ppted_7",
+      "msoc_ppted_8",
+      "msoc_ppted_9"
+    ]
+  },
+  "msoc_pptedqual": {
+    "type": "radio",
+    "label": "In general, how would you grade the overall quality of the education you received?",
+    "value_labels": {
+      "1": "Excellent",
+      "2": "Good",
+      "3": "Average",
+      "4": "Poor",
+      "5": "Very poor"
+    }
+  },
+  "msoc_work18": {
+    "type": "radio",
+    "label": "Did you work before turning 18 years of age? ",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  "msoc_work_age": {
+    "type": "text",
+    "label": "What was your age when you worked for the first time?",
+    "value_labels": null
+  },
+  "msoc_work_age_2": {
+    "type": "checkbox",
+    "label": "Why did you work during your childhood? (select all that apply)",
+    "value_labels": {
+      "1": "To support my own needs",
+      "2": "To support my family's needs",
+      "3": "To save money for myself",
+      "4": "To learn new skills or learn a new trade",
+      "5": "For another reason"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_work_age_2_1",
+      "msoc_work_age_2_2",
+      "msoc_work_age_2_3",
+      "msoc_work_age_2_4",
+      "msoc_work_age_2_5"
+    ]
+  },
+  "msoc_work_age2b": {
+    "type": "text",
+    "label": "If another reason, please specify",
+    "value_labels": null
+  },
+  "msoc_num_job": {
+    "type": "text",
+    "label": "How many jobs have you had in your life, including jobs done as a child? ",
+    "value_labels": null
+  },
+  "msoc_longestjob": {
+    "type": "text",
+    "label": "What is the longest held job you have had during your life, including unpaid work and work done as a homemaker? If you had two or more jobs for the same amount of time, please ONLY indicate the job that required the highest degree of skill or training. ",
+    "value_labels": null
+  },
+  "msoc_longestjob_dur": {
+    "type": "text",
+    "label": "For how long did you have this job?",
+    "value_labels": null
+  },
+  "msoc_longestjob_detail": {
+    "type": "notes",
+    "label": "Describe in detail the main tasks or activities you did for this job",
+    "value_labels": null
+  },
+  "msoc_20rev": {
+    "type": "radio",
+    "label": "Have you ever had to work the nightshift (or \"overnight\" or \"graveyard\" shift) for more than one year? \n",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  "msoc_20arev": {
+    "type": "text",
+    "label": "For how many years did you work the nightshift?\n",
+    "value_labels": null
+  },
+  "msoc_44rev": {
+    "type": "radio",
+    "label": "Which languages were regularly spoken in your household during the first 10 years of your life?",
+    "value_labels": {
+      "1": "English is the only language that was spoken regularly",
+      "2": "English was the main language spoken, but another language was also spoken regularly",
+      "3": "A language other than English was the main language spoken, but English was also spoken regularly",
+      "4": "A language other than English is the only language that was regularly spoken in my home"
+    }
+  },
+  "msoc_lang_spec": {
+    "type": "text",
+    "label": "Which other languages were regularly spoken in your household during the first 10 years of your life?",
+    "value_labels": null
+  },
+  "msoc_lang1rev": {
+    "type": "descriptive",
+    "label": "Indicate your native languages(s) and any other languages you have studied or learned, the age at which you started using each language in terms of listening, speaking, reading, and writing, and the total number of years you have spent using each language. REMEMBER: If you are helping a participant complete this survey, the answers should be about the participant's life, not your own.     Language   Listening   Speaking   Reading   Writing   Years of use *     {msoc_21rev}   {msoc_21arev}   {msoc_21brev}   {msoc_21crev}   {msoc_21drev}   {msoc_21erev}     {msoc_22rev}   {msoc_22arev}   {msoc_22brev}   {msoc_22crev}   {msoc_22drev}   {msoc_22erev}     {msoc_23rev}   {msoc_23arev}   {msoc_23brev}   {msoc_23crev}   {msoc_23drev}   {msoc_23erev}     {msoc_24rev}   {msoc_24arev}   {msoc_24brev}   {msoc_24crev}   {msoc_24drev}   {msoc_24erev}                     * For Years of Use, you may have learned a language, stopped using it, and then started using it again. Indicate the total cumulative number of years you have used each language.",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_21rev",
+      "msoc_21arev",
+      "msoc_21brev",
+      "msoc_21crev",
+      "msoc_21drev",
+      "msoc_21erev",
+      "msoc_22rev",
+      "msoc_22arev",
+      "msoc_22brev",
+      "msoc_22crev",
+      "msoc_22drev",
+      "msoc_22erev",
+      "msoc_23rev",
+      "msoc_23arev",
+      "msoc_23brev",
+      "msoc_23crev",
+      "msoc_23drev",
+      "msoc_23erev",
+      "msoc_24rev",
+      "msoc_24arev",
+      "msoc_24brev",
+      "msoc_24crev",
+      "msoc_24drev",
+      "msoc_24erev"
+    ]
+  },
+  "msoc_21rev": {
+    "type": "text",
+    "label": "Language_1",
+    "value_labels": null
+  },
+  "msoc_21arev": {
+    "type": "text",
+    "label": "Listening_1",
+    "value_labels": null
+  },
+  "msoc_21brev": {
+    "type": "text",
+    "label": "Speaking_1",
+    "value_labels": null
+  },
+  "msoc_21crev": {
+    "type": "text",
+    "label": "Reading_1",
+    "value_labels": null
+  },
+  "msoc_21drev": {
+    "type": "text",
+    "label": "Writing_1",
+    "value_labels": null
+  },
+  "msoc_21erev": {
+    "type": "text",
+    "label": "Years_of_use_1",
+    "value_labels": null
+  },
+  "msoc_22rev": {
+    "type": "text",
+    "label": "Language_2",
+    "value_labels": null
+  },
+  "msoc_22arev": {
+    "type": "text",
+    "label": "Listening_2",
+    "value_labels": null
+  },
+  "msoc_22brev": {
+    "type": "text",
+    "label": "Speaking2",
+    "value_labels": null
+  },
+  "msoc_22crev": {
+    "type": "text",
+    "label": "Reading2",
+    "value_labels": null
+  },
+  "msoc_22drev": {
+    "type": "text",
+    "label": "Writing2",
+    "value_labels": null
+  },
+  "msoc_22erev": {
+    "type": "text",
+    "label": "Years_of_use2",
+    "value_labels": null
+  },
+  "msoc_23rev": {
+    "type": "text",
+    "label": "Language_3",
+    "value_labels": null
+  },
+  "msoc_23arev": {
+    "type": "text",
+    "label": "Listening_3",
+    "value_labels": null
+  },
+  "msoc_23brev": {
+    "type": "text",
+    "label": "Speaking_3",
+    "value_labels": null
+  },
+  "msoc_23crev": {
+    "type": "text",
+    "label": "Reading_3",
+    "value_labels": null
+  },
+  "msoc_23drev": {
+    "type": "text",
+    "label": "Writing_3",
+    "value_labels": null
+  },
+  "msoc_23erev": {
+    "type": "text",
+    "label": "Years_of_use_3",
+    "value_labels": null
+  },
+  "msoc_24rev": {
+    "type": "text",
+    "label": "Language_4",
+    "value_labels": null
+  },
+  "msoc_24arev": {
+    "type": "text",
+    "label": "Listening_4",
+    "value_labels": null
+  },
+  "msoc_24brev": {
+    "type": "text",
+    "label": "Speaking_4",
+    "value_labels": null
+  },
+  "msoc_24crev": {
+    "type": "text",
+    "label": "Reading_4",
+    "value_labels": null
+  },
+  "msoc_24drev": {
+    "type": "text",
+    "label": "Writing_4",
+    "value_labels": null
+  },
+  "msoc_24erev": {
+    "type": "text",
+    "label": "Years_of_use_4",
+    "value_labels": null
+  },
+  "msoc_lang2rev": {
+    "type": "descriptive",
+    "label": "Now please rate your current ability in terms of listening, speaking, reading, and writing in each of the languages you have studied or learned (including your native language/s.) using this scale: (1) very bad, (2) bad, (3) limited, (4) functional, (5) good, (6) very good, (7) like a native. REMEMBER: If you are helping a participant complete this survey, the answers should be about the participant's life, not your own.     Language   Listening   Speaking   Reading   Writing     [msoc_21rev]   {msoc_21frev}   {msoc_21grev}   {msoc_21hrev}   {msoc_21irev}     [msoc_22rev]   {msoc_22frev}   {msoc_22grev}   {msoc_22hrev}   {msoc_22irev}     [msoc_23rev]   {msoc_23frev}   {msoc_23grev}   {msoc_23hrev}   {msoc_23irev}     [msoc_24rev]   {msoc_24frev}   {msoc_24grev}   {msoc_24hrev}   {msoc_24irev}      ",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_21frev",
+      "msoc_21grev",
+      "msoc_21hrev",
+      "msoc_21irev",
+      "msoc_22frev",
+      "msoc_22grev",
+      "msoc_22hrev",
+      "msoc_22irev",
+      "msoc_23frev",
+      "msoc_23grev",
+      "msoc_23hrev",
+      "msoc_23irev",
+      "msoc_24frev",
+      "msoc_24grev",
+      "msoc_24hrev",
+      "msoc_24irev"
+    ]
+  },
+  "msoc_21frev": {
+    "type": "dropdown",
+    "label": "Listening_ability_1",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_21grev": {
+    "type": "dropdown",
+    "label": "Speaking_ability_1",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_21hrev": {
+    "type": "dropdown",
+    "label": "Reading_ability_1",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_21irev": {
+    "type": "dropdown",
+    "label": "Writing_ability_1",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_22frev": {
+    "type": "dropdown",
+    "label": "Listening_ability_2",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_22grev": {
+    "type": "dropdown",
+    "label": "Speaking_ability_2",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_22hrev": {
+    "type": "dropdown",
+    "label": "Reading_ability_2",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_22irev": {
+    "type": "dropdown",
+    "label": "Writing_ability_2",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_23frev": {
+    "type": "dropdown",
+    "label": "Listening_ability_3",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_23grev": {
+    "type": "dropdown",
+    "label": "Speaking_ability_3",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_23hrev": {
+    "type": "dropdown",
+    "label": "Reading_ability_3",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_23irev": {
+    "type": "dropdown",
+    "label": "Writing_ability_3",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_24frev": {
+    "type": "dropdown",
+    "label": "Listening_ability_4",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_24grev": {
+    "type": "dropdown",
+    "label": "Speaking_ability_4",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_24hrev": {
+    "type": "dropdown",
+    "label": "Reading_ability_4",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_24irev": {
+    "type": "dropdown",
+    "label": "Writing_ability_4",
+    "value_labels": {
+      "1": "very bad",
+      "2": "bad",
+      "3": "limited",
+      "4": "functional",
+      "5": "good",
+      "6": "very good",
+      "7": "like a native"
+    }
+  },
+  "msoc_lang3rev": {
+    "type": "descriptive",
+    "label": "Please estimate how many hours per day you spend in the following activities in each of the languages you have studied or learned (including your native language). REMEMBER: If you are helping a participant complete this survey, the answers should be about the participant's life, not your own.     Language   Watching television   Listening to radio/podcasts   Reading for fun   Reading for school/work   Using social media and internet   Writing for school/work     [msoc_21rev]   {msoc_21jrev}   {msoc_21krev}   {msoc_21lrev}   {msoc_21mrev}   {msoc_21nrev}   {msoc_21orev}     [msoc_22rev]   {msoc_22jrev}   {msoc_22krev}   {msoc_22lrev}   {msoc_22mrev}   {msoc_22nrev}   {msoc_22orev}     [msoc_23rev]   {msoc_23jrev}   {msoc_23krev}   {msoc_23lrev}   {msoc_23mrev}   {msoc_23nrev}   {msoc_23orev}     [msoc_24rev]   {msoc_24jrev}   {msoc_24krev}   {msoc_24lrev}   {msoc_24mrev}   {msoc_24nrev}   {msoc_24orev}    ",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_21jrev",
+      "msoc_21krev",
+      "msoc_21lrev",
+      "msoc_21mrev",
+      "msoc_21nrev",
+      "msoc_21orev",
+      "msoc_22jrev",
+      "msoc_22krev",
+      "msoc_22lrev",
+      "msoc_22mrev",
+      "msoc_22nrev",
+      "msoc_22orev",
+      "msoc_23jrev",
+      "msoc_23krev",
+      "msoc_23lrev",
+      "msoc_23mrev",
+      "msoc_23nrev",
+      "msoc_23orev",
+      "msoc_24jrev",
+      "msoc_24krev",
+      "msoc_24lrev",
+      "msoc_24mrev",
+      "msoc_24nrev",
+      "msoc_24orev"
+    ]
+  },
+  "msoc_21jrev": {
+    "type": "text",
+    "label": "TV_lang_1",
+    "value_labels": null
+  },
+  "msoc_21krev": {
+    "type": "text",
+    "label": "radio_lang_1",
+    "value_labels": null
+  },
+  "msoc_21lrev": {
+    "type": "text",
+    "label": "reading_lang_1",
+    "value_labels": null
+  },
+  "msoc_21mrev": {
+    "type": "text",
+    "label": "reading_school_lang_1",
+    "value_labels": null
+  },
+  "msoc_21nrev": {
+    "type": "text",
+    "label": "social_media_lang_1",
+    "value_labels": null
+  },
+  "msoc_21orev": {
+    "type": "text",
+    "label": "writing_school_lang_1",
+    "value_labels": null
+  },
+  "msoc_22jrev": {
+    "type": "text",
+    "label": "TV_lang_2",
+    "value_labels": null
+  },
+  "msoc_22krev": {
+    "type": "text",
+    "label": "radio_lang_2",
+    "value_labels": null
+  },
+  "msoc_22lrev": {
+    "type": "text",
+    "label": "reading_lang_2",
+    "value_labels": null
+  },
+  "msoc_22mrev": {
+    "type": "text",
+    "label": "reading_school_lang_2",
+    "value_labels": null
+  },
+  "msoc_22nrev": {
+    "type": "text",
+    "label": "social_media_lang_2",
+    "value_labels": null
+  },
+  "msoc_22orev": {
+    "type": "text",
+    "label": "writing_school_lang_2",
+    "value_labels": null
+  },
+  "msoc_23jrev": {
+    "type": "text",
+    "label": "TV_lang_3",
+    "value_labels": null
+  },
+  "msoc_23krev": {
+    "type": "text",
+    "label": "radio_lang_3",
+    "value_labels": null
+  },
+  "msoc_23lrev": {
+    "type": "text",
+    "label": "reading_lang_3",
+    "value_labels": null
+  },
+  "msoc_23mrev": {
+    "type": "text",
+    "label": "reading_school_lang_3",
+    "value_labels": null
+  },
+  "msoc_23nrev": {
+    "type": "text",
+    "label": "social_media_lang_3",
+    "value_labels": null
+  },
+  "msoc_23orev": {
+    "type": "text",
+    "label": "writing_school_lang_2",
+    "value_labels": null
+  },
+  "msoc_24jrev": {
+    "type": "text",
+    "label": "TV_lang_4",
+    "value_labels": null
+  },
+  "msoc_24krev": {
+    "type": "text",
+    "label": "radio_lang_4",
+    "value_labels": null
+  },
+  "msoc_24lrev": {
+    "type": "text",
+    "label": "reading_lang_4",
+    "value_labels": null
+  },
+  "msoc_24mrev": {
+    "type": "text",
+    "label": "reading_school_lang_4",
+    "value_labels": null
+  },
+  "msoc_24nrev": {
+    "type": "text",
+    "label": "social_media_lang_4",
+    "value_labels": null
+  },
+  "msoc_24orev": {
+    "type": "text",
+    "label": "writing_school_lang_4",
+    "value_labels": null
+  },
+  "msoc_lang4rev": {
+    "type": "descriptive",
+    "label": "Please estimate how many hours per day you spend speaking with the following groups of people in each of the languages you have studied or learned (including your native language). REMEMBER: If you are helping a participant complete this survey, the answers should be about the participant's life, not your own.     Language   Family members   Friends*   Classmates   Others (co-workers**, roommates, etc.)     [msoc_21rev]   {msoc_21prev}   {msoc_21qrev}   {msoc_21rrev}   {msoc_21srev}     [msoc_22rev]   {msoc_22prev}   {msoc_22qrev}   {msoc_22rrev}   {msoc_22srev}     [msoc_23rev]   {msoc_23prev}   {msoc_23qrev}   {msoc_23rrev}   {msoc_23srev}     [msoc_24rev]   {msoc_24prev}   {msoc_24qrev}   {msoc_24rrev}   {msoc_24srev}     *include significant others in this category if you did not include them as family members (e.g. married partners) ** include anyone in the work environment in this category (e.g. if you are a teacher, include students as co-workers)",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_21prev",
+      "msoc_21qrev",
+      "msoc_21rrev",
+      "msoc_21srev",
+      "msoc_22prev",
+      "msoc_22qrev",
+      "msoc_22rrev",
+      "msoc_22srev",
+      "msoc_23prev",
+      "msoc_23qrev",
+      "msoc_23rrev",
+      "msoc_23srev",
+      "msoc_24prev",
+      "msoc_24qrev",
+      "msoc_24rrev",
+      "msoc_24srev"
+    ]
+  },
+  "msoc_21prev": {
+    "type": "text",
+    "label": "Family_1",
+    "value_labels": null
+  },
+  "msoc_21qrev": {
+    "type": "text",
+    "label": "Friends_1",
+    "value_labels": null
+  },
+  "msoc_21rrev": {
+    "type": "text",
+    "label": "Classmates_1",
+    "value_labels": null
+  },
+  "msoc_21srev": {
+    "type": "text",
+    "label": "Others_1",
+    "value_labels": null
+  },
+  "msoc_22prev": {
+    "type": "text",
+    "label": "Family_2",
+    "value_labels": null
+  },
+  "msoc_22qrev": {
+    "type": "text",
+    "label": "Friends_2",
+    "value_labels": null
+  },
+  "msoc_22rrev": {
+    "type": "text",
+    "label": "Classmates_2",
+    "value_labels": null
+  },
+  "msoc_22srev": {
+    "type": "text",
+    "label": "Others_2",
+    "value_labels": null
+  },
+  "msoc_23prev": {
+    "type": "text",
+    "label": "Family_3",
+    "value_labels": null
+  },
+  "msoc_23qrev": {
+    "type": "text",
+    "label": "Friends_3",
+    "value_labels": null
+  },
+  "msoc_23rrev": {
+    "type": "text",
+    "label": "Classmates_3",
+    "value_labels": null
+  },
+  "msoc_23srev": {
+    "type": "text",
+    "label": "Others_3",
+    "value_labels": null
+  },
+  "msoc_24prev": {
+    "type": "text",
+    "label": "Family_4",
+    "value_labels": null
+  },
+  "msoc_24qrev": {
+    "type": "text",
+    "label": "Friends_4",
+    "value_labels": null
+  },
+  "msoc_24rrev": {
+    "type": "text",
+    "label": "Classmates_4",
+    "value_labels": null
+  },
+  "msoc_24srev": {
+    "type": "text",
+    "label": "Others_4",
+    "value_labels": null
+  },
+  "msoc_9rev": {
+    "type": "radio",
+    "label": "How would you describe your race? ",
+    "value_labels": {
+      "1": "{msoc_race}",
+      "2": "I do not know which race or racial group I belong to",
+      "3": "I do not belong to any race or racial group",
+      "4": "I do not understand this question"
+    }
+  },
+  "msoc_race": {
+    "type": "text",
+    "label": "Race",
+    "value_labels": null
+  },
+  "msoc_10rev": {
+    "type": "radio",
+    "label": "How would you describe your ethnicity or ethnic group? ",
+    "value_labels": {
+      "1": "{msoc_ethni}",
+      "2": "I do not know which ethnicity or ethnic group I belong to",
+      "3": "I not have an ethnic identity",
+      "4": "I do not belong to any ethnic group",
+      "5": "I do not understand this question"
+    }
+  },
+  "msoc_ethni": {
+    "type": "text",
+    "label": "Ethnicity",
+    "value_labels": null
+  },
+  "msoc_10rev_2": {
+    "type": "radio",
+    "label": "How would you describe your cultural identity or cultural group? ",
+    "value_labels": {
+      "1": "{msoc_cult}",
+      "2": "I do not know which culture or cultural group I belong to",
+      "3": "I do not have a cultural identity",
+      "4": "I do not belong to any cultural group",
+      "5": "I do not understand this question."
+    }
+  },
+  "msoc_cult": {
+    "type": "text",
+    "label": "Cultural_identity",
+    "value_labels": null
+  },
+  "msoc_11rev": {
+    "type": "checkbox",
+    "label": "With which of the following US Census racial/ethnic categories do you identify with? (select all that apply)",
+    "value_labels": {
+      "1": "White",
+      "2": "Black or African American",
+      "3": "Hispanic, Latino, Spanish",
+      "4": "American Indian or Alaska Native",
+      "5": "Asian",
+      "6": "Native Hawaiian and Pacific Islander",
+      "7": "I do not identify with any of these racial/ethnic categories",
+      "8": "I identify with another racial/ethnic category: {msoc_cat_other}"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_11rev_1",
+      "msoc_11rev_2",
+      "msoc_11rev_3",
+      "msoc_11rev_4",
+      "msoc_11rev_5",
+      "msoc_11rev_6",
+      "msoc_11rev_7",
+      "msoc_11rev_8"
+    ]
+  },
+  "msoc_cat_other": {
+    "type": "text",
+    "label": "Other_ethnicity",
+    "value_labels": null
+  },
+  "msoc_12rev": {
+    "type": "radio",
+    "label": "What sex were you assigned (on your birth certificate)?",
+    "value_labels": {
+      "1": "Female",
+      "2": "Male",
+      "3": "Other: {msoc_sex_other}"
+    }
+  },
+  "msoc_sex_other": {
+    "type": "text",
+    "label": "Other_Sex",
+    "value_labels": null
+  },
+  "msoc_13rev": {
+    "type": "radio",
+    "label": "How would you describe your sexual orientation? ",
+    "value_labels": {
+      "1": "Heterosexual (people who feel sexual attraction for people of the opposite sex)",
+      "2": "Asexual (people who do not feel any sexual attraction for others)",
+      "3": "Bisexual (people who feel sexual attraction for people of their same sex or the opposite sex)",
+      "4": "Gay (men who feel sexual attraction for other men)",
+      "5": "Lesbian (women who feel sexual attraction for other women)",
+      "6": "Queer (people who feel sexual attraction for people who do not identify as a woman or a man)",
+      "7": "I am not sure",
+      "8": "Another sexual orientation",
+      "9": "I prefer not to answer"
+    }
+  },
+  "msoc_13arev": {
+    "type": "text",
+    "label": "Please tell us how you would describe your sexual orientation",
+    "value_labels": null
+  },
+  "msoc_14rev": {
+    "type": "radio",
+    "label": "How would you describe your gender identity? ",
+    "value_labels": {
+      "1": "Man",
+      "2": "Woman",
+      "3": "Genderqueer",
+      "4": "Transgender Man (Female-to-Male)",
+      "5": "Transgender Woman (Male-to-Female)",
+      "6": "Another gender identity",
+      "7": "Prefer not to answer"
+    }
+  },
+  "msoc_14arev": {
+    "type": "text",
+    "label": "Please tell us how you would describe your gender identity",
+    "value_labels": null
+  },
+  "msoc_15rev": {
+    "type": "radio",
+    "label": "A person's appearance, style, or dress may affect the way people think of them. On average, how do you think people would describe your appearance, style, or dress?",
+    "value_labels": {
+      "1": "Feminine",
+      "2": "Equally feminine and masculine",
+      "3": "Masculine"
+    }
+  },
+  "msoc_16rev": {
+    "type": "radio",
+    "label": "A person's mannerisms (such as the way they walk or talk) may affect the way people think of them. On average, how do you think people would describe your mannerisms?",
+    "value_labels": {
+      "1": "Feminine",
+      "2": "Equally feminine and masculine",
+      "3": "Masculine"
+    }
+  },
+  "msoc_child": {
+    "type": "text",
+    "label": "How many children (including yourself) lived in your household for most of the time when you were between 0 and 10 years old?",
+    "value_labels": null
+  },
+  "msoc_43rev": {
+    "type": "radio",
+    "label": "Approximately how many books were there in the household where you lived in for the longest time during the first 10 years of your life? Do not count magazines, newspapers, or schoolbooks.",
+    "value_labels": {
+      "1": "None or very few (0-10 books)",
+      "2": "Enough to fill one shelf (11-25 books)",
+      "3": "Enough to fill one bookcase (26-100 books)",
+      "4": "Enough to fill two bookcases (101-200)",
+      "5": "Enough to fill more than two bookcases (more than 200 books)"
+    }
+  },
+  "msoc_8rev": {
+    "type": "radio",
+    "label": "Did any of your siblings or children die before they were 18 years of age?",
+    "value_labels": {
+      "1": "Yes, your brothers or sisters",
+      "2": "Yes, your sons or daughters",
+      "3": "No"
+    }
+  },
+  "msoc_8arev": {
+    "type": "text",
+    "label": "How many of your siblings or children died before the age of 18? ",
+    "value_labels": null
+  },
+  "msoc_contact": {
+    "type": "radio",
+    "label": "Over the last 12 months, how frequently have you been in contact with loved ones, with people who are important to you, and/or people you feel close to? For example, speaking with friends over the phone or internet, visiting friends or family members, going to church or other meetings, having a conversation with other people in your household.",
+    "value_labels": {
+      "1": "Less than once per week",
+      "2": "1 or 2 times per week",
+      "3": "3 to 5 times per week",
+      "4": "More than 5 times per week"
+    }
+  },
+  "msoc_household": {
+    "type": "descriptive",
+    "label": "     0 to 10 years of age 11 to 24 years of age 25 to 34 years of age 35 to 45 years of age 46 to 65 years of age 66 until one year ago Over the last 12 months   Including yourself, how many people did you live with for the majority of time during the following periods of your life?   {msoc_household_0}   {msoc_household_1}   {msoc_household_2}   {msoc_household_3}   {msoc_household_4}   {msoc_household_5}   {msoc_household_6}    Who lived with you for the majority of time during the following periods of your life?   {msoc_household_7}   {msoc_household_8}   {msoc_household_9}   {msoc_household_10}   {msoc_household_11}   {msoc_household_12}   {msoc_household_13}    ",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_household_0",
+      "msoc_household_1",
+      "msoc_household_2",
+      "msoc_household_3",
+      "msoc_household_4",
+      "msoc_household_5",
+      "msoc_household_6"
+    ]
+  },
+  "msoc_household_0": {
+    "type": "text",
+    "label": "Num_people(0-10 years)",
+    "value_labels": null
+  },
+  "msoc_household_1": {
+    "type": "text",
+    "label": "Num_people(11-24 years)",
+    "value_labels": null
+  },
+  "msoc_household_2": {
+    "type": "text",
+    "label": "Num_people(25-34 years)",
+    "value_labels": null
+  },
+  "msoc_household_3": {
+    "type": "text",
+    "label": "Num_people(35-45 years)",
+    "value_labels": null
+  },
+  "msoc_household_4": {
+    "type": "text",
+    "label": "Num_people(46-65 years)",
+    "value_labels": null
+  },
+  "msoc_household_5": {
+    "type": "text",
+    "label": "Num_people(66 until one year ago)",
+    "value_labels": null
+  },
+  "msoc_household_6": {
+    "type": "text",
+    "label": "Num_people(over the last 12 months)",
+    "value_labels": null
+  },
+  "msoc_household_7": {
+    "type": "checkbox",
+    "label": "Who (0-10 years)",
+    "value_labels": {
+      "1": "Biological mother",
+      "2": "Biological father",
+      "3": "Adoptive, step, or foster mother",
+      "4": "Adoptive, step, or foster father",
+      "5": "Biological brother(s) or sister(s)",
+      "6": "Adopted step, foster, or half brother(s) or sister(s)",
+      "7": "Grandparent(s)",
+      "12": "Other relative(s)",
+      "13": "Other non-relative(s)",
+      "14": "I don't know"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_household_7_1",
+      "msoc_household_7_2",
+      "msoc_household_7_3",
+      "msoc_household_7_4",
+      "msoc_household_7_5",
+      "msoc_household_7_6",
+      "msoc_household_7_7",
+      "msoc_household_7_12",
+      "msoc_household_7_13",
+      "msoc_household_7_14"
+    ]
+  },
+  "msoc_household_8": {
+    "type": "checkbox",
+    "label": "Who (11-24 years)",
+    "value_labels": {
+      "1": "Biological mother",
+      "2": "Biological father",
+      "3": "Adoptive, step, or foster mother",
+      "4": "Adoptive, step, or foster father",
+      "5": "Biological brother(s) or sister(s)",
+      "6": "Adopted step, foster, or half brother(s) or sister(s)",
+      "7": "Grandparent(s)",
+      "8": "Spouse/Partner",
+      "9": "Biological children",
+      "10": "Adopted children",
+      "12": "Other relative(s)",
+      "13": "Other non-relative(s)",
+      "14": "I don't know"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_household_8_1",
+      "msoc_household_8_2",
+      "msoc_household_8_3",
+      "msoc_household_8_4",
+      "msoc_household_8_5",
+      "msoc_household_8_6",
+      "msoc_household_8_7",
+      "msoc_household_8_8",
+      "msoc_household_8_9",
+      "msoc_household_8_10",
+      "msoc_household_8_12",
+      "msoc_household_8_13",
+      "msoc_household_8_14"
+    ]
+  },
+  "msoc_household_9": {
+    "type": "checkbox",
+    "label": "Who (25-34 years)",
+    "value_labels": {
+      "1": "Biological mother",
+      "2": "Biological father",
+      "3": "Adoptive, step, or foster mother",
+      "4": "Adoptive, step, or foster father",
+      "5": "Biological brother(s) or sister(s)",
+      "6": "Adopted step, foster, or half brother(s) or sister(s)",
+      "7": "Grandparent(s)",
+      "8": "Spouse/Partner",
+      "9": "Biological children",
+      "10": "Adopted children",
+      "12": "Other relative(s)",
+      "13": "Other non-relative(s)",
+      "14": "I don't know"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_household_9_1",
+      "msoc_household_9_2",
+      "msoc_household_9_3",
+      "msoc_household_9_4",
+      "msoc_household_9_5",
+      "msoc_household_9_6",
+      "msoc_household_9_7",
+      "msoc_household_9_8",
+      "msoc_household_9_9",
+      "msoc_household_9_10",
+      "msoc_household_9_12",
+      "msoc_household_9_13",
+      "msoc_household_9_14"
+    ]
+  },
+  "msoc_household_10": {
+    "type": "checkbox",
+    "label": "Who (35-45 years)",
+    "value_labels": {
+      "1": "Biological mother",
+      "2": "Biological father",
+      "3": "Adoptive, step, or foster mother",
+      "4": "Adoptive, step, or foster father",
+      "5": "Biological brother(s) or sister(s)",
+      "6": "Adopted step, foster, or half brother(s) or sister(s)",
+      "7": "Grandparent(s)",
+      "8": "Spouse/Partner",
+      "9": "Biological children",
+      "10": "Adopted children",
+      "11": "Grandchildren",
+      "12": "Other relative(s)",
+      "13": "Other non-relative(s)",
+      "14": "I don't know"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_household_10_1",
+      "msoc_household_10_2",
+      "msoc_household_10_3",
+      "msoc_household_10_4",
+      "msoc_household_10_5",
+      "msoc_household_10_6",
+      "msoc_household_10_7",
+      "msoc_household_10_8",
+      "msoc_household_10_9",
+      "msoc_household_10_10",
+      "msoc_household_10_11",
+      "msoc_household_10_12",
+      "msoc_household_10_13",
+      "msoc_household_10_14"
+    ]
+  },
+  "msoc_household_11": {
+    "type": "checkbox",
+    "label": "Who (46-65 years)",
+    "value_labels": {
+      "1": "Biological mother",
+      "2": "Biological father",
+      "3": "Adoptive, step, or foster mother",
+      "4": "Adoptive, step, or foster father",
+      "5": "Biological brother(s) or sister(s)",
+      "6": "Adopted step, foster, or half brother(s) or sister(s)",
+      "7": "Grandparent(s)",
+      "8": "Spouse/Partner",
+      "9": "Biological children",
+      "10": "Adopted children",
+      "11": "Grandchildren",
+      "12": "Other relative(s)",
+      "13": "Other non-relative(s)",
+      "14": "I don't know"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_household_11_1",
+      "msoc_household_11_2",
+      "msoc_household_11_3",
+      "msoc_household_11_4",
+      "msoc_household_11_5",
+      "msoc_household_11_6",
+      "msoc_household_11_7",
+      "msoc_household_11_8",
+      "msoc_household_11_9",
+      "msoc_household_11_10",
+      "msoc_household_11_11",
+      "msoc_household_11_12",
+      "msoc_household_11_13",
+      "msoc_household_11_14"
+    ]
+  },
+  "msoc_household_12": {
+    "type": "checkbox",
+    "label": "Who (66 until one year ago)",
+    "value_labels": {
+      "1": "Biological mother",
+      "2": "Biological father",
+      "3": "Adoptive, step, or foster mother",
+      "4": "Adoptive, step, or foster father",
+      "5": "Biological brother(s) or sister(s)",
+      "6": "Adopted step, foster, or half brother(s) or sister(s)",
+      "7": "Grandparent(s)",
+      "8": "Spouse/Partner",
+      "9": "Biological children",
+      "10": "Adopted children",
+      "11": "Grandchildren",
+      "12": "Other relative(s)",
+      "13": "Other non-relative(s)",
+      "14": "I don't know"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_household_12_1",
+      "msoc_household_12_2",
+      "msoc_household_12_3",
+      "msoc_household_12_4",
+      "msoc_household_12_5",
+      "msoc_household_12_6",
+      "msoc_household_12_7",
+      "msoc_household_12_8",
+      "msoc_household_12_9",
+      "msoc_household_12_10",
+      "msoc_household_12_11",
+      "msoc_household_12_12",
+      "msoc_household_12_13",
+      "msoc_household_12_14"
+    ]
+  },
+  "msoc_household_13": {
+    "type": "checkbox",
+    "label": "Who (Over the last 12 months)",
+    "value_labels": {
+      "1": "Biological mother",
+      "2": "Biological father",
+      "3": "Adoptive, step, or foster mother",
+      "4": "Adoptive, step, or foster father",
+      "5": "Biological brother(s) or sister(s)",
+      "6": "Adopted step, foster, or half brother(s) or sister(s)",
+      "7": "Grandparent(s)",
+      "8": "Spouse/Partner",
+      "9": "Biological children",
+      "10": "Adopted children",
+      "11": "Grandchildren",
+      "12": "Other relative(s)",
+      "13": "Other non-relative(s)",
+      "14": "I don't know"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_household_13_1",
+      "msoc_household_13_2",
+      "msoc_household_13_3",
+      "msoc_household_13_4",
+      "msoc_household_13_5",
+      "msoc_household_13_6",
+      "msoc_household_13_7",
+      "msoc_household_13_8",
+      "msoc_household_13_9",
+      "msoc_household_13_10",
+      "msoc_household_13_11",
+      "msoc_household_13_12",
+      "msoc_household_13_13",
+      "msoc_household_13_14"
+    ]
+  },
+  "msoc_1arev": {
+    "type": "radio",
+    "label": "Enter the total number of school years completed by your MOTHER (do not include unfinished school years or repeated school years)",
+    "value_labels": {
+      "1": "{msoc_1arevyears}",
+      "2": "I grew up without a maternal figure",
+      "3": "I do not know"
+    }
+  },
+  "msoc_1arevyears": {
+    "type": "text",
+    "label": "Mother_schooling_years",
+    "value_labels": null
+  },
+  "msoc_1rev": {
+    "type": "checkbox",
+    "label": "Mark all of the educational certificates, diplomas, and/or degrees achieved by your MOTHER",
+    "value_labels": {
+      "1": "She attended school, but did not obtain any formal certificate, diploma, or degree",
+      "2": "Early childhood education (daycare center, nursery, play school, etc.)",
+      "3": "Primary education (elementary school)",
+      "4": "Lower secondary education (secondary school, junior school, middle school, junior high school, etc.)",
+      "5": "Higher secondary education (secondary school, high school, etc.)",
+      "6": "Technical or vocational education",
+      "7": "Bachelor's degree or equivalent (associate degree)",
+      "8": "Master's degree or equivalent",
+      "9": "Doctoral degree or equivalent (MD, PhD, JD, etc.)"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_1rev_1",
+      "msoc_1rev_2",
+      "msoc_1rev_3",
+      "msoc_1rev_4",
+      "msoc_1rev_5",
+      "msoc_1rev_6",
+      "msoc_1rev_7",
+      "msoc_1rev_8",
+      "msoc_1rev_9"
+    ]
+  },
+  "msoc_2rev": {
+    "type": "text",
+    "label": "What is your MOTHER'S longest held job, including unpaid work and/or work as a homemaker? If she had two or more jobs for the same amount of time, please ONLY indicate the job that required the highest degree of skill or training.",
+    "value_labels": null
+  },
+  "msoc_2rev_des": {
+    "type": "notes",
+    "label": "Describe in detail the main tasks or activities your MOTHER did for this job",
+    "value_labels": null
+  },
+  "msoc_3rev": {
+    "type": "radio",
+    "label": "On average, how many hours per week did your mother work outside the home?",
+    "value_labels": {
+      "1": "No outside work (i.e. was exclusively a homemaker)",
+      "2": "< 10 hours",
+      "3": "10 to 20 hours",
+      "4": "21 to 30 hours",
+      "5": "31 to 40 hours",
+      "6": "More than 40 hours",
+      "7": "I do not know"
+    }
+  },
+  "msoc_4rev": {
+    "type": "radio",
+    "label": "Enter the total number of school years completed by your FATHER (do not include unfinished school years or repeated school years)",
+    "value_labels": {
+      "1": "{msoc_4arevyears}",
+      "2": "I grew up without a paternal figure",
+      "3": "I do not know"
+    }
+  },
+  "msoc_4arevyears": {
+    "type": "text",
+    "label": "Father_schooling_years",
+    "value_labels": null
+  },
+  "msoc_4arev": {
+    "type": "checkbox",
+    "label": "Mark all of the educational certificates, diplomas, and/or degrees achieved by your FATHER:  ",
+    "value_labels": {
+      "1": "He attended school, but did not obtain any formal certificate, diploma, or degree",
+      "2": "Early childhood education (daycare center, nursery, play school, etc.)",
+      "3": "Primary education (elementary school)",
+      "4": "Lower secondary education (secondary school, junior school, middle school, junior high school, etc.)",
+      "5": "Higher secondary education (secondary school, high school, etc.)",
+      "6": "Technical or vocational education",
+      "7": "Bachelor's degree or equivalent (associate degree)",
+      "8": "Master's degree or equivalent",
+      "9": "Doctoral degree or equivalent (MD, PhD, JD, etc.)"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_4arev_1",
+      "msoc_4arev_2",
+      "msoc_4arev_3",
+      "msoc_4arev_4",
+      "msoc_4arev_5",
+      "msoc_4arev_6",
+      "msoc_4arev_7",
+      "msoc_4arev_8",
+      "msoc_4arev_9"
+    ]
+  },
+  "msoc_5rev": {
+    "type": "text",
+    "label": "What is your FATHER'S longest held job, including unpaid work and/or work as a homemaker? If he had two or more jobs for the same amount of time, please ONLY indicate the job that required the highest degree of skill or training.",
+    "value_labels": null
+  },
+  "msoc_5rev_des": {
+    "type": "notes",
+    "label": "Describe in detail the main tasks or activities your FATHER did for this job",
+    "value_labels": null
+  },
+  "msoc_6rev": {
+    "type": "radio",
+    "label": "On average, how many hours per week did your father work outside the home?",
+    "value_labels": {
+      "1": "No outside work (i.e. was exclusively a homemaker)",
+      "2": "< 10 hours",
+      "3": "10 to 20 hours",
+      "4": "21 to 30 hours",
+      "5": "31 to 40 hours",
+      "6": "More than 40 hours",
+      "7": "I do not know"
+    }
+  },
+  "msoc_35rev": {
+    "type": "radio",
+    "label": "For the majority of time during the first 10 years of your life, who was the primary economic provider in your household?",
+    "value_labels": {
+      "1": "Father",
+      "2": "Mother",
+      "3": "Father and Mother provided equally",
+      "4": "Other",
+      "5": "I do not know"
+    }
+  },
+  "msoc_35arev": {
+    "type": "text",
+    "label": "Who was the primary economic provider during the first 10 years of your life?",
+    "value_labels": null
+  },
+  "msoc_36rev": {
+    "type": "radio",
+    "label": "During the first 10 years of your life, did you or one of your brothers or sisters have to stop attending school in order to work and support the economic needs of your household? ",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_amenities": {
+    "type": "descriptive",
+    "label": "        0 to 10 years of age   11 to 24 years of age   25 to 34 years of age   35 to 45 years of age   46 to 65 years of age   66 until one year ago   Over the last 12 months     Electricity   {msoc_elec_0}   {msoc_elec_11}   {msoc_elec_25}   {msoc_elec_35}   {msoc_elec_46}   {msoc_elec_66}   {msoc_elec_rec}     Radio   {msoc_rad_0}   {msoc_rad_11}   {msoc_rad_25}   {msoc_rad_35}   {msoc_rad_46}   {msoc_rad_66}   {msoc_rad_rec}     Television   {msoc_tv_0}   {msoc_tv_11}   {msoc_tv_25}   {msoc_tv_35}   {msoc_tv_46}   {msoc_tv_66}   {msoc_tv_rec}     Refrigerator   {msoc_ref_0}   {msoc_ref_11}   {msoc_ref_25}   {msoc_ref_35}   {msoc_ref_46}   {msoc_ref_66}   {msoc_ref_rec}     Washing machine   {msoc_wash_0}   {msoc_wash_11}   {msoc_wash_25}   {msoc_wash_35}   {msoc_wash_46}   {msoc_wash_66}   {msoc_wash_rec}     Landline telephone   {msoc_line_0}   {msoc_line_11}   {msoc_line_25}   {msoc_line_35}   {msoc_line_46}   {msoc_line_66}   {msoc_line_rec}     Water heater or water boiler   {msoc_wat_0}   {msoc_wat_11}   {msoc_wat_25}   {msoc_wat_35}   {msoc_wat_46}   {msoc_wat_66}   {msoc_wat_rec}     Indoor bathroom (a toilet with sewage/drainage system)   {msoc_bath_0}   {msoc_bath_11}   {msoc_bath_25}   {msoc_bath_35}   {msoc_bath_46}   {msoc_bath_66}   {msoc_bath_rec}     Running water inside the home   {msoc_runn_0}   {msoc_runn_11}   {msoc_runn_25}   {msoc_runn_35}   {msoc_runn_46}   {msoc_runn_66}   {msoc_runn_rec}    ",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_elec_0",
+      "msoc_elec_11",
+      "msoc_elec_25",
+      "msoc_elec_35",
+      "msoc_elec_46",
+      "msoc_elec_66",
+      "msoc_elec_rec",
+      "msoc_rad_0",
+      "msoc_rad_11",
+      "msoc_rad_25",
+      "msoc_rad_35",
+      "msoc_rad_46",
+      "msoc_rad_66",
+      "msoc_rad_rec",
+      "msoc_tv_0",
+      "msoc_tv_11",
+      "msoc_tv_25",
+      "msoc_tv_35",
+      "msoc_tv_46",
+      "msoc_tv_66",
+      "msoc_tv_rec",
+      "msoc_ref_0",
+      "msoc_ref_11",
+      "msoc_ref_25",
+      "msoc_ref_35",
+      "msoc_ref_46",
+      "msoc_ref_66",
+      "msoc_ref_rec",
+      "msoc_wash_0",
+      "msoc_wash_11",
+      "msoc_wash_25",
+      "msoc_wash_35",
+      "msoc_wash_46",
+      "msoc_wash_66",
+      "msoc_wash_rec",
+      "msoc_comp_0",
+      "msoc_comp_11",
+      "msoc_comp_25",
+      "msoc_comp_35",
+      "msoc_comp_46",
+      "msoc_comp_66",
+      "msoc_comp_rec",
+      "msoc_line_0",
+      "msoc_line_11",
+      "msoc_line_25",
+      "msoc_line_35",
+      "msoc_line_46",
+      "msoc_line_66",
+      "msoc_line_rec",
+      "msoc_runn_0",
+      "msoc_runn_11",
+      "msoc_runn_25",
+      "msoc_runn_35",
+      "msoc_runn_46",
+      "msoc_runn_66",
+      "msoc_runn_rec",
+      "msoc_wat_0",
+      "msoc_wat_11",
+      "msoc_wat_25",
+      "msoc_wat_35",
+      "msoc_wat_46",
+      "msoc_wat_66",
+      "msoc_wat_rec",
+      "msoc_bath_0",
+      "msoc_bath_11",
+      "msoc_bath_25",
+      "msoc_bath_35",
+      "msoc_bath_46",
+      "msoc_bath_66",
+      "msoc_bath_rec",
+      "msoc_car_0",
+      "msoc_car_11",
+      "msoc_car_25",
+      "msoc_car_35",
+      "msoc_car_46",
+      "msoc_car_66",
+      "msoc_car_rec",
+      "msoc_inter_0",
+      "msoc_inter_11",
+      "msoc_inter_25",
+      "msoc_inter_35",
+      "msoc_inter_46",
+      "msoc_inter_66",
+      "msoc_inter_rec",
+      "msoc_sound_0",
+      "msoc_sound_11",
+      "msoc_sound_25",
+      "msoc_sound_35",
+      "msoc_sound_46",
+      "msoc_sound_66",
+      "msoc_sound_rec",
+      "msoc_smrt_0",
+      "msoc_smrt_11",
+      "msoc_smrt_25",
+      "msoc_smrt_35",
+      "msoc_smrt_46",
+      "msoc_smrt_66",
+      "msoc_smrt_rec",
+      "msoc_bedr_0",
+      "msoc_bedr_11",
+      "msoc_bedr_25",
+      "msoc_bedr_35",
+      "msoc_bedr_46",
+      "msoc_bedr_66",
+      "msoc_bedr_rec"
+    ]
+  },
+  "msoc_elec_0": {
+    "type": "radio",
+    "label": "Elec (0 to 10 years_",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_elec_11": {
+    "type": "radio",
+    "label": "Elec (11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_elec_25": {
+    "type": "radio",
+    "label": "Elec (25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_elec_35": {
+    "type": "radio",
+    "label": "Elec (35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_elec_46": {
+    "type": "radio",
+    "label": "Elec (46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_elec_66": {
+    "type": "radio",
+    "label": "Elec (66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_elec_rec": {
+    "type": "radio",
+    "label": "Elec(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_rad_0": {
+    "type": "radio",
+    "label": "Radio(0 to 10 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_rad_11": {
+    "type": "radio",
+    "label": "Radio(11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_rad_25": {
+    "type": "radio",
+    "label": "Radio(25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_rad_35": {
+    "type": "radio",
+    "label": "Radio(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_rad_46": {
+    "type": "radio",
+    "label": "Radio(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_rad_66": {
+    "type": "radio",
+    "label": "Radio (66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_rad_rec": {
+    "type": "radio",
+    "label": "Radio(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_tv_0": {
+    "type": "radio",
+    "label": "TV(0 to 10 years) ",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_tv_11": {
+    "type": "radio",
+    "label": "TV(11 to 24 years) ",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_tv_25": {
+    "type": "radio",
+    "label": "TV(25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_tv_35": {
+    "type": "radio",
+    "label": "TV(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_tv_46": {
+    "type": "radio",
+    "label": "TV(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_tv_66": {
+    "type": "radio",
+    "label": "TV(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_tv_rec": {
+    "type": "radio",
+    "label": "TV(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_ref_0": {
+    "type": "radio",
+    "label": "Ref(0 to 10 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_ref_11": {
+    "type": "radio",
+    "label": "Ref(11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_ref_25": {
+    "type": "radio",
+    "label": "Ref(25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_ref_35": {
+    "type": "radio",
+    "label": "Ref(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_ref_46": {
+    "type": "radio",
+    "label": "Ref(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_ref_66": {
+    "type": "radio",
+    "label": "Ref(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_ref_rec": {
+    "type": "radio",
+    "label": "Ref(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wash_0": {
+    "type": "radio",
+    "label": "Wash(0 to 10 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wash_11": {
+    "type": "radio",
+    "label": "Wash(11 to 24 years",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wash_25": {
+    "type": "radio",
+    "label": "Wash(25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wash_35": {
+    "type": "radio",
+    "label": "Wash (35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wash_46": {
+    "type": "radio",
+    "label": "Wash(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wash_66": {
+    "type": "radio",
+    "label": "Wash(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wash_rec": {
+    "type": "radio",
+    "label": "Wash(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_comp_0": {
+    "type": "radio",
+    "label": "Comp(0 to 10 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_comp_11": {
+    "type": "radio",
+    "label": "Comp(11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_comp_25": {
+    "type": "radio",
+    "label": "Comp (25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_comp_35": {
+    "type": "radio",
+    "label": "Comp(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_comp_46": {
+    "type": "radio",
+    "label": "Comp(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_comp_66": {
+    "type": "radio",
+    "label": "Comp (66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_comp_rec": {
+    "type": "radio",
+    "label": "Comp(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_line_0": {
+    "type": "radio",
+    "label": "Line(0 to 10 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_line_11": {
+    "type": "radio",
+    "label": "Line(11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_line_25": {
+    "type": "radio",
+    "label": "Line(25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_line_35": {
+    "type": "radio",
+    "label": "Line(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_line_46": {
+    "type": "radio",
+    "label": "Line(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_line_66": {
+    "type": "radio",
+    "label": "Line(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_line_rec": {
+    "type": "radio",
+    "label": "Line(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_runn_0": {
+    "type": "radio",
+    "label": "Runn(0 to 10 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_runn_11": {
+    "type": "radio",
+    "label": "Runn(11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_runn_25": {
+    "type": "radio",
+    "label": "Runn(25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_runn_35": {
+    "type": "radio",
+    "label": "Runn(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_runn_46": {
+    "type": "radio",
+    "label": "Runn(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_runn_66": {
+    "type": "radio",
+    "label": "Runn(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_runn_rec": {
+    "type": "radio",
+    "label": "Runn(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wat_0": {
+    "type": "radio",
+    "label": "Wat(0 to 10 years of age)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wat_11": {
+    "type": "radio",
+    "label": "Wat(11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wat_25": {
+    "type": "radio",
+    "label": "Wat(25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wat_35": {
+    "type": "radio",
+    "label": "Wat(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wat_46": {
+    "type": "radio",
+    "label": "Wat(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wat_66": {
+    "type": "radio",
+    "label": "Wat(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_wat_rec": {
+    "type": "radio",
+    "label": "Wat(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bath_0": {
+    "type": "radio",
+    "label": "Bath(0 to 10 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bath_11": {
+    "type": "radio",
+    "label": "Bath(11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bath_25": {
+    "type": "radio",
+    "label": "Bath(25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bath_35": {
+    "type": "radio",
+    "label": "Bath(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bath_46": {
+    "type": "radio",
+    "label": "Bath(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bath_66": {
+    "type": "radio",
+    "label": "Bath(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bath_rec": {
+    "type": "radio",
+    "label": "Bath(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_car_0": {
+    "type": "radio",
+    "label": "Automobile(0 to 10 years of age)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_car_11": {
+    "type": "radio",
+    "label": "Automobile(11 to 24 years of age)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_car_25": {
+    "type": "radio",
+    "label": "Automobile(25 to 34 years of age)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_car_35": {
+    "type": "radio",
+    "label": "Automobile(35 to 45 years of age)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_car_46": {
+    "type": "radio",
+    "label": "Automobile(46 to 65 years of age)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_car_66": {
+    "type": "radio",
+    "label": "Automobile(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_car_rec": {
+    "type": "radio",
+    "label": "Automobile(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_inter_0": {
+    "type": "radio",
+    "label": "Internet(0 to 10 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_inter_11": {
+    "type": "radio",
+    "label": "Internet(11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_inter_25": {
+    "type": "radio",
+    "label": "Internet(25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_inter_35": {
+    "type": "radio",
+    "label": "Internet(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_inter_46": {
+    "type": "radio",
+    "label": "Internet(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_inter_66": {
+    "type": "radio",
+    "label": "Internet(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_inter_rec": {
+    "type": "radio",
+    "label": "Internet(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_sound_0": {
+    "type": "radio",
+    "label": "Sound(0 to 10 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_sound_11": {
+    "type": "radio",
+    "label": "Sound(11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_sound_25": {
+    "type": "radio",
+    "label": "Sound (25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_sound_35": {
+    "type": "radio",
+    "label": "Sound(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_sound_46": {
+    "type": "radio",
+    "label": "Sound(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_sound_66": {
+    "type": "radio",
+    "label": "Sound(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_sound_rec": {
+    "type": "radio",
+    "label": "Sound(over the last last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_smrt_0": {
+    "type": "radio",
+    "label": "Smartphone(0 to 10 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_smrt_11": {
+    "type": "radio",
+    "label": "Smartphone(11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_smrt_25": {
+    "type": "radio",
+    "label": "Smartphone(25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_smrt_35": {
+    "type": "radio",
+    "label": "Smartphone(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_smrt_46": {
+    "type": "radio",
+    "label": "Smartphone(46 to 65 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_smrt_66": {
+    "type": "radio",
+    "label": "Smartphone(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_smrt_rec": {
+    "type": "radio",
+    "label": "Smartphone(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bedr_0": {
+    "type": "radio",
+    "label": "Bedroom(0 to 10 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bedr_11": {
+    "type": "radio",
+    "label": "Bedroom(11 to 24 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bedr_25": {
+    "type": "radio",
+    "label": "Bedroom(25 to 34 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bedr_35": {
+    "type": "radio",
+    "label": "Bedroom(35 to 45 years)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bedr_46": {
+    "type": "radio",
+    "label": "Bedroom(46 to 65)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bedr_66": {
+    "type": "radio",
+    "label": "Bedroom(66 until one year ago)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bedr_rec": {
+    "type": "radio",
+    "label": "Bedroom(over the last 12 months)",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_obj_num": {
+    "type": "descriptive",
+    "label": "Indicate the number (e.g., 1, 2, 3) of each of these items present in your home during each life period. REMEMBER: If you are helping a participant complete this survey, the answers should be about the participant's life, not your own.         0 to 10 years of age   11 to 24 years of age   25 to 34 years of age   35 to 45 years of age   46 to 65 years of age   66 until one year ago   Over the last 12 months     Television   {msoc_ob1_0}   {msoc_ob1_11}   {msoc_ob1_25}   {msoc_ob1_35}   {msoc_ob1_46}   {msoc_ob1_66}   {msoc_ob1_rec}     Indoor bathroom (a toilet with sewage/drainage system)    {msoc_ob2_0}   {msoc_ob2_11}   {msoc_ob2_25}   {msoc_ob2_35}   {msoc_ob2_46}   {msoc_ob2_66}   {msoc_ob2_rec}     Automobile for personal or family use (do NOT include work vehicles, such as taxis, that could be used as personal or family vehicles)   {msoc_ob3_0}   {msoc_ob3_11}   {msoc_ob3_25}   {msoc_ob3_35}   {msoc_ob3_46}   {msoc_ob3_66}   {msoc_ob3_rec}     Computer    {msoc_ob4_0}   {msoc_ob4_11}   {msoc_ob4_25}   {msoc_ob4_35}   {msoc_ob4_46}   {msoc_ob4_66}   {msoc_ob4_rec}     Bedrooms (rooms that were primarily used for sleeping)   {msoc_ob5_0}   {msoc_ob5_11}   {msoc_ob5_25}   {msoc_ob5_35}   {msoc_ob5_46}   {msoc_ob5_66}   {msoc_ob5_rec}      ",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_ob1_0",
+      "msoc_ob1_11",
+      "msoc_ob1_25",
+      "msoc_ob1_35",
+      "msoc_ob1_46",
+      "msoc_ob1_66",
+      "msoc_ob1_rec",
+      "msoc_ob2_0",
+      "msoc_ob2_11",
+      "msoc_ob2_25",
+      "msoc_ob2_35",
+      "msoc_ob2_46",
+      "msoc_ob2_66",
+      "msoc_ob2_rec",
+      "msoc_ob3_0",
+      "msoc_ob3_11",
+      "msoc_ob3_25",
+      "msoc_ob3_35",
+      "msoc_ob3_46",
+      "msoc_ob3_66",
+      "msoc_ob3_rec",
+      "msoc_ob4_0",
+      "msoc_ob4_11",
+      "msoc_ob4_25",
+      "msoc_ob4_35",
+      "msoc_ob4_46",
+      "msoc_ob4_66",
+      "msoc_ob4_rec",
+      "msoc_ob5_0",
+      "msoc_ob5_11",
+      "msoc_ob5_25",
+      "msoc_ob5_35",
+      "msoc_ob5_46",
+      "msoc_ob5_66",
+      "msoc_ob5_rec"
+    ]
+  },
+  "msoc_ob1_0": {
+    "type": "text",
+    "label": "TV_no(0 to 10 years)",
+    "value_labels": null
+  },
+  "msoc_ob1_11": {
+    "type": "text",
+    "label": "TV_no(11 to 24 years)",
+    "value_labels": null
+  },
+  "msoc_ob1_25": {
+    "type": "text",
+    "label": "TV_no(25 to 34 years)",
+    "value_labels": null
+  },
+  "msoc_ob1_35": {
+    "type": "text",
+    "label": "TV_no(35 to 45 years)",
+    "value_labels": null
+  },
+  "msoc_ob1_46": {
+    "type": "text",
+    "label": "TV_no(46 to 65 years)",
+    "value_labels": null
+  },
+  "msoc_ob1_66": {
+    "type": "text",
+    "label": "TV_no(66 until one year ago)",
+    "value_labels": null
+  },
+  "msoc_ob1_rec": {
+    "type": "text",
+    "label": "TV_no(over the last 12 months)",
+    "value_labels": null
+  },
+  "msoc_ob2_0": {
+    "type": "text",
+    "label": "Indoor_bath_no(0 to 10 years)",
+    "value_labels": null
+  },
+  "msoc_ob2_11": {
+    "type": "text",
+    "label": "Indoor_bath_no(11 to 24 years)",
+    "value_labels": null
+  },
+  "msoc_ob2_25": {
+    "type": "text",
+    "label": "Indoor_bath_no(25 to 34 years)",
+    "value_labels": null
+  },
+  "msoc_ob2_35": {
+    "type": "text",
+    "label": "Indoor_bath_no(35 to 45 years)",
+    "value_labels": null
+  },
+  "msoc_ob2_46": {
+    "type": "text",
+    "label": "Indoor_bath_no(46 to 65 years)",
+    "value_labels": null
+  },
+  "msoc_ob2_66": {
+    "type": "text",
+    "label": "Indoor_bath_no(66 until one year ago)",
+    "value_labels": null
+  },
+  "msoc_ob2_rec": {
+    "type": "text",
+    "label": "Indoor_bath_no(over the last 12 months)",
+    "value_labels": null
+  },
+  "msoc_ob3_0": {
+    "type": "text",
+    "label": "Automobile_no(0 to 10 years)",
+    "value_labels": null
+  },
+  "msoc_ob3_11": {
+    "type": "text",
+    "label": "Automobile_no(11 to 24years)",
+    "value_labels": null
+  },
+  "msoc_ob3_25": {
+    "type": "text",
+    "label": "Automobile_no(25 to 34 years)",
+    "value_labels": null
+  },
+  "msoc_ob3_35": {
+    "type": "text",
+    "label": "Automobile_no(35 to 45 years)",
+    "value_labels": null
+  },
+  "msoc_ob3_46": {
+    "type": "text",
+    "label": "Automobile_no(46 to 65 years)",
+    "value_labels": null
+  },
+  "msoc_ob3_66": {
+    "type": "text",
+    "label": "Automobile_no(66 until one year ago)",
+    "value_labels": null
+  },
+  "msoc_ob3_rec": {
+    "type": "text",
+    "label": "Automobile_no(over the last 12 months)",
+    "value_labels": null
+  },
+  "msoc_ob4_0": {
+    "type": "text",
+    "label": "Comp_no(0 to 10 years",
+    "value_labels": null
+  },
+  "msoc_ob4_11": {
+    "type": "text",
+    "label": "Comp_no(11 to 24 years)",
+    "value_labels": null
+  },
+  "msoc_ob4_25": {
+    "type": "text",
+    "label": "Comp_no(25 to 34 years)",
+    "value_labels": null
+  },
+  "msoc_ob4_35": {
+    "type": "text",
+    "label": "Comp_no(35 to 45 years)",
+    "value_labels": null
+  },
+  "msoc_ob4_46": {
+    "type": "text",
+    "label": "Comp_no(46 to 65 years)",
+    "value_labels": null
+  },
+  "msoc_ob4_66": {
+    "type": "text",
+    "label": "Comp_no(66 until one year ago)",
+    "value_labels": null
+  },
+  "msoc_ob4_rec": {
+    "type": "text",
+    "label": "Comp_no(over the last 12 months)",
+    "value_labels": null
+  },
+  "msoc_ob5_0": {
+    "type": "text",
+    "label": "Bedrooms_no(0 to 10 years)",
+    "value_labels": null
+  },
+  "msoc_ob5_11": {
+    "type": "text",
+    "label": "Bedrooms_no(11 to 24 years)",
+    "value_labels": null
+  },
+  "msoc_ob5_25": {
+    "type": "text",
+    "label": "Bedrooms_no(25 to 34 years)",
+    "value_labels": null
+  },
+  "msoc_ob5_35": {
+    "type": "text",
+    "label": "Bedrooms_no(35 to 45 years)",
+    "value_labels": null
+  },
+  "msoc_ob5_46": {
+    "type": "text",
+    "label": "Bedrooms_no(46 to 65 years)",
+    "value_labels": null
+  },
+  "msoc_ob5_66": {
+    "type": "text",
+    "label": "Bedrooms_no(66 until one year ago)",
+    "value_labels": null
+  },
+  "msoc_ob5_rec": {
+    "type": "text",
+    "label": "Bedrooms_no(over the last 12 months)",
+    "value_labels": null
+  },
+  "msoc_bas": {
+    "type": "radio",
+    "label": "In your life has it ever been difficult for your family to meet the expenses of your basic needs such as food, clothing and housing?",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bas_1": {
+    "type": "descriptive",
+    "label": "In these stages of your life, how difficult has it been for your family to meet the expenses of your basic needs such as food, clothing and housing?",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_bas_0",
+      "msoc_bas_11",
+      "msoc_bas_25",
+      "msoc_bas_35",
+      "msoc_bas_46",
+      "msoc_bas_66",
+      "msoc_bas_rec"
+    ]
+  },
+  "msoc_bas_0": {
+    "type": "radio",
+    "label": "0 to 10 years of age",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_bas_11": {
+    "type": "radio",
+    "label": "11 to 24 years of age",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_bas_25": {
+    "type": "radio",
+    "label": "25 to 34 years of age",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_bas_35": {
+    "type": "radio",
+    "label": "35 to 45 years of age",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_bas_46": {
+    "type": "radio",
+    "label": "46 to 65 years of age",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_bas_66": {
+    "type": "radio",
+    "label": "66 to one year ago",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_bas_rec": {
+    "type": "radio",
+    "label": "Over the last 12 months",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_fin": {
+    "type": "radio",
+    "label": "On average across your whole life, how did your family's finances usually work out by the end of each month?  ",
+    "value_labels": {
+      "1": "Money left over to save",
+      "2": "Just about enough to make ends meet",
+      "3": "Not enough to make ends meet"
+    }
+  },
+  "msoc_fin_1": {
+    "type": "descriptive",
+    "label": "In these stages of your life, how have your family's finances usually worked out by the end of each month?",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_fin_0",
+      "msoc_fin_11",
+      "msoc_fin_25",
+      "msoc_fin_35",
+      "msoc_fin_46",
+      "msoc_fin_66",
+      "msoc_fin_rec"
+    ]
+  },
+  "msoc_fin_0": {
+    "type": "radio",
+    "label": "0 to 10 years of age",
+    "value_labels": {
+      "1": "Money left over to save",
+      "2": "Just about enough to make ends meet",
+      "3": "Not enough to make ends meet"
+    }
+  },
+  "msoc_fin_11": {
+    "type": "radio",
+    "label": "11 to 24 years of age",
+    "value_labels": {
+      "1": "Money left over to save",
+      "2": "Just about enough to make ends meet",
+      "3": "Not enough to make ends meet"
+    }
+  },
+  "msoc_fin_25": {
+    "type": "radio",
+    "label": "25 to 34 years of age",
+    "value_labels": {
+      "1": "Money left over to save",
+      "2": "Just about enough to make ends meet",
+      "3": "Not enough to make ends meet"
+    }
+  },
+  "msoc_fin_35": {
+    "type": "radio",
+    "label": "35 to 45 years of age",
+    "value_labels": {
+      "1": "Money left over to save",
+      "2": "Just about enough to make ends meet",
+      "3": "Not enough to make ends meet"
+    }
+  },
+  "msoc_fin_46": {
+    "type": "radio",
+    "label": "46 to 65 years of age",
+    "value_labels": {
+      "1": "Money left over to save",
+      "2": "Just about enough to make ends meet",
+      "3": "Not enough to make ends meet"
+    }
+  },
+  "msoc_fin_66": {
+    "type": "radio",
+    "label": "66 to one year ago",
+    "value_labels": {
+      "1": "Money left over to save",
+      "2": "Just about enough to make ends meet",
+      "3": "Not enough to make ends meet"
+    }
+  },
+  "msoc_fin_rec": {
+    "type": "radio",
+    "label": "Over the last 12 months",
+    "value_labels": {
+      "1": "Money left over to save",
+      "2": "Just about enough to make ends meet",
+      "3": "Not enough to make ends meet"
+    }
+  },
+  "msoc_care": {
+    "type": "radio",
+    "label": "In your life, has it ever been difficult for your family to pay for health care?",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_care_1": {
+    "type": "descriptive",
+    "label": "In these stages of your life, how difficult has it been for your family to pay for health care? ",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_care_0",
+      "msoc_care_11",
+      "msoc_care_25",
+      "msoc_care_35",
+      "msoc_care_46",
+      "msoc_care_66",
+      "msoc_care_rec"
+    ]
+  },
+  "msoc_care_0": {
+    "type": "radio",
+    "label": "0 to 10 years of age",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_care_11": {
+    "type": "radio",
+    "label": "11 to 24 years of age",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_care_25": {
+    "type": "radio",
+    "label": "25 to 34 years of age",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_care_35": {
+    "type": "radio",
+    "label": "35 to 45 years of age",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_care_46": {
+    "type": "radio",
+    "label": "46 to 65 years of age",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_care_66": {
+    "type": "radio",
+    "label": "66 to one year ago",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_care_rec": {
+    "type": "radio",
+    "label": "Over the last 12 months",
+    "value_labels": {
+      "1": "Not difficult at all",
+      "2": "Somewhat difficult",
+      "3": "Very difficult"
+    }
+  },
+  "msoc_eat": {
+    "type": "radio",
+    "label": "Throughout your life, have you ever eaten less than you thought you should because you/your family didn't have enough money for food?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  "msoc_eat_1": {
+    "type": "descriptive",
+    "label": "Did this happen during any of these stages of your life?  ",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_eat_0",
+      "msoc_eat_11",
+      "msoc_eat_25",
+      "msoc_eat_35",
+      "msoc_eat_46",
+      "msoc_eat_66",
+      "msoc_eat_rec"
+    ]
+  },
+  "msoc_eat_0": {
+    "type": "radio",
+    "label": "0 to 10 years of age",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_eat_11": {
+    "type": "radio",
+    "label": "11 to 24 years of age",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_eat_25": {
+    "type": "radio",
+    "label": "25 to 34 years of age",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_eat_35": {
+    "type": "radio",
+    "label": "35 to 45 years of age",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_eat_46": {
+    "type": "radio",
+    "label": "46 to 65 years of age",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_eat_66": {
+    "type": "radio",
+    "label": "66 to one year ago",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_eat_rec": {
+    "type": "radio",
+    "label": "Over the last 12 months",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bal": {
+    "type": "radio",
+    "label": "Throughout your life, have you ever not been able to eat a balanced or healthy meal due to lack of money or other resources? ",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  "msoc_bal_1": {
+    "type": "descriptive",
+    "label": "Did this happen during any of these stages of your life?  ",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_bal_0",
+      "msoc_bal_11",
+      "msoc_bal_25",
+      "msoc_bal_35",
+      "msoc_bal_46",
+      "msoc_bal_66",
+      "msoc_bal_rec"
+    ]
+  },
+  "msoc_bal_0": {
+    "type": "radio",
+    "label": "0 to 10 years of age",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bal_11": {
+    "type": "radio",
+    "label": "11 to 24 years of age",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bal_25": {
+    "type": "radio",
+    "label": "25 to 34 years of age",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bal_35": {
+    "type": "radio",
+    "label": "35 to 45 years of age",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bal_46": {
+    "type": "radio",
+    "label": "46 to 65 years of age",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bal_66": {
+    "type": "radio",
+    "label": "66 to one year ago",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_bal_rec": {
+    "type": "radio",
+    "label": "Over the last 12 months",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_74rev": {
+    "type": "radio",
+    "label": "Are you currently working? Please consider paid and/or unpaid work. ",
+    "value_labels": {
+      "1": "Yes, I do paid work",
+      "2": "Yes, I do unpaid work",
+      "3": "Yes, I do paid and unpaid work",
+      "4": "I am not currently working because I am retired",
+      "5": "I am not currently working for another reason"
+    }
+  },
+  "msoc_74arev": {
+    "type": "text",
+    "label": "What type of work do you? Please describe your work briefly",
+    "value_labels": null
+  },
+  "msoc_75rev": {
+    "type": "checkbox",
+    "label": "What are your current sources of income? (select all that apply)",
+    "value_labels": {
+      "1": "Salary from my current job/employment",
+      "2": "Income received from an inheritance",
+      "3": "Income from bank investments",
+      "4": "Income from a pension or retirement fund",
+      "5": "Savings",
+      "6": "Property rentals",
+      "7": "Disability benefits",
+      "8": "Unemployment benefits",
+      "9": "Social security or other government social programs",
+      "10": "Family support (spouse, kids, etc)",
+      "11": "Money received from a friend or family member in another country",
+      "12": "Other: {msoc_75reva}"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_75rev_1",
+      "msoc_75rev_2",
+      "msoc_75rev_3",
+      "msoc_75rev_4",
+      "msoc_75rev_5",
+      "msoc_75rev_6",
+      "msoc_75rev_7",
+      "msoc_75rev_8",
+      "msoc_75rev_9",
+      "msoc_75rev_10",
+      "msoc_75rev_11",
+      "msoc_75rev_12"
+    ]
+  },
+  "msoc_75reva": {
+    "type": "text",
+    "label": "Other_sources_of_income",
+    "value_labels": null
+  },
+  "msoc_76rev": {
+    "type": "radio",
+    "label": "Counting the income of all the members of your household, was you household income before taxes for the previous year less than $30,000 or $30,000 or more? This includes all money received from all sources. ",
+    "value_labels": {
+      "1": "Less than $30,000",
+      "2": "$30,000 or more"
+    }
+  },
+  "msoc_76arev": {
+    "type": "radio",
+    "label": "Which of the following brackets includes your total household income?",
+    "value_labels": {
+      "1": "Less than $10,000",
+      "2": "$10,001 - $15,000",
+      "3": "$15,001 - $20,000",
+      "4": "$20,001 - $25,000",
+      "5": "$25,001 - $30,000"
+    }
+  },
+  "msoc_76brev": {
+    "type": "radio",
+    "label": "Which of the following brackets includes your total household income?",
+    "value_labels": {
+      "6": "$30,001 - $40,000",
+      "7": "$40,001 - $50,000",
+      "8": "$50,001 - $75,000",
+      "9": "$75,001 - $100,000",
+      "10": "More than $100,000"
+    }
+  },
+  "msoc_77rev": {
+    "type": "radio",
+    "label": "Approximately what proportion of your household income is spent on rent/mortgage",
+    "value_labels": {
+      "1": "More than two-thirds",
+      "2": "Between two-thirds and half",
+      "3": "About half",
+      "4": "Between half and one-third",
+      "5": "Less than one-third",
+      "6": "None"
+    }
+  },
+  "msoc_79rev": {
+    "type": "radio",
+    "label": "What is the total family debt within your household from such things as credit card charges, medical or legal bills, and loans from banks or relatives? Do not include mortgage or car loans.",
+    "value_labels": {
+      "0": "No household/family debt",
+      "1": "Less than $500",
+      "2": "$500 to $4,900",
+      "3": "$5,000 to $9,999",
+      "4": "$10,000 to $19,999",
+      "5": "$20,000 to $49,999",
+      "6": "$50,000 to $99,000",
+      "7": "$100,000 or greater"
+    }
+  },
+  "msoc_80rev": {
+    "type": "radio",
+    "label": "If you lost all your current sources of household income (paycheck, public assistance, or other forms of income), how long could you continue to live at your current address and standard of living?",
+    "value_labels": {
+      "1": "Less than 1 month",
+      "2": "1 to 2 months",
+      "3": "3 to 6 months",
+      "4": "7 to 12 months",
+      "5": "More than 1 year"
+    }
+  },
+  "msoc_81rev": {
+    "type": "radio",
+    "label": "Which of the following describes your current living situation?",
+    "value_labels": {
+      "1": "Homeowner, no mortgage payments",
+      "2": "Homeowner, mortgage payments",
+      "3": "Home renter (house, apartment, flat)",
+      "4": "Room renter (rents room within home)",
+      "5": "Homed, but does not pay rent",
+      "6": "Homeless (being homeless includes living with friends or extended family members, or living in temporary living accommodations such as transitional housing, shelters, single room occupancy facilities, cars/vans, etc.)"
+    }
+  },
+  "msoc_81arev": {
+    "type": "text",
+    "label": "How long have you been homeless?",
+    "value_labels": null
+  },
+  "msoc_82rev": {
+    "type": "radio",
+    "label": "In the past 12 months, have you had concerns about the conditions or quality of your home? For example, water leaks, electrical problems, problems with a water heater, etc. ",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  "msoc_82arev": {
+    "type": "checkbox",
+    "label": "Please tell us what types of concerns you've had about the conditions or quality of your home? (select all that apply)",
+    "value_labels": {
+      "1": "Pest problems",
+      "2": "Mold problems",
+      "3": "Lack of/malfunctioning house heater",
+      "4": "Lack of/malfunctioning water heater",
+      "5": "Lack of/malfunctioning oven/stove",
+      "6": "Lack of/malfunctioning refrigerator",
+      "7": "Lack of/malfunctioning toilet",
+      "8": "Lack of/malfunctioning shower/tub",
+      "9": "Water leaks",
+      "10": "Other: {msoc_82brev}"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_82arev_1",
+      "msoc_82arev_2",
+      "msoc_82arev_3",
+      "msoc_82arev_4",
+      "msoc_82arev_5",
+      "msoc_82arev_6",
+      "msoc_82arev_7",
+      "msoc_82arev_8",
+      "msoc_82arev_9",
+      "msoc_82arev_10"
+    ]
+  },
+  "msoc_82brev": {
+    "type": "text",
+    "label": "other_concerns",
+    "value_labels": null
+  },
+  "msoc_83rev": {
+    "type": "radio",
+    "label": "In the past 12 months, have you been evicted or forcibly removed from your home for any reason?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  "msoc_84rev": {
+    "type": "checkbox",
+    "label": "What kinds of health insurance or health care coverage do you have? (select all that apply)",
+    "value_labels": {
+      "1": "Private health insurance",
+      "2": "Public/Government Health Insurance (Medicare, Medigap, Medicaid, Medical, etc.)",
+      "3": "I do not have medical insurance",
+      "4": "I do not know"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_84rev_1",
+      "msoc_84rev_2",
+      "msoc_84rev_3",
+      "msoc_84rev_4"
+    ]
+  },
+  "msoc_insur_type": {
+    "type": "checkbox",
+    "label": "Which of the following types of medical insurance do you have? (select all that apply)",
+    "value_labels": {
+      "1": "Medicare",
+      "2": "Medigap",
+      "3": "Medicaid",
+      "4": "Medical",
+      "5": "Military related health care (TRICARE/CHAMPUS, VA Health Care, CHAMP-VA)",
+      "6": "Indian Health Service",
+      "7": "Other state-sponsored health care",
+      "8": "Other government medical insurance"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_insur_type_1",
+      "msoc_insur_type_2",
+      "msoc_insur_type_3",
+      "msoc_insur_type_4",
+      "msoc_insur_type_5",
+      "msoc_insur_type_6",
+      "msoc_insur_type_7",
+      "msoc_insur_type_8"
+    ]
+  },
+  "msoc_87rev": {
+    "type": "radio",
+    "label": "In the past 12 months, how often have you had a problem understanding what is being told to you about your health by medical professionals in a clinic or hospital?",
+    "value_labels": {
+      "1": "Almost always",
+      "2": "Sometimes",
+      "3": "Never"
+    }
+  },
+  "msoc_91rev": {
+    "type": "radio",
+    "label": "In the past 12 months, have you needed to see a doctor, but weren't able to for any reason?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  "msoc_doc_why": {
+    "type": "checkbox",
+    "label": "Why couldn't you see a doctor when you needed to? (select all that apply)",
+    "value_labels": {
+      "1": "Financial reasons (transportation costs, cost of the visit, etc.)",
+      "2": "There were no medical appointments available",
+      "3": "Difficulty with transportation",
+      "4": "Distance",
+      "5": "I didn't have anyone to accompany me to the visit",
+      "6": "For reasons related to the COVID-19 pandemic",
+      "7": "For reasons related to a sociopolitical event",
+      "8": "Other: {msoc_doc_why_spec}"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_doc_why_1",
+      "msoc_doc_why_2",
+      "msoc_doc_why_3",
+      "msoc_doc_why_4",
+      "msoc_doc_why_5",
+      "msoc_doc_why_6",
+      "msoc_doc_why_7",
+      "msoc_doc_why_8"
+    ]
+  },
+  "msoc_doc_why_spec": {
+    "type": "text",
+    "label": "Other_doc_why",
+    "value_labels": null
+  },
+  "msoc_25rev": {
+    "type": "radio",
+    "label": "How often did a parent or other adult in the household make you feel that you were loved, supported, and cared for?",
+    "value_labels": {
+      "1": "Never",
+      "2": "Sometimes",
+      "3": "Often"
+    }
+  },
+  "msoc_27rev": {
+    "type": "radio",
+    "label": "How often did a parent or other adult in the household express physical affection for you, such as hugging, or other physical gestures of warmth and affection?",
+    "value_labels": {
+      "1": "Never",
+      "2": "Sometimes",
+      "3": "Often"
+    }
+  },
+  "msoc_30rev": {
+    "type": "radio",
+    "label": "How often would you say there were fights, arguments, or yelling between your parents?",
+    "value_labels": {
+      "1": "Never",
+      "2": "Sometimes",
+      "3": "Often"
+    }
+  },
+  "msoc_31rev": {
+    "type": "radio",
+    "label": "How often would you say there were fights, arguments, or yelling between one of your parents and you?",
+    "value_labels": {
+      "1": "Never",
+      "2": "Sometimes",
+      "3": "Often"
+    }
+  },
+  "msoc_31rev_2": {
+    "type": "radio",
+    "label": "How often would you say there were fights, arguments, or yelling between one of your parents and one of your siblings?",
+    "value_labels": {
+      "1": "Never",
+      "2": "Sometimes",
+      "3": "Often"
+    }
+  },
+  "msoc_31rev_3": {
+    "type": "radio",
+    "label": "How often would you say there were fights, arguments, or yelling between your siblings and you?",
+    "value_labels": {
+      "1": "Never",
+      "2": "Sometimes",
+      "3": "Often"
+    }
+  },
+  "msoc_32rev": {
+    "type": "radio",
+    "label": "Would you say that the home you grew up in was well organized and managed?",
+    "value_labels": {
+      "1": "Never",
+      "2": "Sometimes",
+      "3": "Often"
+    }
+  },
+  "msoc_33rev": {
+    "type": "radio",
+    "label": "As a child, did you live with someone who was a problem drinker or alcoholic, or used illegal drugs?",
+    "value_labels": {
+      "1": "Never",
+      "2": "Sometimes",
+      "3": "Often"
+    }
+  },
+  "msoc_34rev": {
+    "type": "radio",
+    "label": "Would you say that you were neglected during your childhood, that you were left alone to fend for yourself?",
+    "value_labels": {
+      "1": "Never",
+      "2": "Sometimes",
+      "3": "Often"
+    }
+  },
+  "msoc_hit": {
+    "type": "radio",
+    "label": "Has someone (including family members or friends) ever hit, pushed, or pulled your hair?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_hit_period": {
+    "type": "checkbox",
+    "label": "In what period or periods of your life did this occur?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_hit_period_1",
+      "msoc_hit_period_2",
+      "msoc_hit_period_3",
+      "msoc_hit_period_4",
+      "msoc_hit_period_5",
+      "msoc_hit_period_6",
+      "msoc_hit_period_7"
+    ]
+  },
+  "msoc_hit_relat": {
+    "type": "checkbox",
+    "label": "What relationship did you have with the person or persons who treated you this way?",
+    "value_labels": {
+      "1": "Mother or Stepmother - legal guardian",
+      "2": "Father or Stepfather - legal guardian",
+      "3": "Son or Daughter",
+      "4": "Other family member",
+      "5": "Friend",
+      "6": "Caregiver",
+      "7": "A stranger",
+      "8": "Other"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_hit_relat_1",
+      "msoc_hit_relat_2",
+      "msoc_hit_relat_3",
+      "msoc_hit_relat_4",
+      "msoc_hit_relat_5",
+      "msoc_hit_relat_6",
+      "msoc_hit_relat_7",
+      "msoc_hit_relat_8"
+    ]
+  },
+  "msoc_hit_relat_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_att": {
+    "type": "radio",
+    "label": "Has anyone (including family members or friends) ever attacked you using a gun, knife, or other weapon?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_att_period": {
+    "type": "checkbox",
+    "label": "In what period or periods of your life did this occur?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_att_period_1",
+      "msoc_att_period_2",
+      "msoc_att_period_3",
+      "msoc_att_period_4",
+      "msoc_att_period_5",
+      "msoc_att_period_6",
+      "msoc_att_period_7"
+    ]
+  },
+  "msoc_att_relat": {
+    "type": "checkbox",
+    "label": "What relationship did you have with the person or persons who treated you this way?",
+    "value_labels": {
+      "1": "Mother or Stepmother - legal guardian",
+      "2": "Father or Stepfather - legal guardian",
+      "3": "Son or Daughter",
+      "4": "Other family member",
+      "5": "Friend",
+      "6": "Caregiver",
+      "7": "A stranger",
+      "8": "Other"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_att_relat_1",
+      "msoc_att_relat_2",
+      "msoc_att_relat_3",
+      "msoc_att_relat_4",
+      "msoc_att_relat_5",
+      "msoc_att_relat_6",
+      "msoc_att_relat_7",
+      "msoc_att_relat_8"
+    ]
+  },
+  "msoc_att_relat_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_humi": {
+    "type": "radio",
+    "label": "Has someone (including family members or friends) ever humiliated or made fun of you?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_humi_period": {
+    "type": "checkbox",
+    "label": "In what period or periods of your life did this occur?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_humi_period_1",
+      "msoc_humi_period_2",
+      "msoc_humi_period_3",
+      "msoc_humi_period_4",
+      "msoc_humi_period_5",
+      "msoc_humi_period_6",
+      "msoc_humi_period_7"
+    ]
+  },
+  "msoc_humi_relat": {
+    "type": "checkbox",
+    "label": "What relationship did you have with the person or persons who treated you this way?",
+    "value_labels": {
+      "1": "Mother or Stepmother - legal guardian",
+      "2": "Father or Stepfather - legal guardian",
+      "3": "Son or Daughter",
+      "4": "Other family member",
+      "5": "Friend",
+      "6": "Caregiver",
+      "7": "A stranger",
+      "8": "Other"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_humi_relat_1",
+      "msoc_humi_relat_2",
+      "msoc_humi_relat_3",
+      "msoc_humi_relat_4",
+      "msoc_humi_relat_5",
+      "msoc_humi_relat_6",
+      "msoc_humi_relat_7",
+      "msoc_humi_relat_8"
+    ]
+  },
+  "msoc_humi_relat_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_forb": {
+    "type": "radio",
+    "label": "Has someone (including family members or friends) ever forbid you from leaving your home or having visitors?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_forb_period": {
+    "type": "checkbox",
+    "label": "In what period or periods of your life did this occur?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_forb_period_1",
+      "msoc_forb_period_2",
+      "msoc_forb_period_3",
+      "msoc_forb_period_4",
+      "msoc_forb_period_5",
+      "msoc_forb_period_6",
+      "msoc_forb_period_7"
+    ]
+  },
+  "msoc_forb_relat": {
+    "type": "checkbox",
+    "label": "What relationship did you have with the person or persons who treated you this way?",
+    "value_labels": {
+      "1": "Mother or Stepmother - legal guardian",
+      "2": "Father or Stepfather - legal guardian",
+      "3": "Son or Daughter",
+      "4": "Other family member",
+      "5": "Friend",
+      "6": "Caregiver",
+      "7": "A stranger",
+      "8": "Other"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_forb_relat_1",
+      "msoc_forb_relat_2",
+      "msoc_forb_relat_3",
+      "msoc_forb_relat_4",
+      "msoc_forb_relat_5",
+      "msoc_forb_relat_6",
+      "msoc_forb_relat_7",
+      "msoc_forb_relat_8"
+    ]
+  },
+  "msoc_forb_relat_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_prov": {
+    "type": "radio",
+    "label": "Has someone (including family members or friends) ever stopped providing you with basic needs such as clothing, shoes, or medications that you need despite having the money to supply you with these needs?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_prov_period": {
+    "type": "checkbox",
+    "label": "In what period or periods of your life did this occur?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_prov_period_1",
+      "msoc_prov_period_2",
+      "msoc_prov_period_3",
+      "msoc_prov_period_4",
+      "msoc_prov_period_5",
+      "msoc_prov_period_6",
+      "msoc_prov_period_7"
+    ]
+  },
+  "msoc_prov_relat": {
+    "type": "checkbox",
+    "label": "What relationship did you have with the person or persons who treated you this way?",
+    "value_labels": {
+      "1": "Mother or Stepmother - legal guardian",
+      "2": "Father or Stepfather - legal guardian",
+      "3": "Son or Daughter",
+      "4": "Other family member",
+      "5": "Friend",
+      "6": "Caregiver",
+      "7": "A stranger",
+      "8": "Other"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_prov_relat_1",
+      "msoc_prov_relat_2",
+      "msoc_prov_relat_3",
+      "msoc_prov_relat_4",
+      "msoc_prov_relat_5",
+      "msoc_prov_relat_6",
+      "msoc_prov_relat_7",
+      "msoc_prov_relat_8"
+    ]
+  },
+  "msoc_prov_relat_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_mon": {
+    "type": "radio",
+    "label": "Has anyone (including family members or friends) ever handled your money without your consent?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_mon_period": {
+    "type": "checkbox",
+    "label": "In what period or periods of your life did this occur?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_mon_period_1",
+      "msoc_mon_period_2",
+      "msoc_mon_period_3",
+      "msoc_mon_period_4",
+      "msoc_mon_period_5",
+      "msoc_mon_period_6",
+      "msoc_mon_period_7"
+    ]
+  },
+  "msoc_mon_relat": {
+    "type": "checkbox",
+    "label": "What relationship did you have with the person or persons who treated you this way?",
+    "value_labels": {
+      "1": "Mother or Stepmother - legal guardian",
+      "2": "Father or Stepfather - legal guardian",
+      "3": "Son or Daughter",
+      "4": "Other family member",
+      "5": "Friend",
+      "6": "Caregiver",
+      "7": "A stranger",
+      "8": "Other"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_mon_relat_1",
+      "msoc_mon_relat_2",
+      "msoc_mon_relat_3",
+      "msoc_mon_relat_4",
+      "msoc_mon_relat_5",
+      "msoc_mon_relat_6",
+      "msoc_mon_relat_7",
+      "msoc_mon_relat_8"
+    ]
+  },
+  "msoc_mon_relat_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_prop": {
+    "type": "radio",
+    "label": "Has anyone (including family members or friends) ever pressured you to stop owning your home or other property?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_prop_period": {
+    "type": "checkbox",
+    "label": "In what period or periods of your life did this occur?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_prop_period_1",
+      "msoc_prop_period_2",
+      "msoc_prop_period_3",
+      "msoc_prop_period_4",
+      "msoc_prop_period_5",
+      "msoc_prop_period_6",
+      "msoc_prop_period_7"
+    ]
+  },
+  "msoc_prop_relat": {
+    "type": "checkbox",
+    "label": "What relationship did you have with the person or persons who treated you this way?",
+    "value_labels": {
+      "1": "Mother or Stepmother - legal guardian",
+      "2": "Father or Stepfather - legal guardian",
+      "3": "Son or Daughter",
+      "4": "Other family member",
+      "5": "Friend",
+      "6": "Caregiver",
+      "7": "A stranger",
+      "8": "Other"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_prop_relat_1",
+      "msoc_prop_relat_2",
+      "msoc_prop_relat_3",
+      "msoc_prop_relat_4",
+      "msoc_prop_relat_5",
+      "msoc_prop_relat_6",
+      "msoc_prop_relat_7",
+      "msoc_prop_relat_8"
+    ]
+  },
+  "msoc_prop_relat_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_deman": {
+    "type": "radio",
+    "label": "Has someone (including family members or friends) ever demanded sex, even if you didn't want to?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_deman_period": {
+    "type": "checkbox",
+    "label": "In what period or periods of your life did this occur?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_deman_period_1",
+      "msoc_deman_period_2",
+      "msoc_deman_period_3",
+      "msoc_deman_period_4",
+      "msoc_deman_period_5",
+      "msoc_deman_period_6",
+      "msoc_deman_period_7"
+    ]
+  },
+  "msoc_deman_relat": {
+    "type": "checkbox",
+    "label": "What relationship did you have with the person or persons who treated you this way?",
+    "value_labels": {
+      "1": "Mother or Stepmother - legal guardian",
+      "2": "Father or Stepfather - legal guardian",
+      "3": "Son or Daughter",
+      "4": "Other family member",
+      "5": "Friend",
+      "6": "Caregiver",
+      "7": "A stranger",
+      "8": "Other"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_deman_relat_1",
+      "msoc_deman_relat_2",
+      "msoc_deman_relat_3",
+      "msoc_deman_relat_4",
+      "msoc_deman_relat_5",
+      "msoc_deman_relat_6",
+      "msoc_deman_relat_7",
+      "msoc_deman_relat_8"
+    ]
+  },
+  "msoc_deman_relat_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_45rev_2": {
+    "type": "radio",
+    "label": "Have you suffered an act of political violence or repression?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_45arev_2": {
+    "type": "checkbox",
+    "label": "When did this happen to you? ",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_45arev_2_1",
+      "msoc_45arev_2_2",
+      "msoc_45arev_2_3",
+      "msoc_45arev_2_4",
+      "msoc_45arev_2_5",
+      "msoc_45arev_2_6",
+      "msoc_45arev_2_7"
+    ]
+  },
+  "msoc_45rev_3": {
+    "type": "radio",
+    "label": "Has anyone ever assaulted you to steal or try to steal your personal belongings?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_45arev_3": {
+    "type": "checkbox",
+    "label": "When did this happen to you? ",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_45arev_3_1",
+      "msoc_45arev_3_2",
+      "msoc_45arev_3_3",
+      "msoc_45arev_3_4",
+      "msoc_45arev_3_5",
+      "msoc_45arev_3_6",
+      "msoc_45arev_3_7"
+    ]
+  },
+  "msoc_45rev_4": {
+    "type": "radio",
+    "label": "Has anyone ever tried or managed to break into your home to steal from you?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_45arev_4": {
+    "type": "checkbox",
+    "label": "When did this happen to you? ",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_45arev_4_1",
+      "msoc_45arev_4_2",
+      "msoc_45arev_4_3",
+      "msoc_45arev_4_4",
+      "msoc_45arev_4_5",
+      "msoc_45arev_4_6",
+      "msoc_45arev_4_7"
+    ]
+  },
+  "msoc_45rev_5": {
+    "type": "radio",
+    "label": "Have you ever experienced a \"man-made\" disaster such as a train crash, building collapse, bank robbery, fire, etc., where you felt you or your loved ones were in danger of death or injury?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_45arev_5": {
+    "type": "checkbox",
+    "label": "When did this happen to you? ",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_45arev_5_1",
+      "msoc_45arev_5_2",
+      "msoc_45arev_5_3",
+      "msoc_45arev_5_4",
+      "msoc_45arev_5_5",
+      "msoc_45arev_5_6",
+      "msoc_45arev_5_7"
+    ]
+  },
+  "msoc_45rev_6": {
+    "type": "radio",
+    "label": "Have you ever been in any other situation in which you felt you might be killed or be seriously injured?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_45arev_6": {
+    "type": "checkbox",
+    "label": "When did this happen to you? ",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_45arev_6_1",
+      "msoc_45arev_6_2",
+      "msoc_45arev_6_3",
+      "msoc_45arev_6_4",
+      "msoc_45arev_6_5",
+      "msoc_45arev_6_6",
+      "msoc_45arev_6_7"
+    ]
+  },
+  "msoc_45rev_7": {
+    "type": "radio",
+    "label": "Outside of work or professional situations, have you ever seen someone seriously injured or killed?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_45arev_7": {
+    "type": "checkbox",
+    "label": "When did this happen to you? ",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_45arev_7_1",
+      "msoc_45arev_7_2",
+      "msoc_45arev_7_3",
+      "msoc_45arev_7_4",
+      "msoc_45arev_7_5",
+      "msoc_45arev_7_6",
+      "msoc_45arev_7_7"
+    ]
+  },
+  "msoc_45rev_8": {
+    "type": "radio",
+    "label": "Outside of work or professional situations, have you ever seen dead bodies (other than at a funeral) or had to handle dead bodies for any reason?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_45arev_8": {
+    "type": "checkbox",
+    "label": "When did this happen to you? ",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_45arev_8_1",
+      "msoc_45arev_8_2",
+      "msoc_45arev_8_3",
+      "msoc_45arev_8_4",
+      "msoc_45arev_8_5",
+      "msoc_45arev_8_6",
+      "msoc_45arev_8_7"
+    ]
+  },
+  "msoc_52rev": {
+    "type": "radio",
+    "label": "Have there been times in your daily life when you were treated with less courtesy or respect than other people?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_52revb": {
+    "type": "radio",
+    "label": "Have there been times in your daily life when you were treated with more courtesy or respect than other people?  ",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_52arev_2": {
+    "type": "checkbox",
+    "label": "When did this happen to you?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_52arev_2_1",
+      "msoc_52arev_2_2",
+      "msoc_52arev_2_3",
+      "msoc_52arev_2_4",
+      "msoc_52arev_2_5",
+      "msoc_52arev_2_6",
+      "msoc_52arev_2_7"
+    ]
+  },
+  "msoc_52a_1arev": {
+    "type": "radio",
+    "label": "From 0 to 10 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_52a_1brev": {
+    "type": "radio",
+    "label": "From 0 to 10 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_52a_1brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_52a_2arev": {
+    "type": "radio",
+    "label": "From 11 to 24 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_52a_2brev": {
+    "type": "radio",
+    "label": "From 11 to 24 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_52a_2brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_52a_3arev": {
+    "type": "radio",
+    "label": "From 25 to 34 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_52a_3brev": {
+    "type": "radio",
+    "label": "From 25 to 34 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_52a_3brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_52a_4arev": {
+    "type": "radio",
+    "label": "From 35 to 45 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_52a_4brev": {
+    "type": "radio",
+    "label": "From 35 to 45 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_52a_4brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_52a_5arev": {
+    "type": "radio",
+    "label": "From 46 to 65 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_52a_5brev": {
+    "type": "radio",
+    "label": "From 46 to 65 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_52a_5brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_52a_6arev": {
+    "type": "radio",
+    "label": "From 66 to one year ago, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_52a_6brev": {
+    "type": "radio",
+    "label": "From 66 to one year ago, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_52a_6brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_52a_7arev": {
+    "type": "radio",
+    "label": "Within the last 12 months, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_52a_7brev": {
+    "type": "radio",
+    "label": "Within the last 12 months, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_52a_7brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_53rev": {
+    "type": "radio",
+    "label": "Have there been times in your daily life when you received worse service than other people in restaurants, markets, stores, or other similar establishments?  ",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_53revb": {
+    "type": "radio",
+    "label": "Have there been times in your daily life when you received better service than other people in restaurants, markets, stores, or other similar establishments?  ",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_53arev": {
+    "type": "checkbox",
+    "label": "When did this happen to you?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_53arev_1",
+      "msoc_53arev_2",
+      "msoc_53arev_3",
+      "msoc_53arev_4",
+      "msoc_53arev_5",
+      "msoc_53arev_6",
+      "msoc_53arev_7"
+    ]
+  },
+  "msoc_53a_1arev": {
+    "type": "radio",
+    "label": "From 0 to 10 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_53a_1brev": {
+    "type": "radio",
+    "label": "From 0 to 10 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_53a_1brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_53a_2arev": {
+    "type": "radio",
+    "label": "From 11 to 24 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_53a_2brev": {
+    "type": "radio",
+    "label": "From 11 to 24 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_53a_2brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_53a_3arev": {
+    "type": "radio",
+    "label": "From 25 to 34 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_53a_3brev": {
+    "type": "radio",
+    "label": "From 25 to 34 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_53a_3brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_53a_4arev": {
+    "type": "radio",
+    "label": "From 35 to 45 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_53a_4brev": {
+    "type": "radio",
+    "label": "From 35 to 45 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_53a_4brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_53a_5arev": {
+    "type": "radio",
+    "label": "From 46 to 65 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_53a_5brev": {
+    "type": "radio",
+    "label": "From 46 to 65 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_53a_5brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_53a_6arev": {
+    "type": "radio",
+    "label": "From 66 to one year ago, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_53a_6brev": {
+    "type": "radio",
+    "label": "From 66 to one year ago, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_53a_6brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_53a_7arev": {
+    "type": "radio",
+    "label": "Within the last 12 months, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_53a_7brev": {
+    "type": "radio",
+    "label": "Within the last 12 months, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_53a_7brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_54rev": {
+    "type": "radio",
+    "label": "Have there been times in your everyday life when other people have acted as if they think you are less intelligent than other people?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_54revb": {
+    "type": "radio",
+    "label": "Have there been times in your daily life when other people have acted as if they think you are more intelligent than other people?  ",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_54arev": {
+    "type": "checkbox",
+    "label": "When did this happen to you? ",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_54arev_1",
+      "msoc_54arev_2",
+      "msoc_54arev_3",
+      "msoc_54arev_4",
+      "msoc_54arev_5",
+      "msoc_54arev_6",
+      "msoc_54arev_7"
+    ]
+  },
+  "msoc_54a_1arev": {
+    "type": "radio",
+    "label": "From 0 to 10 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_54a_1brev": {
+    "type": "radio",
+    "label": "From 0 to 10 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_54a_1brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_54a_2arev": {
+    "type": "radio",
+    "label": "From 11 to 24 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_54a_2brev": {
+    "type": "radio",
+    "label": "From 11 to 24 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_54a_2brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_54a_3arev": {
+    "type": "radio",
+    "label": "From 25 to 34 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_54a_3brev": {
+    "type": "radio",
+    "label": "From 25 to 34 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_54a_3brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_54a_4arev": {
+    "type": "radio",
+    "label": "From 35 to 45 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_54a_4brev": {
+    "type": "radio",
+    "label": "From 35 to 45 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_54a_4brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_54a_5arev": {
+    "type": "radio",
+    "label": "From 46 to 65 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_54a_5brev": {
+    "type": "radio",
+    "label": "From 46 to 65 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_54a_5brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_54a_6arev": {
+    "type": "radio",
+    "label": "From 66 to one year ago, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_54a_6brev": {
+    "type": "radio",
+    "label": "From 66 to one year ago, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_54a_6brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_54a_7arev": {
+    "type": "radio",
+    "label": "Within the last 12 months, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_54a_7brev": {
+    "type": "radio",
+    "label": "Within the last 12 months, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_54a_7brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_55rev": {
+    "type": "radio",
+    "label": "Have there been times in your daily life when other people acted as if they were afraid of you?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_55arev": {
+    "type": "checkbox",
+    "label": "When did this happen to you?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_55arev_1",
+      "msoc_55arev_2",
+      "msoc_55arev_3",
+      "msoc_55arev_4",
+      "msoc_55arev_5",
+      "msoc_55arev_6",
+      "msoc_55arev_7"
+    ]
+  },
+  "msoc_55a_1arev": {
+    "type": "radio",
+    "label": "From 0 to 10 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_55a_1brev": {
+    "type": "radio",
+    "label": "From 0 to 10 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_55a_1brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_55a_2arev": {
+    "type": "radio",
+    "label": "From 11 to 24 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_55a_2brev": {
+    "type": "radio",
+    "label": "From 11 to 24 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_55a_2brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_55a_3arev": {
+    "type": "radio",
+    "label": "From 25 to 34 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_55a_3brev": {
+    "type": "radio",
+    "label": "From 25 to 34 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_55a_3brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_55a_4arev": {
+    "type": "radio",
+    "label": "From 35 to 45 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_55a_4brev": {
+    "type": "radio",
+    "label": "From 35 to 45 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_55a_4brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_55a_5arev": {
+    "type": "radio",
+    "label": "From 46 to 65 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_55a_5brev": {
+    "type": "radio",
+    "label": "From 46 to 65 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_55a_5brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_55a_6arev": {
+    "type": "radio",
+    "label": "From 66 to one year ago, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_55a_6brev": {
+    "type": "radio",
+    "label": "From 66 to one year ago, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_55a_6brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_55a_7arev": {
+    "type": "radio",
+    "label": "Within the last 12 months, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_55a_7brev": {
+    "type": "radio",
+    "label": "Within the last 12 months, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_55a_7brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_56rev": {
+    "type": "radio",
+    "label": "Have there been times in your daily life when you have felt threatened or harassed by other people?",
+    "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "3": "I do not know"
+    }
+  },
+  "msoc_56arev": {
+    "type": "checkbox",
+    "label": "When did this happen to you?",
+    "value_labels": {
+      "1": "0 to 10 years of age",
+      "2": "11 to 24 years of age",
+      "3": "25 to 34 years of age",
+      "4": "35 to 45 years of age",
+      "5": "46 to 65 years of age",
+      "6": "66 to one year ago",
+      "7": "Within the last 12 months"
+    },
+    "is_checkbox": true,
+    "exploded_fields": [
+      "msoc_56arev_1",
+      "msoc_56arev_2",
+      "msoc_56arev_3",
+      "msoc_56arev_4",
+      "msoc_56arev_5",
+      "msoc_56arev_6",
+      "msoc_56arev_7"
+    ]
+  },
+  "msoc_56a_1arev": {
+    "type": "radio",
+    "label": "From 0 to 10 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_56a_1brev": {
+    "type": "radio",
+    "label": "From 0 to 10 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_56a_1brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_56a_2arev": {
+    "type": "radio",
+    "label": "From 11 to 24 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_56a_2brev": {
+    "type": "radio",
+    "label": "From 11 to 24 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_56a_2brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_56a_3arev": {
+    "type": "radio",
+    "label": "From 25 to 34 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_56a_3brev": {
+    "type": "radio",
+    "label": "From 25 to 34 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_56a_3brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_56a_4arev": {
+    "type": "radio",
+    "label": "From 35 to 45 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_56a_4brev": {
+    "type": "radio",
+    "label": "From 35 to 45 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_56a_4brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_56a_5arev": {
+    "type": "radio",
+    "label": "From 46 to 65 years of age, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_56a_5brev": {
+    "type": "radio",
+    "label": "From 46 to 65 years of age, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_56a_5brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_56a_6arev": {
+    "type": "radio",
+    "label": "From 66 to one year ago, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_56a_6brev": {
+    "type": "radio",
+    "label": "From 66 to one year ago, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_56a_6brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_56a_7arev": {
+    "type": "radio",
+    "label": "Within the last 12 months, how frequently were you treated this way?",
+    "value_labels": {
+      "1": "Almost every day",
+      "2": "At least once a week",
+      "3": "A few times a month",
+      "4": "A few times a year",
+      "5": "Less than once a year"
+    }
+  },
+  "msoc_56a_7brev": {
+    "type": "radio",
+    "label": "Within the last 12 months, what do you think is the main reason for these experiences?",
+    "value_labels": {
+      "1": "Ancestry, nationality, place of origin",
+      "2": "Manner of speaking",
+      "3": "Sex or sexual orientation",
+      "4": "Age",
+      "5": "Religion, other beliefs",
+      "6": "Political ideology",
+      "7": "Physical appearance (height, weight, color of your skin, or other aspect of your physical appearance)",
+      "8": "Physical or mental disability",
+      "9": "Socioeconomic status, level of education",
+      "10": "Occupation",
+      "11": "Other"
+    }
+  },
+  "msoc_56a_7brev_s": {
+    "type": "text",
+    "label": "If other, please specify",
+    "value_labels": null
+  },
+  "msoc_102": {
+    "type": "radio",
+    "label": "Have you felt this kind of stress lately?",
+    "value_labels": {
+      "1": "I'm not stressed",
+      "2": "I'm mildly stressed",
+      "3": "I'm moderately stressed",
+      "4": "I'm highly stressed",
+      "5": "I do not know"
+    }
+  },
+  "msoc_103": {
+    "type": "radio",
+    "label": "Have you felt this type of stress for several days, weeks, or months during other periods of your life? ",
+    "value_labels": {
+      "1": "Yes",
+      "0": "No"
+    }
+  },
+  "msoc_104": {
+    "type": "radio",
+    "label": "From 0 to 10 years of age, approximately what was your level of stress?",
+    "value_labels": {
+      "1": "Mildly stressed",
+      "2": "Moderately stressed",
+      "3": "Highly stressed",
+      "4": "I do not know"
+    }
+  },
+  "msoc_105": {
+    "type": "radio",
+    "label": "From 11 to 24 years of age, approximately what was your level of stress?",
+    "value_labels": {
+      "1": "Mildly stressed",
+      "2": "Moderately stressed",
+      "3": "Highly stressed",
+      "4": "I do not know"
+    }
+  },
+  "msoc_106": {
+    "type": "radio",
+    "label": "From 25 to 34 years of age, approximately what was your level of stress?",
+    "value_labels": {
+      "1": "Mildly stressed",
+      "2": "Moderately stressed",
+      "3": "Highly stressed",
+      "4": "I do not know"
+    }
+  },
+  "msoc_107": {
+    "type": "radio",
+    "label": "From 35 to 45 years of age, approximately what was your level of stress?",
+    "value_labels": {
+      "1": "Mildly stressed",
+      "2": "Moderately stressed",
+      "3": "Highly stressed",
+      "4": "I do not know"
+    }
+  },
+  "msoc_108": {
+    "type": "radio",
+    "label": "From 46 to 65 years of age, approximately what was your level of stress?",
+    "value_labels": {
+      "1": "Mildly stressed",
+      "2": "Moderately stressed",
+      "3": "Highly stressed",
+      "4": "I do not know"
+    }
+  },
+  "msoc_109": {
+    "type": "radio",
+    "label": "From 66 to one year ago, approximately what was your level of stress?",
+    "value_labels": {
+      "1": "Mildly stressed",
+      "2": "Moderately stressed",
+      "3": "Highly stressed",
+      "4": "I do not know"
+    }
+  },
+  "msoc_contrib": {
+    "type": "radio",
+    "label": "Who contributed to answering these questions?",
+    "value_labels": {
+      "1": "I (The participant) alone",
+      "2": "I (The participant) and study partner together",
+      "3": "The study partner alone"
+    }
+  },
+  "msoc_confid": {
+    "type": "radio",
+    "label": "The following question is for the study partner. On average, how confident are you that your answers to the questions in this survey accurately reflect the participant's experience?",
+    "value_labels": {
+      "1": "Not at all (not confident in any of the answers)",
+      "2": "Not very (confident in less than half of the answers)",
+      "3": "Moderately (confident in about half of the answers)",
+      "4": "Confident (confident in most of the answers)",
+      "5": "Very confident (confident in all of the answers)"
+    }
+  },
+  "msoc_contrib_ppt": {
+    "type": "radio",
+    "label": "How much did you (the participant) contribute to completing this survey?",
+    "value_labels": {
+      "1": "I (the participant) answered all of the questions with no input from others",
+      "2": "I (the participant) answered most of the questions with no input from others",
+      "3": "I (the participant) answered about half of the questions",
+      "4": "I (the participant) answered less than half of the questions"
+    }
+  },
+  "msoc_time_endrev": {
+    "type": "text",
+    "label": "Please record the time that the survey was completed",
+    "value_labels": null
+  }
+}
