@@ -183,6 +183,7 @@ if check_columns(data):
     print("All dataframes have the same columns")
     # Combine into single dataframe and save
     combined_df = pd.concat(data.values(), ignore_index=True)
+    
     try:
         # Save combined data
         combined_df.to_csv(f"{DATA}/combined.tsv", index=False, sep='\t')

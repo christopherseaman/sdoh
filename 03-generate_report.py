@@ -5,6 +5,8 @@ from jinja2 import Environment, FileSystemLoader
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
+import numpy as np
+from scipy import stats
 
 # Load domain mappings
 domain_map_path = 'reference/domain_map.tsv'
@@ -20,9 +22,9 @@ def get_related_columns(column_names):
     related = {}
     for col in column_names.split(', '):
         if col in data_dict and data_dict[col].get('exploded_fields'):
-            related[col] = [(field, col) for field in data_dict[col]['exploded_fields']]
+            related[col] = data_dict[col]['exploded_fields']
         else:
-            related[col] = [(col, None)]
+            related[col] = [col]
     return related
 
 # Function to generate histogram and return HTML image tag
@@ -62,60 +64,80 @@ def generate_bar_chart(labels, counts, title, cohort=None):
 def compute_distributions(sampled_data, columns_dict, cohort=None):
     distribution_summary = {}
     for parent_col, child_cols in columns_dict.items():
-        for child, parent in child_cols:
-            if child not in sampled_data.columns:
-                continue
-            
-            title = f'Distribution of {child}'
-            
-            if parent and data_dict[parent]['type'] == 'checkbox':
-                # Handle exploded checkbox fields
-                counts = sampled_data[child].value_counts(dropna=True).to_dict()
-                labels = ['Unchecked', 'Checked']
-                count_values = [counts.get(0, 0), counts.get(1, 0)]
-                graph = generate_bar_chart(labels, count_values, title, cohort)
-                distribution_summary[child] = {
-                    'counts': dict(zip(labels, count_values)),
-                    'graph': graph
-                }
-            elif child in data_dict and data_dict[child]['type'] == 'text':
-                # Check if the 'text' column is numerical
-                try:
-                    pd.to_numeric(sampled_data[child].dropna().iloc[0])
-                    is_numeric = True
-                except:
-                    is_numeric = False
-                if is_numeric:
-                    graph = generate_histogram(sampled_data, child, cohort)
-                    distribution_summary[child] = {
-                        'counts': None,
-                        'description': sampled_data[child].describe().to_dict(),
-                        'graph': graph
-                    }
-                else:
+        if parent_col in data_dict and data_dict[parent_col]['type'] == 'checkbox':
+            # Handle exploded checkbox fields
+            counts = {label: sampled_data[child].sum() for child, label in zip(child_cols, data_dict[parent_col]['value_labels'].values())}
+            title = f'Distribution of {parent_col}'
+            graph = generate_bar_chart(list(counts.keys()), list(counts.values()), title, cohort)
+            distribution_summary[parent_col] = {
+                'counts': counts,
+                'graph': graph
+            }
+        else:
+            for child in child_cols:
+                if child not in sampled_data.columns:
+                    continue
+                
+                title = f'Distribution of {child}'
+                
+                if child in data_dict and data_dict[child]['type'] == 'text':
+                    # Check if the 'text' column is numerical
+                    try:
+                        pd.to_numeric(sampled_data[child].dropna().iloc[0])
+                        is_numeric = True
+                    except:
+                        is_numeric = False
+                    if is_numeric:
+                        graph = generate_histogram(sampled_data, child, cohort)
+                        distribution_summary[child] = {
+                            'counts': None,
+                            'description': sampled_data[child].describe().to_dict(),
+                            'graph': graph
+                        }
+                    else:
+                        counts = sampled_data[child].value_counts(dropna=True).to_dict()
+                        graph = generate_bar_chart(list(counts.keys()), list(counts.values()), title, cohort)
+                        distribution_summary[child] = {
+                            'counts': counts,
+                            'graph': graph
+                        }
+                elif child in data_dict and data_dict[child]['type'] in ['radio', 'checkbox']:
                     counts = sampled_data[child].value_counts(dropna=True).to_dict()
-                    graph = generate_bar_chart(list(counts.keys()), list(counts.values()), title, cohort)
+                    labels = list(counts.keys())
+                    count_values = list(counts.values())
+                    graph = generate_bar_chart(labels, count_values, title, cohort)
                     distribution_summary[child] = {
                         'counts': counts,
                         'graph': graph
                     }
-            elif child in data_dict and data_dict[child]['type'] in ['radio', 'checkbox']:
-                counts = sampled_data[child].value_counts(dropna=True).to_dict()
-                labels = list(counts.keys())
-                count_values = list(counts.values())
-                graph = generate_bar_chart(labels, count_values, title, cohort)
-                distribution_summary[child] = {
-                    'counts': counts,
-                    'graph': graph
-                }
-            else:
-                if sampled_data[child].dtype == 'object':
-                    counts = sampled_data[child].value_counts(dropna=True).to_dict()
-                    distribution_summary[child] = {'counts': counts}
                 else:
-                    desc = sampled_data[child].describe().to_dict()
-                    distribution_summary[child] = {'description': desc}
+                    if sampled_data[child].dtype == 'object':
+                        counts = sampled_data[child].value_counts(dropna=True).to_dict()
+                        distribution_summary[child] = {'counts': counts}
+                    else:
+                        desc = sampled_data[child].describe().to_dict()
+                        distribution_summary[child] = {'description': desc}
     return distribution_summary
+
+# Function to perform pairwise comparisons
+def pairwise_comparison(data, columns, cohort1, cohort2):
+    results = {}
+    for col in columns:
+        if col not in data.columns:
+            continue
+        data1 = data[data['survey'] == cohort1][col]
+        data2 = data[data['survey'] == cohort2][col]
+        
+        if data1.dtype == 'object' or data2.dtype == 'object':
+            # For categorical data, perform chi-square test
+            contingency_table = pd.crosstab(data['survey'].isin([cohort1]), data[col])
+            chi2, p_value, _, _ = stats.chi2_contingency(contingency_table)
+            results[col] = f"Chi-square test p-value: {p_value:.4f}"
+        else:
+            # For numerical data, perform t-test
+            t_stat, p_value = stats.ttest_ind(data1.dropna(), data2.dropna())
+            results[col] = f"T-test p-value: {p_value:.4f}"
+    return results
 
 # Read a sample of the data to compute distributions
 data_sample_path = 'data/combined.tsv'
@@ -144,24 +166,30 @@ for _, row in domain_map.iterrows():
     distributions_spanish = compute_distributions(sampled_data[sampled_data['survey'] == 'spanish'], related_columns, 'Spanish')
     distributions_chinese = compute_distributions(sampled_data[sampled_data['survey'] == 'chinese'], related_columns, 'Chinese')
 
+    # Perform pairwise comparisons
+    pairwise_comparisons = {
+        'English vs Spanish': pairwise_comparison(sampled_data, [col for cols in related_columns.values() for col in cols], 'english', 'spanish'),
+        'English vs Chinese': pairwise_comparison(sampled_data, [col for cols in related_columns.values() for col in cols], 'english', 'chinese'),
+        'Spanish vs Chinese': pairwise_comparison(sampled_data, [col for cols in related_columns.values() for col in cols], 'spanish', 'chinese')
+    }
+
     # Retrieve column labels and types
     column_details = {}
     for parent_col, child_cols in related_columns.items():
-        for child, parent in child_cols:
-            if child in data_dict:
-                column_details[child] = {
-                    'label': data_dict[child]['label'],
-                    'type': data_dict[child]['type'],
-                    'value_labels': data_dict[child].get('value_labels')
-                }
-            elif parent in data_dict:
-                parent_value_labels = data_dict[parent].get('value_labels', {})
-                child_number = child.split('_')[-1]
-                column_details[child] = {
-                    'label': f"{data_dict[parent]['label']} - {parent_value_labels.get(child_number, 'Option ' + child_number)}",
-                    'type': 'binary',
-                    'value_labels': {'0': 'Unchecked', '1': 'Checked'}
-                }
+        if parent_col in data_dict and data_dict[parent_col]['type'] == 'checkbox':
+            column_details[parent_col] = {
+                'label': data_dict[parent_col]['label'],
+                'type': 'checkbox',
+                'value_labels': data_dict[parent_col]['value_labels']
+            }
+        else:
+            for child in child_cols:
+                if child in data_dict:
+                    column_details[child] = {
+                        'label': data_dict[child]['label'],
+                        'type': data_dict[child]['type'],
+                        'value_labels': data_dict[child].get('value_labels')
+                    }
 
     summary.append({
         'domain': domain,
@@ -170,7 +198,8 @@ for _, row in domain_map.iterrows():
         'distributions_all': distributions_all,
         'distributions_english': distributions_english,
         'distributions_spanish': distributions_spanish,
-        'distributions_chinese': distributions_chinese
+        'distributions_chinese': distributions_chinese,
+        'pairwise_comparisons': pairwise_comparisons
     })
 
 # Generate HTML report using Jinja2
@@ -188,7 +217,7 @@ template = env.from_string("""
         th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; vertical-align: top; }
         th { background-color: #f2f2f2; }
         .distribution { margin-top: 10px; }
-        .cohort-tabs { display: flex; margin-bottom: 10px; }
+        .cohort-tabs { position: sticky; top: 0; background-color: white; z-index: 1000; display: flex; margin-bottom: 10px; }
         .cohort-tab { padding: 10px; cursor: pointer; border: 1px solid #ccc; background-color: #f1f1f1; }
         .cohort-tab.active { background-color: #ccc; }
         .cohort-content { display: none; }
@@ -216,40 +245,60 @@ template = env.from_string("""
 </head>
 <body>
     <h1>Domain Report</h1>
+    <div class="cohort-tabs">
+        <div class="cohort-tab active" onclick="showCohort('all-cohorts', this)">All Cohorts</div>
+        <div class="cohort-tab" onclick="showCohort('english-cohort', this)">English Cohort</div>
+        <div class="cohort-tab" onclick="showCohort('spanish-cohort', this)">Spanish Cohort</div>
+        <div class="cohort-tab" onclick="showCohort('chinese-cohort', this)">Chinese Cohort</div>
+        <div class="cohort-tab" onclick="showCohort('pairwise-comparison', this)">Pairwise Comparison</div>
+    </div>
     {% for entry in summary %}
     <div class="domain">
-        <h2>Domain: {{ entry.domain }}</h2>
+        <h2>{{ entry.domain }}</h2>
         <div class="item">
-            <h3>Item: {{ entry.item }}</h3>
-            <div class="cohort-tabs">
-                <div class="cohort-tab active" onclick="showCohort('all-cohorts-{{ loop.index }}', this)">All Cohorts</div>
-                <div class="cohort-tab" onclick="showCohort('english-cohort-{{ loop.index }}', this)">English Cohort</div>
-                <div class="cohort-tab" onclick="showCohort('spanish-cohort-{{ loop.index }}', this)">Spanish Cohort</div>
-                <div class="cohort-tab" onclick="showCohort('chinese-cohort-{{ loop.index }}', this)">Chinese Cohort</div>
-            </div>
-            <div id="all-cohorts-{{ loop.index }}" class="cohort-content active">
+            <h3>{{ entry.item }}</h3>
+            <div id="all-cohorts" class="cohort-content active">
                 <h4>All Cohorts Combined</h4>
                 {% with distributions=entry.distributions_all %}
                     {% include 'cohort_table.html' %}
                 {% endwith %}
             </div>
-            <div id="english-cohort-{{ loop.index }}" class="cohort-content">
+            <div id="english-cohort" class="cohort-content">
                 <h4>English Cohort</h4>
                 {% with distributions=entry.distributions_english %}
                     {% include 'cohort_table.html' %}
                 {% endwith %}
             </div>
-            <div id="spanish-cohort-{{ loop.index }}" class="cohort-content">
+            <div id="spanish-cohort" class="cohort-content">
                 <h4>Spanish Cohort</h4>
                 {% with distributions=entry.distributions_spanish %}
                     {% include 'cohort_table.html' %}
                 {% endwith %}
             </div>
-            <div id="chinese-cohort-{{ loop.index }}" class="cohort-content">
+            <div id="chinese-cohort" class="cohort-content">
                 <h4>Chinese Cohort</h4>
                 {% with distributions=entry.distributions_chinese %}
                     {% include 'cohort_table.html' %}
                 {% endwith %}
+            </div>
+            <div id="pairwise-comparison" class="cohort-content">
+                <h4>Pairwise Comparisons</h4>
+                <table>
+                    <tr>
+                        <th>Column</th>
+                        <th>English vs Spanish</th>
+                        <th>English vs Chinese</th>
+                        <th>Spanish vs Chinese</th>
+                    </tr>
+                    {% for col in entry.columns %}
+                    <tr>
+                        <td>{{ col }}</td>
+                        <td>{{ entry.pairwise_comparisons['English vs Spanish'].get(col, 'N/A') }}</td>
+                        <td>{{ entry.pairwise_comparisons['English vs Chinese'].get(col, 'N/A') }}</td>
+                        <td>{{ entry.pairwise_comparisons['Spanish vs Chinese'].get(col, 'N/A') }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
             </div>
         </div>
     </div>
@@ -330,4 +379,4 @@ html_content = template.render(summary=summary)
 with open('domain_report.html', 'w') as f:
     f.write(html_content)
 
-print("Updated domain report with individual distribution summaries and cohort analysis has been successfully generated as 'domain_report.html'. You can open it in your web browser to review the improved report.")
+print("Updated domain report with individual distribution summaries, cohort analysis, and pairwise comparisons has been successfully generated as 'domain_report.html'. You can open it in your web browser to review the improved report.")

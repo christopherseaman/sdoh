@@ -28,7 +28,7 @@
             {% endif %}
         </td>
         <td>
-            {% if distributions[col] %}
+            {% if distributions and col in distributions %}
                 {% if distributions[col].graph %}
                     {{ distributions[col].graph | safe }}
                 {% endif %}
