@@ -114,10 +114,27 @@ else:
     print("Dataframes have different columns. Cannot proceed with combining.")
     exit(1)
 
+# Load English metadata
+english_metadata_file = f"{DATA}/raw/english_metadata.tsv"
+if os.path.exists(english_metadata_file):
+    english_metadata = pd.read_csv(english_metadata_file, sep='\t')
+    print("Loaded English metadata")
+else:
+    print("English metadata file not found. Cannot proceed.")
+    exit(1)
+
+# Function to check if a column should be converted to numeric
+def should_convert_to_numeric(col, metadata_df):
+    field_info = metadata_df[metadata_df['field_name'] == col]
+    if not field_info.empty:
+        field_type = field_info['field_type'].iloc[0]
+        return field_type == 'text'  # Only convert 'text' fields
+    return False  # If not found in metadata, don't convert
+
 # Attempt to convert text columns to numeric if possible in combined_df
 numeric_converted_columns = []
 for col in combined_df.columns:
-    if combined_df[col].dtype == object:
+    if combined_df[col].dtype == object and should_convert_to_numeric(col, english_metadata):
         non_missing = combined_df[col].dropna()
         try:
             converted = pd.to_numeric(non_missing, errors='raise')
@@ -138,60 +155,55 @@ column_config_file = os.path.join(git_root, 'reference', 'column_config.json')
 with open(column_config_file, 'r', encoding='utf-8') as f:
     column_config = json.load(f)
 
-def create_data_dictionary(metadata_file, column_config, combined_df):
+def create_data_dictionary(metadata_df, column_config, combined_df):
     try:
         data_dictionary = {}
         
-        if os.path.exists(metadata_file):
-            metadata = pd.read_csv(metadata_file, sep='\t')
-            for _, row in metadata.iterrows():
-                field_name = row['field_name']
-                
-                # Skip omitted columns
-                if any(field_name.startswith(omit.replace('*', '')) for omit in column_config['omit']):
-                    continue
-                
-                # Determine field type based on data in combined_df
-                if field_name in combined_df.columns:
-                    if pd.api.types.is_numeric_dtype(combined_df[field_name]):
-                        field_type = 'numeric'
-                    else:
-                        field_type = row['field_type']
-                else:
-                    field_type = row['field_type']
-                
-                # Retrieve value labels from metadata
-                select_choices = row['select_choices_or_calculations']
-                value_labels = None
-                if pd.notna(select_choices):
-                    value_labels = {}
-                    choices = select_choices.split('|')
-                    for choice in choices:
-                        parts = choice.strip().split(',', 1)
-                        if len(parts) == 2:
-                            value, label = parts
-                            value_labels[value.strip()] = strip_html(str(label.strip()))
-                
-                # Convert field_label to string before stripping HTML
-                field_label = str(row['field_label']) if pd.notna(row['field_label']) else ''
-                
-                data_dictionary[field_name] = {
-                    'type': field_type,
-                    'label': strip_html(field_label),
-                    'value_labels': value_labels
-                }
-                
-                # Handle non-standard exploding variables first
-                if field_name in column_config['non_standard_exploding']:
-                    data_dictionary[field_name]['exploding'] = True
-                    data_dictionary[field_name]['exploded_fields'] = column_config['non_standard_exploding'][field_name]
-                # Then check if it's a checkbox field (which gets "exploded")
-                elif row['field_type'] == 'checkbox':
-                    data_dictionary[field_name]['is_checkbox'] = True
-                    if value_labels:
-                        exploded_fields = [f"{field_name}_{value}" for value in value_labels.keys()]
-                        data_dictionary[field_name]['exploded_fields'] = exploded_fields
-        
+        for _, row in metadata_df.iterrows():
+            field_name = row['field_name']
+            
+            # Skip omitted columns
+            if any(field_name.startswith(omit.replace('*', '')) for omit in column_config['omit']):
+                continue
+            
+            # Determine field type based on metadata and data in combined_df
+            field_type = row['field_type']
+            if field_name in combined_df.columns:
+                if field_type == 'text' and pd.api.types.is_numeric_dtype(combined_df[field_name]):
+                    field_type = 'numeric'
+            
+            # Retrieve value labels from metadata
+            select_choices = row['select_choices_or_calculations']
+            value_labels = None
+            if pd.notna(select_choices):
+                value_labels = {}
+                choices = select_choices.split('|')
+                for choice in choices:
+                    parts = choice.strip().split(',', 1)
+                    if len(parts) == 2:
+                        value, label = parts
+                        value_labels[value.strip()] = strip_html(str(label.strip()))
+            
+            # Convert field_label to string before stripping HTML
+            field_label = str(row['field_label']) if pd.notna(row['field_label']) else ''
+            
+            data_dictionary[field_name] = {
+                'type': field_type,
+                'label': strip_html(field_label),
+                'value_labels': value_labels
+            }
+            
+            # Handle non-standard exploding variables first
+            if field_name in column_config['non_standard_exploding']:
+                data_dictionary[field_name]['exploding'] = True
+                data_dictionary[field_name]['exploded_fields'] = column_config['non_standard_exploding'][field_name]
+            # Then check if it's a checkbox field (which gets "exploded")
+            elif field_type == 'checkbox':
+                data_dictionary[field_name]['is_checkbox'] = True
+                if value_labels:
+                    exploded_fields = [f"{field_name}_{value}" for value in value_labels.keys()]
+                    data_dictionary[field_name]['exploded_fields'] = exploded_fields
+    
         return data_dictionary
         
     except Exception as e:
@@ -200,8 +212,8 @@ def create_data_dictionary(metadata_file, column_config, combined_df):
         traceback.print_exc()
         return None  # Return None if there's an error
 
-# Create data dictionary, passing combined_df to determine types
-data_dictionary = create_data_dictionary(f"{DATA}/raw/english_metadata.tsv", column_config, combined_df)
+# Create data dictionary, passing English metadata and combined_df
+data_dictionary = create_data_dictionary(english_metadata, column_config, combined_df)
 
 # Optionally, print out how many fields are numeric
 numeric_fields = [field for field, info in data_dictionary.items() if info['type'] == 'numeric']

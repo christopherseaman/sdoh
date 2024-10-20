@@ -60,13 +60,21 @@ def generate_bar_chart(labels, counts, title, cohort=None, max_count=None):
     if not counts:
         return "No data to plot."
 
-    num_values = len(labels)
+    # Filter out 'nan' and non-numeric values
+    valid_data = [(label, count) for label, count in zip(labels, counts) if pd.notna(label) and label != 'nan']
+    
+    if not valid_data:
+        return "No valid data to plot."
+
+    valid_labels, valid_counts = zip(*valid_data)
+
+    num_values = len(valid_labels)
     # Adjust figure height based on the number of labels to accommodate them
     fig_height = max(6, num_values * 0.4)
     plt.figure(figsize=(10, fig_height))
 
-    x = range(len(labels))
-    bars = plt.bar(x, counts, color='skyblue')
+    x = range(len(valid_labels))
+    bars = plt.bar(x, valid_counts, color='skyblue')
 
     plt.title(f'{title}' + (f' ({cohort})' if cohort else ''))
     plt.xlabel('Options')
@@ -76,16 +84,16 @@ def generate_bar_chart(labels, counts, title, cohort=None, max_count=None):
     if max_count is not None:
         plt.ylim(0, max_count * 1.1)  # Add 10% padding to the top
     else:
-        plt.ylim(0, max(counts) * 1.1)
+        plt.ylim(0, max(valid_counts) * 1.1)
 
     # Label bars with their counts
-    for bar, count in zip(bars, counts):
+    for bar, count in zip(bars, valid_counts):
         height = bar.get_height()
         plt.text(bar.get_x() + bar.get_width() / 2., height,
                  f'{int(count)}',
                  ha='center', va='bottom')
 
-    plt.xticks(x, labels, rotation=45, ha='right')
+    plt.xticks(x, valid_labels, rotation=45, ha='right')
 
     plt.tight_layout()
     buffer = BytesIO()
@@ -208,12 +216,16 @@ for _, row in domain_map.iterrows():
         if 'counts' in value and value['counts']:
             counts = value['counts']
             labels = value['labels']
+            nan_count = counts.pop('nan', 0)  # Remove 'nan' and get its count
             value['graph'] = generate_bar_chart(
-                labels,
-                [counts[label] for label in labels],
+                list(counts.keys()),
+                list(counts.values()),
                 f'Distribution of {key}',
                 'All Cohorts'
             )
+            # Add 'nan' count to the summary if it exists
+            if nan_count > 0:
+                value['nan_count'] = nan_count
         elif 'description' in value and value['description']:
             # Generate histogram for numeric data
             numeric_data = pd.to_numeric(data[key], errors='coerce')
@@ -224,15 +236,18 @@ for _, row in domain_map.iterrows():
         for key, value in distribution_set.items():
             if 'counts' in value and value['counts']:
                 counts = value['counts']
-                labels = value['labels']
+                nan_count = counts.pop('nan', 0)  # Remove 'nan' and get its count
                 graph = generate_bar_chart(
-                    labels,
-                    [counts[label] for label in labels],
+                    list(counts.keys()),
+                    list(counts.values()),
                     f'Distribution of {key}',
                     cohort_name,
                     max_count=global_max_counts.get(key)
                 )
                 distribution_set[key]['graph'] = graph
+                # Add 'nan' count to the summary if it exists
+                if nan_count > 0:
+                    distribution_set[key]['nan_count'] = nan_count
             elif 'description' in value and value['description']:
                 # Generate histogram for numeric data
                 numeric_data = pd.to_numeric(data[data[cohort_var] == cohort_name.lower()][key], errors='coerce')

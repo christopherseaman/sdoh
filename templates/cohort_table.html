@@ -1,12 +1,12 @@
 <table>
     <tr>
-        <th>Column Name</th>
+        <th>Column</th>
         {% for col, details in entry.columns.items() %}
         <td>{{ col }}</td>
         {% endfor %}
     </tr>
     <tr>
-        <th>Label</th>
+        <th>Description</th>
         {% for col, details in entry.columns.items() %}
         <td>{{ details.label }}</td>
         {% endfor %}
@@ -18,7 +18,7 @@
         {% endfor %}
     </tr>
     <tr>
-        <th>Value Labels</th>
+        <th>Labels</th>
         {% for col, details in entry.columns.items() %}
         <td>
             {% if details.value_labels %}
@@ -51,8 +51,8 @@
     <p>N/A</p>
     {% endif %}
 
-    <h5>Summary Statistics</h5>
     {% if dist.description is mapping %}
+    <h5>Summary Statistics</h5>
     <ul>
         <li>Count: {{ dist.description.get('count', 'N/A') }}</li>
         <li>Mean: {{ dist.description.get('mean', 'N/A') }}</li>
@@ -64,6 +64,7 @@
         <li>Max: {{ dist.description.get('max', 'N/A') }}</li>
     </ul>
     {% elif dist.counts is mapping %}
+    <h5>Value Counts</h5>
     <ul>
         {% for key, value in dist.counts.items() %}
         <li>{{ key }}: {{ value }}</li>
@@ -103,6 +104,7 @@
             <td>
                 {% if distro[col] %}
                 {% if distro[col].description is mapping %}
+                <h5>Summary Statistics</h5>
                 <ul>
                     <li>Count: {{ distro[col].description.get('count', 'N/A') }}</li>
                     <li>Mean: {{ distro[col].description.get('mean', 'N/A') }}</li>
@@ -114,6 +116,7 @@
                     <li>Max: {{ distro[col].description.get('max', 'N/A') }}</li>
                 </ul>
                 {% elif distro[col].counts is mapping %}
+                <h5>Value Counts</h5>
                 <ul>
                     {% for key, value in distro[col].counts.items() %}
                     <li>{{ key }}: {{ value }}</li>
