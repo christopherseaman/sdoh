@@ -72,6 +72,17 @@ for key in token:
                     for choice in choices:
                         value, label = choice.strip().split(',', 1)
                         value_labels[field_name][value.strip()] = label.strip()
+                else:
+                    # Convert numeric columns and log the changes
+                    for col in data[key].columns:
+                        if data[key][col].dtype == object:
+                            try:
+                                numeric_col = pd.to_numeric(data[key][col], errors='coerce')
+                                if not np.isnan(numeric_col).all():
+                                    data[key][col] = numeric_col
+                                    print(f"Converted column '{col}' in '{key}' to numeric.")
+                            except:
+                                pass  # Column is not numeric
             
             # Save metadata with stripped HTML and value labels
             metadata_df = pd.DataFrame(metadata)
@@ -112,6 +123,7 @@ for key in data:
         data[key]['survey'] = 'chinese'
     else:
         data[key]['survey'] = key
+
 
 
 # Check if dataframes have the same columns
@@ -155,8 +167,15 @@ def create_data_dictionary(metadata_file, column_config):
                             value, label = parts
                             value_labels[value.strip()] = strip_html(label.strip())
                 
+                # Update type to 'numeric' if column was converted to numeric
+                field_type = row['field_type']
+                for df in data.values():
+                    if field_name in df.columns and pd.api.types.is_numeric_dtype(df[field_name]):
+                        field_type = 'numeric'
+                        break
+                
                 data_dictionary[field_name] = {
-                    'type': row['field_type'],
+                    'type': field_type,
                     'label': strip_html(row['field_label']),
                     'value_labels': value_labels
                 }
