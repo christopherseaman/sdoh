@@ -1039,7 +1039,7 @@
     "value_labels": null
   },
   "msoc_23rrev": {
-    "type": "numeric",
+    "type": "text",
     "label": "Classmates_3",
     "value_labels": null
   },
