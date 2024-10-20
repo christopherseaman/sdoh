@@ -40,50 +40,62 @@
 </table>
 
 <div id="combined-{{ entry.domain }}-{{ entry.item }}" class="combined-distribution">
-    <h3>Combined Distributions</h3>
-    {% for col, dist in entry.distributions_all.items() %}
-    <h4>{{ col }}</h4>
-    {% if dist.graph %}
-    <div class="graph-container">
-        {{ dist.graph | safe }}
-    </div>
-    {% else %}
-    <p>N/A</p>
-    {% endif %}
-
-    {% if dist.description is mapping %}
-    <h5>Summary Statistics</h5>
-    <ul>
-        <li>Count: {{ dist.description.get('count', 'N/A') }}</li>
-        <li>Mean: {{ dist.description.get('mean', 'N/A') }}</li>
-        <li>Std: {{ dist.description.get('std', 'N/A') }}</li>
-        <li>Min: {{ dist.description.get('min', 'N/A') }}</li>
-        <li>25%: {{ dist.description.get('25%', 'N/A') }}</li>
-        <li>50%: {{ dist.description.get('50%', 'N/A') }}</li>
-        <li>75%: {{ dist.description.get('75%', 'N/A') }}</li>
-        <li>Max: {{ dist.description.get('max', 'N/A') }}</li>
-    </ul>
-    {% elif dist.counts is mapping %}
-    <h5>Value Counts</h5>
-    <ul>
-        {% for key, value in dist.counts.items() %}
-        <li>{{ key }}: {{ value }}</li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>N/A</p>
-    {% endif %}
-    {% endfor %}
+    <table class="graph-table">
+        <tr>
+            <td style="width: 33.3%;">&nbsp;</th>
+            <td style="width: 33.3%;">&nbsp;</th>
+            <td style="width: 33.3%;">&nbsp;</th>
+        </tr>
+        <tr>
+            {% for col, dist in entry.distributions_all.items() %}
+            <td style="width: 33.3%; vertical-align: top;">
+                {% if dist.graph %}
+                <div class="graph-container">
+                    {{ dist.graph | safe }}
+                </div>
+                {% else %}
+                <p>N/A</p>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {% if dist.description is mapping %}
+                <h4>Summary Statistics</h4>
+                <ul>
+                    <li>Count: {{ dist.description.get('count', 'N/A') }}</li>
+                    <li>Mean: {{ dist.description.get('mean', 'N/A') }}</li>
+                    <li>Std: {{ dist.description.get('std', 'N/A') }}</li>
+                    <li>Min: {{ dist.description.get('min', 'N/A') }}</li>
+                    <li>25%: {{ dist.description.get('25%', 'N/A') }}</li>
+                    <li>50%: {{ dist.description.get('50%', 'N/A') }}</li>
+                    <li>75%: {{ dist.description.get('75%', 'N/A') }}</li>
+                    <li>Max: {{ dist.description.get('max', 'N/A') }}</li>
+                </ul>
+                {% elif dist.counts is mapping %}
+                <h4>Value Counts</h4>
+                <ul>
+                    {% for key, value in dist.counts.items() %}
+                    <li>{{ key }}: {{ value }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>N/A</p>
+                {% endif %}
+            </td>
+            {% endfor %}
+            <td style="width: 33.3%; vertical-align: top;">&nbsp;</td>
+            <td style="width: 33.3%; vertical-align: top;">&nbsp;</td>
+        </tr>
+    </table>
 </div>
 
 <div id="by-cohort-{{ entry.domain }}-{{ entry.item }}" class="by-cohort-distribution hidden">
-    <h3>Distributions by Cohort</h3>
     {% for col in entry.columns.keys() %}
-    <h4>{{ col }}</h4>
-    <table>
+    <table class="graph-table">
         <tr>
             {% for cohort in entry.distributions_by_cohort.keys() %}
-            <th>{{ cohort }}</th>
+            <th style="width: 33.3%;">{{ cohort }}</th>
             {% endfor %}
         </tr>
         <tr>
@@ -104,7 +116,7 @@
             <td>
                 {% if distro[col] %}
                 {% if distro[col].description is mapping %}
-                <h5>Summary Statistics</h5>
+                <h4>Summary Statistics</h4>
                 <ul>
                     <li>Count: {{ distro[col].description.get('count', 'N/A') }}</li>
                     <li>Mean: {{ distro[col].description.get('mean', 'N/A') }}</li>
@@ -116,7 +128,7 @@
                     <li>Max: {{ distro[col].description.get('max', 'N/A') }}</li>
                 </ul>
                 {% elif distro[col].counts is mapping %}
-                <h5>Value Counts</h5>
+                <h4>Value Counts</h4>
                 <ul>
                     {% for key, value in distro[col].counts.items() %}
                     <li>{{ key }}: {{ value }}</li>
@@ -132,3 +144,4 @@
     </table>
     {% endfor %}
 </div>
+

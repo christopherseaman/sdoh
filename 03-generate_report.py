@@ -43,10 +43,10 @@ def generate_histogram(data_series, column, cohort=None):
     plt.xlabel('Values')
     plt.ylabel('Frequency')
     
-    # Add summary statistics as text
-    stats = data_series.describe()
-    stats_text = f"Mean: {stats['mean']:.2f}\nMedian: {stats['50%']:.2f}\nStd: {stats['std']:.2f}"
-    plt.figtext(0.5, -0.1, stats_text, ha='center', va='center', bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
+    # # Add summary statistics as text
+    # stats = data_series.describe()
+    # stats_text = f"Mean: {stats['mean']:.2f}\nMedian: {stats['50%']:.2f}\nStd: {stats['std']:.2f}"
+    # plt.figtext(0.5, -0.1, stats_text, ha='center', va='center', bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
     
     plt.tight_layout()
     buffer = BytesIO()
@@ -81,10 +81,12 @@ def generate_bar_chart(labels, counts, title, cohort=None, max_count=None):
     plt.ylabel('Counts')
 
     # Set y-axis limit to max_count if provided
-    if max_count is not None:
-        plt.ylim(0, max_count * 1.1)  # Add 10% padding to the top
-    else:
-        plt.ylim(0, max(valid_counts) * 1.1)
+    # Note: this used to set all y-axes to the same maximum
+    plt.ylim(0, max(valid_counts) * 1.1)
+    # if max_count is not None:
+    #     plt.ylim(0, max_count * 1.1)  # Add 10% padding to the top
+    # else:
+    #     plt.ylim(0, max(valid_counts) * 1.1)
 
     # Label bars with their counts
     for bar, count in zip(bars, valid_counts):
