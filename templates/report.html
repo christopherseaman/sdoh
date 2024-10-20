@@ -1,66 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domain Report</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .domain { margin-bottom: 40px; }
-        .item { margin-bottom: 20px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; vertical-align: top; }
-        th { background-color: #f2f2f2; }
-        .distribution { margin-top: 10px; }
-        .cohort-tabs { position: sticky; top: 0; background-color: white; z-index: 1000; display: flex; margin-bottom: 10px; }
-        .cohort-tab { padding: 10px; cursor: pointer; border: 1px solid #ccc; background-color: #f1f1f1; }
-        .cohort-tab.active { background-color: #ccc; }
-        .cohort-content { display: none; }
-        .cohort-content.active { display: block; }
-        .graph-container { width: 100%; }
-        .graph-container svg { width: 100%; height: auto; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .graph-container {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        .graph-container svg {
+            width: 100%;
+            height: auto;
+        }
+        .nav-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .nav-button:hover, .nav-button.active {
+            background-color: #2980b9;
+        }
+        .hidden {
+            display: none;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        #nav-container {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            width: 100%;
+        }
+        #domain-nav {
+            margin-top: 10px;
+        }
+        .domain-title {
+            padding-top: 120px; /* Adjust this value as needed */
+            margin-top: -80px; /* Negative margin to offset the padding */
+        }
+        .content {
+            margin-top: 150px; /* Adjust this value to match the height of your nav */
+        }
     </style>
     <script>
-        function showCohort(cohortName, element) {
-            var contents = document.getElementsByClassName('cohort-content');
-            for (var i = 0; i < contents.length; i++) {
-                contents[i].classList.remove('active');
+        function showCohortView(view) {
+            const combinedViews = document.querySelectorAll('.combined-distribution');
+            const byCohortViews = document.querySelectorAll('.by-cohort-distribution');
+            const combinedButton = document.getElementById('nav-combined');
+            const byCohortButton = document.getElementById('nav-by-cohort');
+
+            if (view === 'combined') {
+                combinedViews.forEach(v => v.classList.remove('hidden'));
+                byCohortViews.forEach(v => v.classList.add('hidden'));
+                combinedButton.classList.add('active');
+                byCohortButton.classList.remove('active');
+            } else {
+                combinedViews.forEach(v => v.classList.add('hidden'));
+                byCohortViews.forEach(v => v.classList.remove('hidden'));
+                combinedButton.classList.remove('active');
+                byCohortButton.classList.add('active');
             }
-            
-            var tabs = document.getElementsByClassName('cohort-tab');
-            for (var i = 0; i < tabs.length; i++) {
-                tabs[i].classList.remove('active');
-            }
-            
-            var cohortContents = document.getElementsByClassName(cohortName + '-distribution');
-            for (var i = 0; i < cohortContents.length; i++) {
-                cohortContents[i].classList.add('active');
-            }
-            element.classList.add('active');
         }
 
+        function showDomain(domainId) {
+            const allDomains = document.querySelectorAll('.domain-section');
+            const domainButtons = document.querySelectorAll('.domain-nav-button');
+            
+            allDomains.forEach(d => d.classList.add('hidden'));
+            domainButtons.forEach(b => b.classList.remove('active'));
+            
+            const selectedDomain = document.getElementById(`domain-${domainId}`);
+            const selectedButton = document.getElementById(`nav-${domainId}`);
+            
+            if (selectedDomain && selectedButton) {
+                selectedDomain.classList.remove('hidden');
+                selectedButton.classList.add('active');
+            }
+        }
+
+        // Show the first domain by default when the page loads
         window.onload = function() {
-            var firstTab = document.querySelector('.cohort-tab');
-            if(firstTab){
-                firstTab.click();
+            const firstDomainButton = document.querySelector('.domain-nav-button');
+            if (firstDomainButton) {
+                firstDomainButton.click();
             }
         }
     </script>
 </head>
 <body>
-    <h1>Domain Report</h1>
-    <div class="cohort-tabs">
-        <div class="cohort-tab active" onclick="showCohort('combined', this)">Combined</div>
-        <div class="cohort-tab" onclick="showCohort('by-cohort', this)">By Cohort</div>
-    </div>
-    {% for entry in summary %}
-    <div class="domain">
-        <h2>{{ entry.domain }}</h2>
-        <div class="item">
-            <h3>{{ entry.item }}</h3>
-            {% with distributions_all=entry.distributions_all, distributions=entry.distributions_by_cohort %}
-                {% include 'templates/cohort_table.html' %}
-            {% endwith %}
+    <div id="nav-container">
+        <div id="view-nav">
+            <button id="nav-combined" class="nav-button active" onclick="showCohortView('combined')">Combined</button>
+            <button id="nav-by-cohort" class="nav-button" onclick="showCohortView('by-cohort')">By Cohort</button>
+        </div>
+        <div id="domain-nav">
+            {% for domain in domains %}
+            <button id="nav-{{ domain.id }}" class="nav-button domain-nav-button" onclick="showDomain('{{ domain.id }}')">{{ domain.description }}</button>
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
+
+    <div class="content">
+        {% for domain in domains %}
+        <div id="domain-{{ domain.id }}" class="domain-section hidden">
+            <h1 class="domain-title">Domain: {{ domain.description }}</h1>
+
+            {% for entry in domain.entries %}
+            <div>
+                <h2>Item: {{ entry.item }}</h2>
+                {% include 'templates/cohort_table.html' %}
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
 </body>
 </html>

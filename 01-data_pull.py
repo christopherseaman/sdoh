@@ -32,14 +32,13 @@ else:
 api_url = os.getenv('API_URL')
 token = json.loads(os.getenv('API_TOKEN'))
 
-
 # data['key'] = DataFrame
 data = {}
 
 def strip_html(text):
     return re.sub('<[^<]+?>', '', text)
 
-# Check if csv's exist, if not then download from REDCap
+# Check if CSVs exist; if not, download from REDCap
 for key in token:
     if os.path.exists(f"{DATA}/raw/{key}.tsv"):
         data[key] = pd.read_csv(f"{DATA}/raw/{key}.tsv", sep='\t')
@@ -66,7 +65,6 @@ for key in token:
             for field in metadata:
                 if field['field_type'] in ['radio', 'dropdown', 'checkbox']:
                     field_name = field['field_name']
-                    # trim html from field label
                     value_labels[field_name] = {}
                     choices = field['select_choices_or_calculations'].split('|')
                     for choice in choices:
@@ -77,33 +75,28 @@ for key in token:
             metadata_df = pd.DataFrame(metadata)
             metadata_df['value_labels'] = metadata_df['field_name'].map(value_labels)
             metadata_df.to_csv(f"{DATA}/raw/{key}_metadata.tsv", index=False, sep='\t')
-            print(f"Saved : {key}_metadata.tsv")
+            print(f"Saved: {key}_metadata.tsv")
             
             # Save data
             data[key].to_csv(f"{DATA}/raw/{key}.tsv", index=False, sep='\t')
-            print(f"Saved : {key}.tsv")
+            print(f"Saved: {key}.tsv")
         except Exception as e:
-            print(f"Error : {e}")
+            print(f"Error: {e}")
 
 if DEBUG:
     for key in data:
         print(data[key].head()) if JUPYTER else print(data[key])
 
-# Columns known to be different (2024.10.12):
-# chinese_traditional: {'mac_sdoh_questionnaire_traditional_chinese_complete', 'msoc_bas_46'}
-# chinese_simplified: {'mac_sdoh_questionnaire_chinese_complete', 'msoc_bas_46'}
-# english: {'mac_sdoh_questionnaire_english_complete', 'msoc_bas_46'}
-# spanish: {'msoc_bas_45', 'mac_sdoh_questionnaire_spanish_complete'}
-
-# Change known misnamed column, add 'survey' to identify language, combine questionnaire complete columns
-q_c = {}
-q_c['chinese_traditional'] = 'mac_sdoh_questionnaire_traditional_chinese_complete'
-q_c['chinese_simplified'] = 'mac_sdoh_questionnaire_chinese_complete'
-q_c['english'] = 'mac_sdoh_questionnaire_english_complete'
-q_c['spanish'] = 'mac_sdoh_questionnaire_spanish_complete'
+# Columns known to be different
+q_c = {
+    'chinese_traditional': 'mac_sdoh_questionnaire_traditional_chinese_complete',
+    'chinese_simplified': 'mac_sdoh_questionnaire_chinese_complete',
+    'english': 'mac_sdoh_questionnaire_english_complete',
+    'spanish': 'mac_sdoh_questionnaire_spanish_complete'
+}
 
 for key in data:
-    # Replace multiple underscores with single underscore
+    # Replace multiple underscores with a single underscore
     data[key].columns = data[key].columns.str.replace(r'__+', '_', regex=True)
     data[key].rename(columns={'msoc_bas_45': 'msoc_bas_46'}, inplace=True)
     data[key].rename(columns={q_c[key]: 'questionnaire_complete'}, inplace=True)
@@ -113,32 +106,39 @@ for key in data:
     else:
         data[key]['survey'] = key
 
-    # Check if text columns are all numeric and update type in data dictionary
-    for col in data[key].columns:
-        if data[key][col].dtype == object:
-            try:
-                data[key][col] = pd.to_numeric(data[key][col], errors='raise')
-                print(f"Converted column '{col}' in '{key}' to numeric.")
-            except ValueError:
-                pass  # Column is not numeric
+# Combine dataframes into a single dataframe
+if all(set(df.columns) == set(data['english'].columns) for df in data.values()):
+    print("All dataframes have the same columns")
+    combined_df = pd.concat(data.values(), ignore_index=True)
+else:
+    print("Dataframes have different columns. Cannot proceed with combining.")
+    exit(1)
 
-# Check if dataframes have the same columns
-def check_columns(data):
-    columns = None
-    for key in data:
-        if columns is None:
-            columns = set(data[key].columns)
-        else:
-            if columns != set(data[key].columns):
-                return False
-    return True
+# Attempt to convert text columns to numeric if possible in combined_df
+numeric_converted_columns = []
+for col in combined_df.columns:
+    if combined_df[col].dtype == object:
+        non_missing = combined_df[col].dropna()
+        try:
+            converted = pd.to_numeric(non_missing, errors='raise')
+            # If conversion is successful, update the column
+            combined_df.loc[non_missing.index, col] = converted
+            combined_df[col] = pd.to_numeric(combined_df[col], errors='coerce')
+            numeric_converted_columns.append(col)
+            print(f"Converted column '{col}' to numeric.")
+        except ValueError:
+            pass  # Column cannot be converted to numeric
+
+# Save combined data
+combined_df.to_csv(f"{DATA}/combined.tsv", index=False, sep='\t')
+print(f"Saved: combined.tsv")
 
 # Load the column configuration
 column_config_file = os.path.join(git_root, 'reference', 'column_config.json')
 with open(column_config_file, 'r', encoding='utf-8') as f:
     column_config = json.load(f)
 
-def create_data_dictionary(metadata_file, column_config):
+def create_data_dictionary(metadata_file, column_config, combined_df):
     try:
         data_dictionary = {}
         
@@ -151,8 +151,17 @@ def create_data_dictionary(metadata_file, column_config):
                 if any(field_name.startswith(omit.replace('*', '')) for omit in column_config['omit']):
                     continue
                 
-                select_choices = row['select_choices_or_calculations']
+                # Determine field type based on data in combined_df
+                if field_name in combined_df.columns:
+                    if pd.api.types.is_numeric_dtype(combined_df[field_name]):
+                        field_type = 'numeric'
+                    else:
+                        field_type = row['field_type']
+                else:
+                    field_type = row['field_type']
                 
+                # Retrieve value labels from metadata
+                select_choices = row['select_choices_or_calculations']
                 value_labels = None
                 if pd.notna(select_choices):
                     value_labels = {}
@@ -162,20 +171,6 @@ def create_data_dictionary(metadata_file, column_config):
                         if len(parts) == 2:
                             value, label = parts
                             value_labels[value.strip()] = strip_html(str(label.strip()))
-                
-                # Update type to 'numeric' if column was converted
-                if field_name in data:
-                    df_key = [k for k in data if field_name in data[k].columns]
-                    if df_key:
-                        df = data[df_key[0]]
-                        if pd.api.types.is_numeric_dtype(df[field_name]):
-                            field_type = 'numeric'
-                        else:
-                            field_type = row['field_type']
-                    else:
-                        field_type = row['field_type']
-                else:
-                    field_type = row['field_type']
                 
                 # Convert field_label to string before stripping HTML
                 field_label = str(row['field_label']) if pd.notna(row['field_label']) else ''
@@ -205,55 +200,34 @@ def create_data_dictionary(metadata_file, column_config):
         traceback.print_exc()
         return None  # Return None if there's an error
 
-if check_columns(data):
-    print("All dataframes have the same columns")
-    # Combine into single dataframe and save
-    combined_df = pd.concat(data.values(), ignore_index=True)
-    
-    try:
-        # Save combined data
-        combined_df.to_csv(f"{DATA}/combined.tsv", index=False, sep='\t')
-        print(f"Saved : combined.tsv")
-        
-        # Create data dictionary
-        data_dictionary = create_data_dictionary(f"{DATA}/raw/english_metadata.tsv", column_config)
+# Create data dictionary, passing combined_df to determine types
+data_dictionary = create_data_dictionary(f"{DATA}/raw/english_metadata.tsv", column_config, combined_df)
 
-        # Save data dictionary
-        data_dict_file = os.path.join(git_root, 'reference', 'data_dictionary.json')
-        os.makedirs(os.path.dirname(data_dict_file), exist_ok=True)
-        print(f"Data dictionary contains {len(data_dictionary)} entries")
+# Optionally, print out how many fields are numeric
+numeric_fields = [field for field, info in data_dictionary.items() if info['type'] == 'numeric']
+print(f"Numeric fields detected: {len(numeric_fields)}")
 
-        # Add a comment about checkbox fields
-        checkbox_fields = [field for field, info in data_dictionary.items() if info.get('is_checkbox')]
-        if checkbox_fields:
-            print(f"Checkboxes exploded into multiple columns: {', '.join(checkbox_fields)}")
+# Save data dictionary
+data_dict_file = os.path.join(git_root, 'reference', 'data_dictionary.json')
+os.makedirs(os.path.dirname(data_dict_file), exist_ok=True)
+print(f"Data dictionary contains {len(data_dictionary)} entries")
 
-        exploding_fields = [field for field, info in data_dictionary.items() if info.get('exploding')]
-        if exploding_fields:
-            print(f"\nNon-checkbox exploding fields: {', '.join(exploding_fields)}")
+# Add a comment about checkbox fields
+checkbox_fields = [field for field, info in data_dictionary.items() if info.get('is_checkbox')]
+if checkbox_fields:
+    print(f"Checkboxes exploded into multiple columns: {', '.join(checkbox_fields)}")
 
-        with open(data_dict_file, 'w', encoding='utf-8') as f:
-            json.dump(data_dictionary, f, indent=2, ensure_ascii=False)
-        
-        # Verify that the file was created and has content
-        if os.path.exists(data_dict_file) and os.path.getsize(data_dict_file) > 0:
-            # trim git root from data_dict_file
-            rel_path = os.path.relpath(data_dict_file, git_root)
-            print(f"Data dictionary successfully saved to {rel_path}")
-        else:
-            print(f"Error: Data dictionary file is empty or not created")
-    
-    except Exception as e:
-        print(f"Error saving data dictionary: {e}")
-        import traceback
-        traceback.print_exc()
+exploding_fields = [field for field, info in data_dictionary.items() if info.get('exploding')]
+if exploding_fields:
+    print(f"\nNon-checkbox exploding fields: {', '.join(exploding_fields)}")
 
+with open(data_dict_file, 'w', encoding='utf-8') as f:
+    json.dump(data_dictionary, f, indent=2, ensure_ascii=False)
+
+# Verify that the file was created and has content
+if os.path.exists(data_dict_file) and os.path.getsize(data_dict_file) > 0:
+    # Trim git root from data_dict_file
+    rel_path = os.path.relpath(data_dict_file, git_root)
+    print(f"Data dictionary successfully saved to {rel_path}")
 else:
-    # Find the columns that are different
-    columns = None
-    for key in data:
-        if columns is None:
-            columns = set(data[key].columns)
-        else:
-            columns = columns.intersection(set(data[key].columns))
-    print("Columns that are different:")
+    print(f"Error: Data dictionary file is empty or not created")
