@@ -42,6 +42,7 @@ def strip_html(text):
 for key in token:
     if os.path.exists(f"{DATA}/raw/{key}.tsv"):
         data[key] = pd.read_csv(f"{DATA}/raw/{key}.tsv", sep='\t')
+        data[key] = pd.read_csv(f"{DATA}/raw/{key}.tsv", sep='\t')
         print(f"Loaded: {key}.tsv")
     else:
         try:
