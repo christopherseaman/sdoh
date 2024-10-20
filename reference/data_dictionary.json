@@ -3293,6 +3293,133 @@
       "0": "No"
     }
   },
+  "msoc_ladder": {
+    "type": "descriptive",
+    "label": "",
+    "value_labels": null,
+    "exploding": true,
+    "exploded_fields": [
+      "msoc_ladder_0",
+      "msoc_ladder_11",
+      "msoc_ladder_25",
+      "msoc_ladder_35",
+      "msoc_ladder_46",
+      "msoc_ladder_66",
+      "msoc_ladder_rec"
+    ]
+  },
+  "msoc_ladder_0": {
+    "type": "radio",
+    "label": "0 to 10 years of age",
+    "value_labels": {
+      "10": "10",
+      "9": "9",
+      "8": "8",
+      "7": "7",
+      "6": "6",
+      "5": "5",
+      "4": "4",
+      "3": "3",
+      "2": "2",
+      "1": "1"
+    }
+  },
+  "msoc_ladder_11": {
+    "type": "radio",
+    "label": "11 to 24 years of age",
+    "value_labels": {
+      "10": "10",
+      "9": "9",
+      "8": "8",
+      "7": "7",
+      "6": "6",
+      "5": "5",
+      "4": "4",
+      "3": "3",
+      "2": "2",
+      "1": "1"
+    }
+  },
+  "msoc_ladder_25": {
+    "type": "radio",
+    "label": "25 to 34 years of age",
+    "value_labels": {
+      "10": "10",
+      "9": "9",
+      "8": "8",
+      "7": "7",
+      "6": "6",
+      "5": "5",
+      "4": "4",
+      "3": "3",
+      "2": "2",
+      "1": "1"
+    }
+  },
+  "msoc_ladder_35": {
+    "type": "radio",
+    "label": "35 to 45 years of age",
+    "value_labels": {
+      "10": "10",
+      "9": "9",
+      "8": "8",
+      "7": "7",
+      "6": "6",
+      "5": "5",
+      "4": "4",
+      "3": "3",
+      "2": "2",
+      "1": "1"
+    }
+  },
+  "msoc_ladder_46": {
+    "type": "radio",
+    "label": "46 to 65 years of age",
+    "value_labels": {
+      "10": "10",
+      "9": "9",
+      "8": "8",
+      "7": "7",
+      "6": "6",
+      "5": "5",
+      "4": "4",
+      "3": "3",
+      "2": "2",
+      "1": "1"
+    }
+  },
+  "msoc_ladder_66": {
+    "type": "radio",
+    "label": "66 to one year ago",
+    "value_labels": {
+      "10": "10",
+      "9": "9",
+      "8": "8",
+      "7": "7",
+      "6": "6",
+      "5": "5",
+      "4": "4",
+      "3": "3",
+      "2": "2",
+      "1": "1"
+    }
+  },
+  "msoc_ladder_rec": {
+    "type": "radio",
+    "label": "Over the last 12 months",
+    "value_labels": {
+      "10": "10",
+      "9": "9",
+      "8": "8",
+      "7": "7",
+      "6": "6",
+      "5": "5",
+      "4": "4",
+      "3": "3",
+      "2": "2",
+      "1": "1"
+    }
+  },
   "msoc_74rev": {
     "type": "radio",
     "label": "Are you currently working? Please consider paid and/or unpaid work. ",

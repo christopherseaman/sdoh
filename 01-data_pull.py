@@ -72,17 +72,6 @@ for key in token:
                     for choice in choices:
                         value, label = choice.strip().split(',', 1)
                         value_labels[field_name][value.strip()] = label.strip()
-                else:
-                    # Convert numeric columns and log the changes
-                    for col in data[key].columns:
-                        if data[key][col].dtype == object:
-                            try:
-                                numeric_col = pd.to_numeric(data[key][col], errors='coerce')
-                                if not np.isnan(numeric_col).all():
-                                    data[key][col] = numeric_col
-                                    print(f"Converted column '{col}' in '{key}' to numeric.")
-                            except:
-                                pass  # Column is not numeric
             
             # Save metadata with stripped HTML and value labels
             metadata_df = pd.DataFrame(metadata)
@@ -124,7 +113,14 @@ for key in data:
     else:
         data[key]['survey'] = key
 
-
+    # Check if text columns are all numeric and update type in data dictionary
+    for col in data[key].columns:
+        if data[key][col].dtype == object:
+            try:
+                data[key][col] = pd.to_numeric(data[key][col], errors='raise')
+                print(f"Converted column '{col}' in '{key}' to numeric.")
+            except ValueError:
+                pass  # Column is not numeric
 
 # Check if dataframes have the same columns
 def check_columns(data):
@@ -165,18 +161,28 @@ def create_data_dictionary(metadata_file, column_config):
                         parts = choice.strip().split(',', 1)
                         if len(parts) == 2:
                             value, label = parts
-                            value_labels[value.strip()] = strip_html(label.strip())
+                            value_labels[value.strip()] = strip_html(str(label.strip()))
                 
-                # Update type to 'numeric' if column was converted to numeric
-                field_type = row['field_type']
-                for df in data.values():
-                    if field_name in df.columns and pd.api.types.is_numeric_dtype(df[field_name]):
-                        field_type = 'numeric'
-                        break
+                # Update type to 'numeric' if column was converted
+                if field_name in data:
+                    df_key = [k for k in data if field_name in data[k].columns]
+                    if df_key:
+                        df = data[df_key[0]]
+                        if pd.api.types.is_numeric_dtype(df[field_name]):
+                            field_type = 'numeric'
+                        else:
+                            field_type = row['field_type']
+                    else:
+                        field_type = row['field_type']
+                else:
+                    field_type = row['field_type']
+                
+                # Convert field_label to string before stripping HTML
+                field_label = str(row['field_label']) if pd.notna(row['field_label']) else ''
                 
                 data_dictionary[field_name] = {
                     'type': field_type,
-                    'label': strip_html(row['field_label']),
+                    'label': strip_html(field_label),
                     'value_labels': value_labels
                 }
                 
@@ -197,6 +203,7 @@ def create_data_dictionary(metadata_file, column_config):
         print(f"Error creating data dictionary: {e}")
         import traceback
         traceback.print_exc()
+        return None  # Return None if there's an error
 
 if check_columns(data):
     print("All dataframes have the same columns")
@@ -250,5 +257,3 @@ else:
         else:
             columns = columns.intersection(set(data[key].columns))
     print("Columns that are different:")
-    for key in data:
-        print(f"{key}: {set(data[key].columns) - columns}")

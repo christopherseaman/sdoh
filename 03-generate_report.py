@@ -41,19 +41,30 @@ def generate_histogram(data, column, cohort=None):
     return buffer.getvalue().decode('utf-8')
 
 # Function to generate bar chart and return HTML image tag
-def generate_bar_chart(labels, counts, title, cohort=None):
+def generate_bar_chart(labels, counts, title, cohort=None, max_count=None):
     if not counts:
         return "No data to plot."
     plt.figure(figsize=(10,6))
     
     x = range(len(labels))
-    plt.bar(x, counts, color='skyblue')
+    bars = plt.bar(x, counts, color='skyblue')
     
     plt.title(title + (f' ({cohort})' if cohort else ''))
     plt.xlabel('Values')
     plt.ylabel('Counts')
     
-    plt.xticks([])  # Remove x-axis labels
+    # Set y-axis limit to max_count if provided
+    if max_count:
+        plt.ylim(0, max_count)
+    
+    # Label bars with their values
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2., height,
+                 f'{height}',
+                 ha='center', va='bottom')
+    
+    plt.xticks(x, labels, rotation=45, ha='right')
     
     plt.tight_layout()
     buffer = BytesIO()
@@ -65,10 +76,14 @@ def generate_bar_chart(labels, counts, title, cohort=None):
 # Function to compute distribution summaries
 def compute_distributions(data, columns_dict, cohort=None):
     distribution_summary = {}
+    max_count = 0  # Track the maximum count across all columns
+    
     for parent_col, child_cols in columns_dict.items():
         if parent_col in data_dict and data_dict[parent_col]['type'] == 'checkbox':
             # Handle exploded checkbox fields
             counts = {label: data[child].sum() for child, label in zip(child_cols, data_dict[parent_col]['value_labels'].values())}
+            if counts:
+                max_count = max(max_count, max(counts.values()))
             title = f'Distribution of {parent_col}'
             graph = generate_bar_chart(list(counts.keys()), list(counts.values()), title, cohort)
             distribution_summary[parent_col] = {
@@ -78,55 +93,59 @@ def compute_distributions(data, columns_dict, cohort=None):
         else:
             for child in child_cols:
                 if child not in data.columns:
+                    print(f"Warning: Column '{child}' not found in data")
                     continue
+                
+                # print(f"Processing child column: {child}")
+                # print(f"Child column type: {data_dict.get(child, {}).get('type', 'Unknown')}")
+                # print(f"Sample data: {data[child].head()}")
                 
                 title = f'Distribution of {child}'
                 
-                if child in data_dict and data_dict[child]['type'] == 'text':
-                    # Check if the 'text' column is numerical
-                    try:
-                        pd.to_numeric(data[child].dropna().iloc[0])
-                        is_numeric = True
-                    except:
-                        is_numeric = False
-                    if is_numeric:
-                        graph = generate_histogram(data, child, cohort)
-                        desc = data[child].describe().to_dict()
+                if data_dict[child]['type'] == 'numeric':
+                    # Ensure we're working with numeric data
+                    numeric_data = pd.to_numeric(data[child], errors='coerce')
+                    if not numeric_data.isna().all():
+                        graph = generate_histogram(numeric_data.dropna(), child, cohort)
+                        desc = numeric_data.describe().to_dict()
                         distribution_summary[child] = {
                             'description': desc,
                             'graph': graph
                         }
                     else:
-                        counts = data[child].value_counts(dropna=True).to_dict()
-                        graph = generate_bar_chart(list(counts.keys()), list(counts.values()), title, cohort)
+                        print(f"Warning: Column '{child}' is marked as numeric but contains no valid numeric data.")
                         distribution_summary[child] = {
-                            'counts': counts,
-                            'graph': graph
+                            'description': 'No valid numeric data',
+                            'graph': None
                         }
-                elif child in data_dict and data_dict[child]['type'] in ['radio', 'checkbox']:
-                    counts = data[child].value_counts(dropna=True).to_dict()
-                    labels = list(counts.keys())
-                    count_values = list(counts.values())
-                    graph = generate_bar_chart(labels, count_values, title, cohort)
+                elif data_dict[child]['type'] in ['radio', 'checkbox', 'dropdown', 'text']:
+                    counts = data[child].value_counts(dropna=False).to_dict()
+                    non_nan_counts = {k: v for k, v in counts.items() if pd.notna(k)}
+                    if non_nan_counts:
+                        max_count = max(max_count, max(non_nan_counts.values()))
+                        graph = generate_bar_chart(list(non_nan_counts.keys()), list(non_nan_counts.values()), title, cohort)
+                    else:
+                        print(f"Warning: Column '{child}' contains only NaN values")
+                        graph = "No non-NaN data to plot."
                     distribution_summary[child] = {
-                        'counts': counts,
-                        'graph': graph
+                        'counts': counts,  # Keep nan in counts
+                        'graph': graph     # Will be either the graph or the warning message
                     }
                 else:
-                    if data[child].dtype == 'object':
-                        counts = data[child].value_counts(dropna=True).to_dict()
-                        graph = generate_bar_chart(list(counts.keys()), list(counts.values()), title, cohort)
-                        distribution_summary[child] = {
-                            'counts': counts,
-                            'graph': graph
-                        }
-                    else:
-                        desc = data[child].describe().to_dict()
-                        graph = generate_histogram(data, child, cohort)
-                        distribution_summary[child] = {
-                            'description': desc,
-                            'graph': graph
-                        }
+                    print(f"Warning: Unhandled column type '{data_dict[child]['type']}' for column '{child}'")
+                    distribution_summary[child] = {
+                        'description': f"Unhandled column type: {data_dict[child]['type']}",
+                        'graph': None
+                    }
+    
+    for key, value in distribution_summary.items():
+        if 'counts' in value:
+            non_nan_counts = {k: v for k, v in value['counts'].items() if pd.notna(k)}
+            if non_nan_counts:
+                value['graph'] = generate_bar_chart(list(non_nan_counts.keys()), list(non_nan_counts.values()), f'Distribution of {key}', cohort, max_count)
+            else:
+                value['graph'] = "No non-NaN data to plot."
+    
     return distribution_summary
 
 # Prepare summary data

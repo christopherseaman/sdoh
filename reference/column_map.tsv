@@ -378,7 +378,7 @@ msoc_bal_46	46 to 65 years of age
 msoc_bal_66	66 to one year ago
 msoc_bal_rec	Over the last 12 months
 msoc_ladder_a	0 to 10 years of age   11 to 24 years of age   25 to 34 years of age   35 to 45 years of age   46 to 65 years of age   66 until one year ago   Over the last 12 months     {msoc_ladder}   {msoc_ladder_0}   {msoc_ladder_11}   {msoc_ladder_25}   {msoc_ladder_35}   {msoc_ladder_46}   {msoc_ladder_66}   {msoc_ladder_rec}
-msoc_ladder	
+msoc_ladder	0 to 10 years of age   11 to 24 years of age   25 to 34 years of age   35 to 45 years of age   46 to 65 years of age   66 until one year ago   Over the last 12 months     {msoc_ladder}   {msoc_ladder_0}   {msoc_ladder_11}   {msoc_ladder_25}   {msoc_ladder_35}   {msoc_ladder_46}   {msoc_ladder_66}   {msoc_ladder_rec}
 msoc_ladder_0	0 to 10 years of age
 msoc_ladder_11	11 to 24 years of age
 msoc_ladder_25	25 to 34 years of age
